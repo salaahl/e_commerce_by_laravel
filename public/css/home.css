@@ -72,17 +72,7 @@
   }
 }
 
-@media (min-width: 1200px) {
-  
-}
-
-@media (min-width: 1201px) {
-  
-}
-
 html, body {
-  max-width: 1280px;
-  margin: auto;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -102,6 +92,11 @@ h3 {
   font-weight: 800!important;
   text-transform: uppercase;
   color: #343a40;
+}
+
+header, main {
+  max-width: 1280px;
+  margin: auto;
 }
 
 header {
@@ -150,9 +145,4 @@ section.two h2 {
 
 section.two .section-text {
   margin: 0;
-}
-
-footer {
-  height: 30vh;
-  background-color: burlywood;
 }

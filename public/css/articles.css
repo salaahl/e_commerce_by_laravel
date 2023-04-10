@@ -65,8 +65,6 @@
 }
 
 html, body {
-  max-width: 1280px;
-  margin: auto;
   font-family: 'Oswald', sans-serif;
 }
 
@@ -86,6 +84,11 @@ h3 {
   font-weight: 800!important;
   text-transform: uppercase;
   color: #343a40;
+}
+
+header, main, aside {
+  max-width: 1280px;
+  margin: auto;
 }
 
 header {
@@ -148,10 +151,4 @@ aside nav {
   padding: 1%;
   border-radius: 5px;
   background-color: #A3CFCD;
-}
-
-footer {
-  height: 30vh;
-  color: white;
-  background-color: #2A272A;
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\CRUDController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BasketController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +18,19 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/articles/{slug}', [ArticlesController::class, 'article'])->name('article');
 Route::get('/articles', [ArticlesController::class, 'articles'])->name('articles');
-Route::get('CRUD/create', [CRUDController::class, 'create']);
-Route::get('CRUD/store', [CRUDController::class, 'store']);
-Route::get('CRUD/show', [CRUDController::class, 'show']);
 
+Route::middleware('auth')->group(function () {
+    Route::get('/order', [BasketController::class, 'order'])->name('order');
+    Route::get('/basket', [BasketController::class, 'show'])->name('basket');
+    Route::get('/articles/{slug}/store', [BasketController::class, 'store'])->name('addArticleToBasket');
+    Route::get('CRUD/create', [CRUDController::class, 'create']);
+    Route::get('CRUD/store', [CRUDController::class, 'store']);
+    Route::get('CRUD/show', [CRUDController::class, 'show']);
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,4 +42,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

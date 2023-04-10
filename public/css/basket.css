@@ -1,0 +1,170 @@
+@media (min-width: 0px) {
+    h1 {
+        font-size: 15vw !important;
+    }
+
+    main { 
+        margin: 0 1% 0 1%;
+    }
+
+    .article {
+        margin: 1%;
+    }
+
+    .article .img-container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 6vw !important;
+    }
+
+    .global-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1% 0 1%;
+    }
+
+    main {
+        height: 90vh;
+        width: 70%;
+        margin: 0%;
+        overflow: auto;
+    }
+
+    .article {
+        margin: 0;
+    }
+
+    .article .img-container {
+        width: 20%;
+    }
+
+    .article .description {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        height: fit-content;
+        width: 25%;
+        margin: 1vh 0 1vh 0;
+    }
+}
+
+@media (min-width: 1201px) {
+    .global-container {
+        max-width: 1280px;
+        margin: auto;
+    }
+}
+
+html,
+body {
+    font-family: "Oswald", sans-serif;
+}
+
+h1 {
+    max-width: 1280px;
+    margin: 2% auto 2% auto !important;
+    font-weight: 800 !important;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2a272a;
+    background-color: #a3cfcd;
+    -webkit-text-stroke: 1px white;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 0 1% 0;
+    border: 4px solid;
+}
+
+.article .description {
+    font-size: 150%;
+}
+
+.article .img-container {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1;
+    margin: auto;
+    border-right: 4px solid;
+}
+
+.img-container img {
+    width: 80%;
+    margin: auto;
+}
+
+.article .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.article .options {
+    padding: 1%;
+    background: beige;
+}
+
+.article .options h4, .article .options button {
+    padding: 0.5%;
+}
+
+.article .options button {
+    color: white;
+    background: black;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background: cadetblue;
+    z-index: 0;
+}
+
+.total {
+    font-size: 200%;
+}
+
+aside * {
+    margin: 5% 0 5% 0;
+}
+
+aside button {
+    position: relative;
+    width: 100%;
+    margin: 5% 0 5% 0;
+    padding: 13px 20px 13px;
+    border: 1px solid black;
+}
+
+aside button:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+aside button:hover:after {
+    top: 0px;
+    left: 0px;
+}

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Basket;
 use App\Models\Bill;
 use App\Models\Catalog;
-use App\Models\Customer;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -39,15 +38,6 @@ class CRUDController extends Controller
                 $catalog->catalog = $request->catalog_name;
                 $catalog->save();
                 break;
-            case "customer":
-                $customer = new Customer;
-                $customer->name = $request->customer_name;
-                $customer->surname = $request->customer_surname;
-                $customer->address = $request->customer_address;
-                $customer->mail = $request->customer_mail;
-                $customer->phone = $request->customer_phone;
-                $customer->save();
-                break;
             case "product":
                 $product = new Product;
                 $product->name = $request->product_name;
@@ -73,12 +63,10 @@ class CRUDController extends Controller
     public function show()
     {
         $catalogs = Catalog::all();
-        $customers = Customer::all();
         $products = Product::all();
 
         return view('CRUD/read', [
             "catalogs" => $catalogs,
-            "customers" => $customers,
             "products" => $products
         ]);
     }
@@ -90,7 +78,6 @@ class CRUDController extends Controller
         Basket $basket,
         Bill $bill,
         Catalog $catalog,
-        Customer $customer,
         Order $order,
         Product $product)
     {
@@ -105,7 +92,6 @@ class CRUDController extends Controller
         Basket $basket,
         Bill $bill,
         Catalog $catalog,
-        Customer $customer,
         Order $order,
         Product $product)
     {
@@ -119,7 +105,6 @@ class CRUDController extends Controller
         Basket $basket,
         Bill $bill,
         Catalog $catalog,
-        Customer $customer,
         Order $order,
         Product $product
     )

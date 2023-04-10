@@ -54,13 +54,16 @@
             <h2 style="color: red">Cet article n'est plus en stock</h2>
             <button>Etre notifié de sa disponibilité</button>
             @else
-            <label for="quantity">Quantité :</label>
-            <select name="quantity" id="quantity">
-                @for ($i = 1; $i <= $article->stock; $i++)
-                    <option value="{{ $i }}">{{ $i }}</option>
-                    @endfor
-            </select>
-            <button>Ajouter au panier</button>
+            <form method="GET" action="{{ url('articles/'. $article->reference .'/store') }}">
+                @csrf
+                <label for="quantity">Quantité :</label>
+                <select name="quantity" id="quantity">
+                    @for ($i = 1; $i <= $article->stock; $i++)
+                        <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                </select>
+                <button type="submit">Ajouter au panier</button>
+            </form>
             @endif
         </div>
     </div>

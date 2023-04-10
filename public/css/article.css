@@ -44,7 +44,7 @@
 
 @media (min-width: 1200px) {
   .breadcrumb {
-    margin: 0%;
+    margin: auto;
   }
 
   .img-container, .description {
@@ -57,14 +57,17 @@
 }
 
 html, body {
-  max-width: 1280px;
-  margin: auto;
   font-family: 'Oswald', sans-serif;
 }
 
 h3 {
   font-weight: 800!important;
   text-transform: uppercase;
+}
+
+aside, main {
+  max-width: 1280px;
+  margin: auto;
 }
 
 aside {
@@ -108,18 +111,9 @@ aside {
 }
 
 .description button {
-  font-size: 16px;
-  font-weight: 200;
-  letter-spacing: 1px;
   padding: 13px 20px 13px;
-  outline: 0;
   border: 1px solid black;
-  cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 
 .description button:after {
@@ -137,10 +131,4 @@ aside {
 .description button:hover:after {
   top: 0px;
   left: 0px;
-}
-
-footer {
-  height: 30vh;
-  color: white;
-  background-color: #2A272A;
 }

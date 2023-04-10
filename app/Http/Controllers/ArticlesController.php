@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\Basket;
 
 class ArticlesController extends Controller
 {
@@ -22,7 +23,7 @@ class ArticlesController extends Controller
     {
         $articles = Product::paginate(9);
         // $articles_by = Product::orderBy('name', 'desc')->paginate(9);
-        
+
         return view('pages/articles', [
             "articles" => $articles
         ]);

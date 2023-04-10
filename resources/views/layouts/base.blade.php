@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="antialiased">

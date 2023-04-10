@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('address');
-            $table->string('mail')->nullable();
+            $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->float('total_price');
             $table->timestamps();
