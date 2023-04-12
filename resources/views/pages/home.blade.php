@@ -6,6 +6,50 @@
 <link href="{{ asset('css/home.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
+@section('header')
+@parent
+<div class="carousel">
+    <div class="inner">
+        <div class="slide" style="background-image: url('/images/illustration_1.jpg');">
+            <div class="description">
+                <h3>Slide 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('/images/illustration_2.jpg');">
+            <div class="description">
+                <h3>Slide 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('/images/illustration_1.jpg');">
+            <div class="description">
+                <h3>Slide 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('/images/illustration_2.jpg');">
+            <div class="description">
+                <h3>Slide 4</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
 @section('main-content')
 <main>
     <h1>à la une</h1>

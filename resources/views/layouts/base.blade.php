@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-@yield('head')
+    @yield('head')
     <meta charset="utf-8">
     <meta name="author" lang="fr" content="Salaha SOKHONA">
     <meta name="copyright" content="Salaha SOKHONA.">
@@ -20,9 +20,10 @@
 <body class="antialiased">
     <header>
         @include('layouts.navbar')
+        @yield('header')
     </header>
-        @yield('main-content')
-        @include('layouts.footer')
+    @yield('main-content')
+    @include('layouts.footer')
 </body>
 
 </html>
