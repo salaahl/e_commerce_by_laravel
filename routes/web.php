@@ -25,8 +25,11 @@ Route::get('/articles', [ArticlesController::class, 'articles'])->name('articles
 
 Route::middleware('auth')->group(function () {
     Route::get('/order', [BasketController::class, 'order'])->name('order');
+    Route::get('/order/confirmation/{slug}', [BasketController::class, 'confirmation'])->name('confirmation');
     Route::get('/basket', [BasketController::class, 'show'])->name('basket');
-    Route::get('/articles/{slug}/store', [BasketController::class, 'store'])->name('addArticleToBasket');
+    Route::post('/basket/store', [BasketController::class, 'store']);
+    Route::post('/basket/update', [BasketController::class, 'update']);
+    Route::post('/basket/destroy', [BasketController::class, 'destroy']);
     Route::get('CRUD/create', [CRUDController::class, 'create']);
     Route::get('CRUD/store', [CRUDController::class, 'store']);
     Route::get('CRUD/show', [CRUDController::class, 'show']);

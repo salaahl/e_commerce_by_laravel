@@ -46,7 +46,7 @@
     <div class="description">
         <div class="header">
             <h3 id="name">{{ $article->name }}</h3>
-            <h3 id="price">{{ $article->price }}</h3>
+            <h3 id="price">{{ $article->price }}€</h3>
             <p>{{ $article->description }}</p>
         </div>
         <div>
@@ -54,7 +54,7 @@
             <h2 style="color: red">Cet article n'est plus en stock</h2>
             <button>Etre notifié de sa disponibilité</button>
             @else
-            <form method="GET" action="{{ url('articles/'. $article->reference .'/store') }}">
+            <form>
                 @csrf
                 <label for="quantity">Quantité :</label>
                 <select name="quantity" id="quantity">
@@ -63,9 +63,11 @@
                         @endfor
                 </select>
                 <button type="submit">Ajouter au panier</button>
+                <input name="reference" id="reference" type="hidden" value="{{ $article->reference }}">
             </form>
             @endif
         </div>
     </div>
 </main>
+<script src="{{ asset('js/article.js') }}"></script>
 @endsection

@@ -37,4 +37,14 @@ class ArticlesController extends Controller
             "article" => $article
         ]);
     }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request)
+    {
+        $article = Product::where('reference', $request->reference)->first();
+        $article->quantity = $article->quantity - $request->quantity;
+        $article->save();
+    }
 }

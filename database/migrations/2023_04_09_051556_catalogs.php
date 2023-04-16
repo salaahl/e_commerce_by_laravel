@@ -12,8 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('catalogs', function (Blueprint $table) {
-            $table->id();
-            $table->string('catalog')->unique();
+            $table->string('catalog')->primary();
             $table->timestamps();
         });
     }

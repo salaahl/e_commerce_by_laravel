@@ -14,6 +14,7 @@
         $index = 0;
         $total = 0;
         @endphp
+        @if(isset($articles))
         @foreach($articles as $article)
         <div class="article">
             <div class="img-container">
@@ -24,17 +25,23 @@
             <div class="content">
                 <div class="description">
                     <h3>{{ $article[0]->name }}</h3>
-                    <h3>{{ $article[0]->price }}€</h3>
+                    <h3 class="price">{{ $article[0]->price }}€</h3>
                 </div>
                 <div class="options">
                     <div>
-                        <h4>Quantité : {{ $quantity[$index] }}</h4>
+                        <h4>Quantité :</h4>
+                        <select name="quantity" class="quantity">
+                            <option value="{{ $quantity[$index] }}" selected>{{ $quantity[$index] }}</option>
+                            @for ($i = 1; $i <= $article[0]->stock; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
+                        </select>
                     </div>
                     <div>
-                        <form method="GET" action="{{url('/basket/delete')}}">
+                        <form class="delete-article">
                             @csrf
                             <button type="submit">Supprimer du panier</button>
-                            <input name="article" type="hidden" value="{{ $article[0]->reference }}">
+                            <input name="reference" type="hidden" value="{{ $article[0]->reference }}">
                         </form>
                     </div>
                 </div>
@@ -45,12 +52,15 @@
         $index++;
         @endphp
         @endforeach
+        @else
+        <div>Code à exécuter si le panier ne contient aucun article.</div>
+        @endif
     </main>
     <aside>
-        <div class="total">
+        <div id="total">
             <h2>Total : {{ $total }}€</h2>
         </div>
-        <div class="customer">
+        <div id="customer">
             <h4>{{ $user->name }}</h4>
             <h4>{{ $user->surname }}</h4>
             <h4>{{ $user->address }}</h4>
@@ -60,8 +70,8 @@
         <form method="GET" action="{{url('/order')}}">
             @csrf
             <button type="submit">Commander</button>
-            <input name="basket" type="hidden" value="{{ $article[0]->reference }}">
         </form>
     </aside>
 </div>
+<script src="{{ asset('js/basket.js') }}"></script>
 @endsection

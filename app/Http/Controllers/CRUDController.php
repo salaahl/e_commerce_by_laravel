@@ -41,10 +41,10 @@ class CRUDController extends Controller
             case "product":
                 $product = new Product;
                 $product->name = $request->product_name;
-                $product->catalog_id = 
-                Catalog::where('catalog', $request->product_catalog)
-                ->first()
-                ->id;
+                $product->catalog =
+                    Catalog::where('catalog', $request->product_catalog)
+                    ->first()
+                    ->catalog;
                 $product->reference = $request->product_reference;
                 $product->description = $request->product_description;
                 $product->picture = $request->product_picture;
@@ -54,7 +54,7 @@ class CRUDController extends Controller
                 break;
         }
 
-        return $this->show();
+        // return $this->show();
     }
 
     /**
@@ -79,8 +79,8 @@ class CRUDController extends Controller
         Bill $bill,
         Catalog $catalog,
         Order $order,
-        Product $product)
-    {
+        Product $product
+    ) {
         //
     }
 
@@ -93,8 +93,8 @@ class CRUDController extends Controller
         Bill $bill,
         Catalog $catalog,
         Order $order,
-        Product $product)
-    {
+        Product $product
+    ) {
         //
     }
 
@@ -107,8 +107,7 @@ class CRUDController extends Controller
         Catalog $catalog,
         Order $order,
         Product $product
-    )
-    {
+    ) {
         //
     }
 }

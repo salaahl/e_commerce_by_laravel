@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('bills', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('order_id');
+            $table->unsignedBigInteger('order_index');
             $table->string('name');
             $table->string('surname');
             $table->string('address');
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
-            $table->float('total_price');
+            $table->float('total');
             $table->timestamps();
-            $table->foreign('order_id')->references('id')->on('orders');
+            // $table->foreign('order_index')->references('index_id')->on('orders');
         });
     }
 

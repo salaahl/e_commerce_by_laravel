@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->integer('index_id');
+            $table->string('user_email');
+            $table->string('product_reference');
+            $table->integer('quantity');
             $table->timestamps();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('user_id')->references('user_id')->on('baskets');
-            $table->foreign('product_id')->references('product_id')->on('baskets');
+            // $table->foreign('index_id')->references('id')->on('orders_index');
+            // $table->foreign('user_id')->references('user_id')->on('baskets');
+            // $table->foreign('product_id')->references('product_id')->on('baskets');
         });
     }
 
