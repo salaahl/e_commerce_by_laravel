@@ -58,7 +58,7 @@
   }
 
   .carousel .slide {
-    min-width: 80%;
+    min-width: 100%;
   }
   .carousel .slide:first-of-type {
     margin: 0 0% 0 20%;
@@ -84,6 +84,17 @@
 
   section.three .article, section.three .section-text {
     width: 48%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main, nav {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  section, h1 {
+    width: 100%!important;
   }
 }
 
@@ -118,12 +129,44 @@ nav, main {
   height: 100%;
   width: 100%;
 }
+
+.slide a {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 1vw 1vw 0;
+  display: inline-block;
+  padding: 15%;
+}
+
+.previous {
+  transform: rotate(130deg);
+}
+
+.next {
+  transform: rotate(-45deg);
+}
+
+#slide1 a:first-of-type, #slide4 a:last-of-type {
+  z-index: -1;
+}
+
 .carousel .inner {
   display: flex;
   height: 80%;
   width: 100%;
+  max-width: 1280px;
+  margin: auto;
   overflow: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
 .carousel .inner::-webkit-scrollbar {
@@ -134,7 +177,7 @@ nav, main {
 
 .carousel .slide {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: end;
   height: 100%;
   max-width: 1280px;
@@ -147,7 +190,7 @@ nav, main {
 
 .slide .description {
   max-width: 60%;
-  padding-bottom: 0.5%;
+  padding: 0.5%;
   text-align: center;
   border-radius: 5px;
   background-color: white;

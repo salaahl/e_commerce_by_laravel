@@ -4,6 +4,7 @@ let deleteArticle = document.querySelectorAll(".delete-article");
 if (quantity) {
     quantity.forEach((select) => {
         select.addEventListener("change", () => {
+            document.querySelector("#total h2").style.filter = 'blur(10px)';
             const url = "/basket/update";
 
             let data = {
@@ -24,7 +25,21 @@ if (quantity) {
             };
 
             fetch(url, options)
-                .then((response) => {})
+                .then((response) => response.json())
+                .then((data) => {
+                    let total = 0;
+                    quantity.forEach((price) => {
+                        total +=
+                            parseInt(
+                                price
+                                    .closest(".article")
+                                    .querySelector(".price").innerHTML
+                            ) * price.value;
+                    });
+                    document.querySelector("#total h2").innerHTML =
+                        "Total : " + total + "€";
+                    document.querySelector("#total h2").style.filter = 'blur(0px)';
+                })
                 .catch((error) => {
                     alert(
                         "Une erreur est survenue. Veuillez contacter l'administrateur du site."

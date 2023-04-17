@@ -10,41 +10,53 @@
 @parent
 <div class="carousel">
     <div class="inner">
-        <div class="slide" style="background-image: url('/images/illustration_1.jpg');">
+        <div id="slide1" class="slide" style="background-image: url('images/illustration_1.jpg');">
+            <a href="#"><i class="arrow previous"></i></a>
             <div class="description">
                 <h3>Slide 1</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
                     magna aliqua.
                 </p>
             </div>
+            <a href="#slide2"><i class="arrow next"></i></a>
         </div>
-        <div class="slide" style="background-image: url('/images/illustration_2.jpg');">
+        <div id="slide2" class="slide" style="background-image: url('images/illustration_2.jpg');">
+            <a href="#slide1"><i class="arrow previous"></i></a>
             <div class="description">
                 <h3>Slide 2</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
                     magna aliqua.
                 </p>
             </div>
+            <a href="#slide3"><i class="arrow next"></i></a>
         </div>
-        <div class="slide" style="background-image: url('/images/illustration_1.jpg');">
+        <div id="slide3" class="slide" style="background-image: url('images/illustration_1.jpg');">
+            <a href="#slide2"><i class="arrow previous"></i></a>
             <div class="description">
                 <h3>Slide 3</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
                     magna aliqua.
                 </p>
             </div>
+            <a href="#slide4"><i class="arrow next"></i></a>
         </div>
-        <div class="slide" style="background-image: url('/images/illustration_2.jpg');">
+        <div id="slide4" class="slide" style="background-image: url('images/illustration_2.jpg');">
+            <a href="#slide3"><i class="arrow previous"></i></a>
             <div class="description">
                 <h3>Slide 4</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
                     magna aliqua.
                 </p>
             </div>
+            <a href="#"><i class="arrow next"></i></a>
         </div>
     </div>
 </div>

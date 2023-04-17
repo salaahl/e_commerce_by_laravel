@@ -113,9 +113,9 @@ class BasketController extends Controller
         ]);           
     }
 
-    public function confirmation($id)
+    public function confirmation($slug)
     {
-        $bill = Bill::where('order_index', $id)
+        $bill = Bill::where('order_index', $slug)
         ->where('email', auth()->user()->email)
         ->first();
 
@@ -142,6 +142,11 @@ class BasketController extends Controller
             ->first();
         $basket->quantity = $request->quantity;
         $basket->save();
+
+        return response()->json([
+            'name' => 'Abigail',
+            'state' => 'CA',
+        ]);
     }
 
     /**

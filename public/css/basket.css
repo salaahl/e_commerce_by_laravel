@@ -140,6 +140,10 @@ aside {
     font-size: 200%;
 }
 
+#total h2 {
+    transition: filter 1s;
+}
+
 aside * {
     margin: 5% 0 5% 0;
 }
