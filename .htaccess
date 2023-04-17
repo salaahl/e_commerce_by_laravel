@@ -1,15 +1,18 @@
 <IfModule mod_rewrite.c>
-Options +FollowSymLinks
-RewriteEngine On
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
 
-RewriteCond %{REQUEST_URI} !^/public/ 
+    RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} -d [OR]
+    RewriteCond %{REQUEST_FILENAME} -f
+    RewriteRule ^ ^$1 [N]
 
+    RewriteCond %{REQUEST_URI} (\.\w+$) [NC]
+    RewriteRule ^(.*)$ public/$1
 
-
-RewriteRule ^(.*)$ /public/$1 
-#RewriteRule ^ index.php [L]
-RewriteRule ^(/)?$ public/index.php [L] 
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ server.php
 </IfModule>
