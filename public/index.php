@@ -1,9 +1,7 @@
 <?php
-
+ob_start();
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
-
-ob_start();
 
 define('LARAVEL_START', microtime(true));
 
