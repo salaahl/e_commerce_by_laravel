@@ -144,7 +144,7 @@ class BasketController extends Controller
         $basket->save();
 
         return response()->json([
-            'name' => 'Abigail',
+            'name' => 'Abigaile',
             'state' => 'CA',
         ]);
     }
