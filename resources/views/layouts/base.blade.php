@@ -4,7 +4,6 @@
 <head>
     @yield('head')
     <meta charset="utf-8">
-    <meta name="_token" content="{!! csrf_token() !!}" />
     <meta name="author" lang="fr" content="Salaha SOKHONA">
     <meta name="copyright" content="Salaha SOKHONA.">
     <meta name="description" content="Vente de parfums.">
