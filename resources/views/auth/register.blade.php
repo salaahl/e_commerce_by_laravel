@@ -1,6 +1,6 @@
 <x-guest-layout>
     <form method="POST" action="{{ route('register') }}">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        @csrf
 
         <!-- Name -->
         <div>
