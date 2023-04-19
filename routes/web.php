@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/basket/destroy', [BasketController::class, 'destroy']);
     Route::get('CRUD/create', [CRUDController::class, 'create']);
     Route::get('CRUD/store', [CRUDController::class, 'store']);
+    Route::get('CRUD/update', [CRUDController::class, 'update']);
     Route::get('CRUD/show', [CRUDController::class, 'show']);
 });
 
