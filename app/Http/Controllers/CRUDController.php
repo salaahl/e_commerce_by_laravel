@@ -35,21 +35,21 @@ class CRUDController extends Controller
         switch ($request->form) {
             case "catalog":
                 $catalog = new Catalog;
-                $catalog->catalog = $request->catalog;
+                $catalog->catalog = $request->name;
                 $catalog->save();
                 break;
             case "product":
                 $product = new Product;
-                $product->name = $request->product_name;
+                $product->name = $request->name;
                 $product->catalog =
-                    Catalog::where('catalog', $request->product_catalog)
+                    Catalog::where('catalog', $request->catalog)
                     ->first()
                     ->catalog;
-                $product->reference = $request->product_reference;
-                $product->description = $request->product_description;
-                $product->picture = $request->product_picture;
-                $product->stock = $request->product_stock;
-                $product->price = $request->product_price;
+                $product->reference = $request->reference;
+                $product->description = $request->description;
+                $product->picture = $request->picture;
+                $product->stock = $request->stock;
+                $product->price = $request->price;
                 $product->save();
                 break;
         }
