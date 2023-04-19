@@ -28,7 +28,7 @@
             <label for="product-stock">Stock :</label>
             <input type="number" name="stock" class="text-input" value="{{ $product['stock'] }}">
         </p>
-        <button type="submit">Mettre à jour le stock</button>
+        <button class="button" type="submit">Mettre à jour le stock</button>
     </form>
 </div>
 @endforeach
