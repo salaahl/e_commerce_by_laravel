@@ -96,6 +96,10 @@
   section, h1 {
     width: 100%!important;
   }
+    
+  section .article, section .section-text {
+    margin: auto 0%;
+  }
 }
 
 html, body {
