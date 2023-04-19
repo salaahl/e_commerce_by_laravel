@@ -14,6 +14,9 @@ body {
   background-color: white;
   font-family: 'Montserrat', sans-serif;
 }
+html, body {
+    font-family: 'Oswald', sans-serif;
+}
 h1 {
   font-weight: 800!important;
   text-transform: uppercase!important;
@@ -207,12 +210,15 @@ body {
 }
 .form {
   max-width: 40em;
-  margin: 0 auto;
+  margin: 5% auto;
+  padding: 2%;
   position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: flex-end;
+  border-radius: 5px;
+  background-color: lightslategray;
 }
 .form .field {
   width: 45%;
@@ -288,3 +294,5 @@ body {
   will-change: top, left, width;
   transform-origin: 0 0;
 }
+
+/* Code spécifique à la page de listing des produits :*/
