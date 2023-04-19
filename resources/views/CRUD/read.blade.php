@@ -1,36 +1,28 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.base')
 
-        <title>Laravel</title>
+@section('head')
+@parent
+@section('title', 'Products')
+<link href="{{ asset('css/create_form.css') }}" rel="stylesheet" type="text/css" />
+@endsection
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            form 
-            {
-                background-color: beige;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <h2>Catalogues : </h2>
-        @foreach($catalogs as $catalog)
-            <h3>{{ $catalog['catalog'] }}</h3>
-        @endforeach
-        <h2>Utilisateurs : </h2>
-        @foreach($customers as $customer)
-            <h3>{{ $customer['name'] }}, {{ $customer['surname'] }}</h3>
-        @endforeach
-        <h2>Produits : </h2>
-        @foreach($products as $product)
-            <h3>{{ $product['name'] }}, {{ $product['catalog_id'] }}</h3>
-            <img src="/images/{{ $product['picture'] }}"/>
-        @endforeach
-    </body>
-</html>
+@section('main-content')
+<h2>Produits : </h2>
+@foreach($products as $product)
+<div class="product">
+    <span>Référence : {{ $product['reference'] }}</span>
+    <span>Nom : {{ $product['name'] }}</span>
+    <span>Catalogue : {{ $product['catalog'] }}</span>
+    <span>
+        <form method="GET" action="{{url('/CRUD/update')}}">
+            @csrf
+            <label for="product-stock">Stock :</label>
+            <p class="field required">
+                <input type="number" id="product-stock" name="stock" class="text-input" value="{{ $product['stock'] }}">
+            </p>
+            <button type="submit">Mettre à jour le stock</button>
+        </form>
+    </span>
+</div>
+@endforeach
+@endsection
