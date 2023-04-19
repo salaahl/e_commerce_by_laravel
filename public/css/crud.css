@@ -18,10 +18,17 @@ html, body {
     font-family: 'Oswald', sans-serif;
 }
 h1 {
-  font-weight: 800!important;
-  text-transform: uppercase!important;
-  font-size: 3vw!important;
+    width: 80%;
+    margin: -5% auto 5% auto!important;
+    font-size: 6vw!important;
+    font-weight: 800!important;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2A272A;
+    background-color: #A3CFCD;
+    -webkit-text-stroke: 1px white;
 }
+
 .form .button,
 .form .message,
 .customSelect,
