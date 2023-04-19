@@ -23,8 +23,9 @@ h1 {
     font-weight: 800!important;
     text-align: center;
     text-transform: uppercase;
+    border-radius : 5px;
     color: #2A272A;
-    background-color: #A3CFCD;
+    background-color: lightslategrey;
     -webkit-text-stroke: 1px white;
 }
 
