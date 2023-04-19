@@ -41,8 +41,10 @@
         <ul class="checkboxes">
             <li class="checkbox">
                 <select id="product_catalog" class="text-input" name="product_catalog">
-                    <option value="Boissons">Boissons</option>
-                    <option value="Casher">Casher</option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                    <option value="Enfant">Enfant</option>
+                    <option value="Femme">Maison</option>
                 </select>
             </li>
         </ul>
