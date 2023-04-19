@@ -7,7 +7,7 @@
 @endsection
 
 @section('main-content')
-<h1>Produits : </h1>
+<h1>Produits</h1>
 @foreach($products as $product)
 <div class="product">
     <form class="form" method="GET" action="{{url('/CRUD/update')}}">
