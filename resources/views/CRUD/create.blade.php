@@ -13,9 +13,6 @@
     <p class="field required">
         <input type="text" id="catalog_name" name="catalog_name" required="required" class="text-input" placeholder="Reference du produit">
     </p>
-    <p class="field required">
-        <input type="text" id="product_name" name="product_name" required="required" class="text-input" placeholder="Reference du produit">
-    </p>
     <p class="field">
         <input class="button" type="submit" value="Send">
     </p>
