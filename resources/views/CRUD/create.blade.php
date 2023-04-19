@@ -3,7 +3,7 @@
 @section('head')
 @parent
 @section('title', 'Create')
-<link href="{{ asset('css/create_form.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/crud.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('main-content')
