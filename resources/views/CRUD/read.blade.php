@@ -10,7 +10,7 @@
 <h2>Produits : </h2>
 @foreach($products as $product)
 <div class="product">
-    <form method="GET" action="{{url('/CRUD/update')}}">
+    <form class="form" method="GET" action="{{url('/CRUD/update')}}">
         @csrf
         <p class="field required">
             <label>Catalogue :</label>
