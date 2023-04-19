@@ -12,8 +12,6 @@ html {
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  max-width: 1280px;
-  margin: auto!important;
 }
 html, body {
     font-family: 'Oswald', sans-serif;
@@ -30,7 +28,10 @@ h1 {
     background-color: lightslategrey;
     -webkit-text-stroke: 1px white;
 }
-
+h1, form {
+  max-width: 1280px;
+  margin: auto!important;
+}
 .form .button,
 .form .message,
 .customSelect,
