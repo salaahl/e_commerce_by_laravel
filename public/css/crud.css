@@ -18,8 +18,7 @@ html, body {
     font-family: 'Oswald', sans-serif;
 }
 h1 {
-    width: 80%;
-    margin: -5% auto 5% auto!important;
+    margin: auto!important;
     font-size: 6vw!important;
     font-weight: 800!important;
     text-align: center;
@@ -216,10 +215,8 @@ body {
   padding: 2em;
 }
 .form {
-  max-width: 40em;
   margin: 5% auto;
   padding: 2%;
-  position: relative;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
