@@ -87,22 +87,10 @@ class CRUDController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(
-        Request $request,
-        Basket $basket,
-        Bill $bill,
-        Catalog $catalog,
-        Order $order,
-        Product $product
-    ) {
+    public function update(Request $request) {
         $product = Product::where('reference', $request->reference)->first();
         $product->stock = $request->stock;
         $product->save();
-
-        return response()->json([
-            'name' => 'Abigail',
-            'state' => 'CA',
-        ]);
     }
 
     /**
