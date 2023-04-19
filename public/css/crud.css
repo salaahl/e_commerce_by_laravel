@@ -11,8 +11,9 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 body {
-  background-color: white;
   font-family: 'Montserrat', sans-serif;
+  max-width: 1280px;
+  margin: auto!important;
 }
 html, body {
     font-family: 'Oswald', sans-serif;
