@@ -11,7 +11,7 @@
     @csrf
     <h1>Ajouter un nouveau catalogue :</h1>
     <p class="field required">
-        <input type="text" id="catalog_name" name="catalog_name" required="required" class="text-input" placeholder="Reference du produit">
+        <input type="text" id="catalog" name="catalog" required="required" class="text-input" placeholder="Reference du produit">
     </p>
     <p class="field">
         <input class="button" type="submit" value="Send">
