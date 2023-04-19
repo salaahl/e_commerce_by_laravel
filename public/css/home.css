@@ -3,7 +3,7 @@
     font-size: 150%!important;
   }
   
-  header {
+  .carousel .inner {
     height: 30vh;
   }
 
@@ -29,7 +29,7 @@
   html, body {
     font-size: 105%;
   }
-  header {
+  .carousel .inner {
     height: 50vh;
   }
   
@@ -53,7 +53,7 @@
     font-size: 200%!important;
   }
   
-  header {
+  .carousel .inner {
     height: 90vh;
   }
 
@@ -70,7 +70,7 @@
   
   section .article, section .section-text {
     width: 30%;
-    margin: 1% 0 1% 0;
+    margin: 2% auto;
   }
 
   section.two {
@@ -103,8 +103,7 @@ html, body {
 }
 
 h1 {
-  width: 80%;
-  margin: -5% auto 5% auto!important;
+  margin: 2% auto!important;
   font-size: 6vw!important;
   font-weight: 800!important;
   text-align: center;
