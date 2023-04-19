@@ -35,7 +35,7 @@ class CRUDController extends Controller
         switch ($request->form) {
             case "catalog":
                 $catalog = new Catalog;
-                $catalog->catalog = $request->catalog_name;
+                $catalog->catalog = $request->catalog;
                 $catalog->save();
                 break;
             case "product":
