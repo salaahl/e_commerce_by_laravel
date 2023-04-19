@@ -95,7 +95,14 @@ class CRUDController extends Controller
         Order $order,
         Product $product
     ) {
-        //
+        $product = Product::where('reference', $request->reference)->first();
+        $product->stock = $request->stock;
+        $product->save();
+
+        return response()->json([
+            'name' => 'Abigail',
+            'state' => 'CA',
+        ]);
     }
 
     /**
