@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('picture');
             $table->integer('stock');
             $table->float('price');
+            $table->integer('orders');
             $table->timestamps();
             $table->foreign('catalog')->references('catalog')->on('catalogs');
         });
