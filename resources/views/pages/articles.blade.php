@@ -12,9 +12,34 @@
     <div class="filter-bar">
         <h4>Trier par :</h4>
         <ul class="filters">
-            <a href="#">Prix</a>
-            <a href="#">Notes</a>
-            <a href="#">Meilleures ventes</a>
+            <li>
+                <form>
+                    @csrf
+                    <button type="submit">Nouveautés</button>
+                    <input name="order" type="hidden" value="new">
+                </form>
+            </li>
+            <li>
+                <form>
+                    @csrf
+                    <button type="submit">Prix</button>
+                    <input name="order" type="hidden" value="price">
+                </form>
+            </li>
+            <li>
+                <form>
+                    @csrf
+                    <button type="submit">Notes</button>
+                    <input name="order" type="hidden" value="rating">
+                </form>
+            </li>
+            <li>
+                <form>
+                    @csrf
+                    <button type="submit">Meilleures ventes</button>
+                    <input name="order" type="hidden" value="bestseller">
+                </form>
+            </li>
         </ul>
     </div>
     <div class="articles">
