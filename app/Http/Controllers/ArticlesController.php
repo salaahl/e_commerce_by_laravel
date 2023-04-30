@@ -23,14 +23,29 @@ class ArticlesController extends Controller
     {
         $articles = null;
         
+        switch ($request->order) {
+            case "new":
+                $articles = Product::orderBy('created_at', 'ASC')->paginate(9);
+                break;
+            case "price":
+                $articles = Product::orderBy('price', 'ASC')->paginate(9);
+                break;
+            case "rating":
+                $articles = Product::orderBy('rating', 'DESC')->paginate(9);
+                break;
+            case "bestseller":
+                $articles = Product::orderBy('order', 'DESC')->paginate(9);
+                break;
+            default:
+                $articles = Product::paginate(9);
+        }
+        
         if(1 == 2) {
             // Je peux imaginer un tri par 'nouveauté' (en utilisant le timestramp 'created_at'), prix, notes (ajouter une colonne voir une table ds ce cas)
             // Pour le catalogue je n'ai qu'à trier en 'requêtant' de la sorte : Product::where('catalog', 'Homme')->paginate(9);
             $articles = Product::orderBy('$request->column', $request->order)->paginate(9);
             return response()->json(['articles' => $articles]);
         }
-        
-        $articles = Product::paginate(9);
 
         return view('pages/articles', [
             "articles" => $articles
