@@ -116,8 +116,8 @@ main {
   text-align: end;
 }
 
-ul li {
-  display: inline-block;
+.filters li {
+  display: inline-block!important;
   margin: 0 1% 0 1%;
 }
 
