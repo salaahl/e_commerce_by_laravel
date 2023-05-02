@@ -41,7 +41,7 @@
   }
 
   h1 {
-    font-size: 10vw!important;
+    font-size: 6vw!important;
   }
 
   .carousel .inner {
@@ -63,7 +63,7 @@
   }
 
   section.two h2 {
-    font-size: 15vw;
+    font-size: 6vw;
   }
 }
 
@@ -213,7 +213,6 @@ nav, main {
   min-width: 80%;
   max-width: 1280px;
   margin: 0 2% 0 2%;
-  padding-bottom: 5%;
   background-size: cover;
   background-position: center;
   scroll-snap-align: center;
@@ -221,6 +220,7 @@ nav, main {
 
 .slide .description {
   max-width: 60%;
+  margin-bottom: 5%;
   padding: 0.5%;
   text-align: center;
   border-radius: 5px;
