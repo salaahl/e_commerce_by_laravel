@@ -24,7 +24,7 @@ class HomeController extends Controller
     {
         return view('pages/profile', [
                 "user" => auth()->user(),
-                "order" => Order::where('user_email', auth()->user()->email)
+                "orders" => Order::where('user_email', auth()->user()->email)->get()
              ]
         );
     }
