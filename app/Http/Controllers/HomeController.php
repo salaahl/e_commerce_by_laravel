@@ -15,4 +15,12 @@ class HomeController extends Controller
     {
         return view('pages/home');
     }
+    
+    /**
+     * Handle the incoming request.
+     */
+    public function profile()
+    {
+        return view('pages/profile');
+    }
 }
