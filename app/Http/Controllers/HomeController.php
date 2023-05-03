@@ -24,7 +24,7 @@ class HomeController extends Controller
     {
         return view('pages/profile', [
                 "user" => auth()->user(),
-                "bills" => Bill::where('user_email', auth()->user()->email)->orderBy('created_at', 'DESC')->get()
+                "bills" => Bill::where('email', auth()->user()->email)->orderBy('created_at', 'DESC')->get()
              ]
         );
     }
