@@ -25,8 +25,8 @@
           <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div class="p-6 text-gray-900">
                   Historique de mes commandes :
-                  @foreach($orders as $order)
-                    <p> {{ $order }} </p>
+                  @foreach($bills as $bill)
+                    <p> {{ $bill }} </p>
                   @endforeach
               </div>
           </div>
