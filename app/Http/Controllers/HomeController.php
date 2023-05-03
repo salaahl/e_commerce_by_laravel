@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Basket;
 use App\Models\Product;
-use App\Models\Order;
+use App\Models\Bill;
 
 class HomeController extends Controller
 {
@@ -24,7 +24,7 @@ class HomeController extends Controller
     {
         return view('pages/profile', [
                 "user" => auth()->user(),
-                "orders" => Order::where('user_email', auth()->user()->email)->get()
+                "bills" => Bill::where('user_email', auth()->user()->email)->orderBy('created_at', 'DESC')->get()
              ]
         );
     }
