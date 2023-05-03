@@ -21,6 +21,10 @@ class HomeController extends Controller
      */
     public function profile()
     {
-        return view('pages/profile');
+        return view('pages/profile', [
+                "user" => auth()->user(),
+                "order" => Order::where('user_email', auth()->user()->email)
+             ]
+        );
     }
 }
