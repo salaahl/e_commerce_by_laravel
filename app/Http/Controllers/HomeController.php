@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Basket;
 use App\Models\Product;
+use App\Models\Order;
 use App\Models\Bill;
 
 class HomeController extends Controller
@@ -22,9 +23,16 @@ class HomeController extends Controller
      */
     public function profile()
     {
+        $bills = Bill::where('email', auth()->user()->email)->orderBy('created_at', 'DESC')->get();
+        $orders = [];
+        foreach($bills as $bill) {
+            $orders[] = Order::where('index_id', $bill->order_index)->orderBy('created_at', 'DESC')->get();
+        }
+        
         return view('pages/profile', [
                 "user" => auth()->user(),
-                "bills" => Bill::where('email', auth()->user()->email)->orderBy('created_at', 'DESC')->get()
+                "bills" => $bills,
+                "orders" => $orders
              ]
         );
     }
