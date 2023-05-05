@@ -28,6 +28,9 @@
                   @foreach($bills as $bill)
                     <p> {{ $bill }} </p>
                   @endforeach
+                  @foreach($orders as $order)
+                    <p> {{ $order }} </p>
+                  @endforeach
               </div>
           </div>
       </div>
