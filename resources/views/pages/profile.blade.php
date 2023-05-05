@@ -25,13 +25,13 @@
           <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div class="p-6 text-gray-900">
                   Historique de mes commandes :
-                  @php($i = 0)
                   @foreach($bills as $bill)
                     <p> 
                         Facture numéro : {{ $bill->id }}
                         <br>
                         Articles commandés :
                         <br>
+                        @php($i = 0)
                         @foreach($orders as $order)
                             @if($order[$i]->index_id' == $bill->order_index)
                                 - Référence : {{ $order[$i]->product_reference }}
