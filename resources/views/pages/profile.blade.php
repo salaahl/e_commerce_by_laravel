@@ -26,10 +26,16 @@
               <div class="p-6 text-gray-900">
                   Historique de mes commandes :
                   @foreach($bills as $bill)
-                    <p> {{ $bill }} </p>
-                  @endforeach
-                  @foreach($orders as $order)
-                    <p> {{ $order }} </p>
+                    <p> 
+                        Facture numéro : {{ $bill->id }}
+                        Articles commandés :
+                        @foreach($orders as $order)
+                            @if($order->index_id == $bill->order_index)
+                                - Référence : {{ $order->product_reference }}
+                                Quantité : {{ $order->quantity }}
+                            @endif
+                        @endforeach
+                    </p>
                   @endforeach
               </div>
           </div>
