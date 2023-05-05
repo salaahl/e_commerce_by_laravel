@@ -38,7 +38,7 @@
                                 Quantité : {{ $order[$i]->quantity }}
                             @endif
                             <br>
-                            @php(i++)
+                            @php($i++)
                         @endforeach
                     </p>
                   @endforeach
