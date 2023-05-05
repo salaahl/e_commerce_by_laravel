@@ -36,9 +36,9 @@
                             @if($order[$i]->index_id' == $bill->order_index)
                                 - Référence : {{ $order[$i]->product_reference }}
                                 Quantité : {{ $order[$i]->quantity }}
+                                @php($i++)
                             @endif
                             <br>
-                            @php($i++)
                         @endforeach
                     </p>
                   @endforeach
