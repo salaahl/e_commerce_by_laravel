@@ -30,9 +30,9 @@
                         Facture numéro : {{ $bill->id }}
                         Articles commandés :
                         @foreach($orders as $order)
-                            @if($order->index_id == $bill->order_index)
-                                - Référence : {{ $order->product_reference }}
-                                Quantité : {{ $order->quantity }}
+                            @if($order['index_id'] == $bill->order_index)
+                                - Référence : {{ $order['product_reference'] }}
+                                Quantité : {{ $order['quantity'] }}
                             @endif
                         @endforeach
                     </p>
