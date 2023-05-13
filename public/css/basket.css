@@ -17,6 +17,9 @@
 }
 
 @media (min-width: 768px) {
+    h1 {
+        font-size: 10vw !important;
+    }
 }
 
 @media (min-width: 1024px) {

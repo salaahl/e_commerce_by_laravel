@@ -1,0 +1,67 @@
+@media (min-width: 0px) {
+    h1 {
+        font-size: 15vw!important;
+    }
+
+    main {
+        margin: 0 2% 0 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 6vw !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        margin: 0;
+    }
+}
+
+html, body {
+    font-family: "Oswald", sans-serif;
+    max-width: 1280px;
+    margin: auto;
+}
+
+h1 {
+    max-width: 1280px;
+    margin: 2% auto 2% auto !important;
+    font-weight: 800 !important;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2a272a;
+    background-color: #a3cfcd;
+    -webkit-text-stroke: 1px white;
+}
+
+h3 {
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+    padding: 2%;
+    background-color: darkslategray;
+    color: white!important;
+}
+
+.bill {
+    border: 1px solid black;
+    margin: 1% 0 1% 0;
+    padding: 1%;
+}
+
+.article {
+    background-color: beige;
+    padding: 0 1% 0 1%;
+    margin: 1% 0 1% 0;
+}

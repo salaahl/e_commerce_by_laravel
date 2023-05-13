@@ -20,11 +20,11 @@ use App\Http\Controllers\BasketController;
 
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/user-profile', [HomeController::class, 'profile'])->name('profile');
 Route::get('/articles/{slug}', [ArticlesController::class, 'article'])->name('article');
 Route::get('/articles', [ArticlesController::class, 'articles'])->name('articles');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/user-profile', [HomeController::class, 'profile'])->name('profile');
     Route::get('/order', [BasketController::class, 'order'])->name('order');
     Route::get('/order/confirmation/{slug}', [BasketController::class, 'confirmation'])->name('confirmation');
     Route::get('/basket', [BasketController::class, 'show'])->name('basket');
