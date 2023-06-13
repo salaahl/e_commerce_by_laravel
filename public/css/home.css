@@ -12,7 +12,7 @@
   }
 
   .carousel .slide {
-    min-width: 100%;
+    min-width: 100%!important;
   }
   
   section, h1 {
@@ -94,7 +94,7 @@
   
   section .article, section .section-text {
     width: 30%;
-    margin: auto;
+    margin: 0;
   }
 
   section.two {
