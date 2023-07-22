@@ -18,6 +18,9 @@ use App\Http\Controllers\BasketController;
 |
 */
 
+Route::get('/404', function () {
+    abort(404);
+});
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/articles/{slug}', [ArticlesController::class, 'article'])->name('article');
