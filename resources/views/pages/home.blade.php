@@ -78,7 +78,7 @@
         @foreach($bestsellers as $article)
         <div class="article">
             <a href="/articles/{{ $article->reference }}">
-                <div class="article-img-container">
+                <div class="img-container">
                     <img src="{{ asset('images/' . $article->picture) }}" />
                 </div>
                 <div class="description">
@@ -97,7 +97,7 @@
         @if($article_featured)
         <div class="article">
             <a href="/articles/{{ $article_featured[0]->reference }}">
-                <div class="article-img-container">
+                <div class="img-container">
                     <img src="{{ asset('images/' . $article_featured[0]->picture) }}" />
                 </div>
             </a>
