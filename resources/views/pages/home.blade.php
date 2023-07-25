@@ -80,10 +80,10 @@
             <a href="/articles/{{ $article->reference }}">
                 <div class="img-container">
                     <img src="{{ asset('images/' . $article->picture) }}" />
-                </div>
-                <div class="description">
-                    <h3>{{ $article->name }}</h3>
-                    <h3>{{ $article->price }}€</h3>
+                    <div class="description">
+                        <h3>{{ $article->name }}</h3>
+                        <h3>{{ $article->price }}€</h3>
+                    </div>
                 </div>
             </a>
         </div>
