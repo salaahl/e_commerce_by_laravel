@@ -136,6 +136,12 @@ main {
   justify-content: space-between;
 }
 
+.article h3:first-child {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .article-img-container {
   display: flex;
   aspect-ratio: 1;

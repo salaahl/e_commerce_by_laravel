@@ -124,10 +124,6 @@
   section {
     width: 100%!important;
   }
-    
-  section .article, section .section-text {
-    margin: auto 0%;
-  }
 }
 
 html, body {
@@ -233,10 +229,25 @@ nav, main {
   background: rgb(0, 0, 0, 0.1);
 }
 
+section:not(.three) .article {
+  border-bottom: 4px solid;
+}
+
+.article .description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article h3:first-child {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .article .img-container {
   display: flex;
   aspect-ratio: 1;
-  border: 5px solid;
+  border: 4px solid;
 }
 
 .article .img-container img {
@@ -263,25 +274,4 @@ section.two h2 {
 
 section.two .section-text {
   margin: 0;
-}
-
-/* CSS à remanier... */
-.article {
-  border-bottom: 4px solid;
-}
-
-.article .description {
-  display: flex;
-  justify-content: space-between;
-}
-
-.article-img-container {
-  display: flex;
-  aspect-ratio: 1;
-  border: 4px solid;
-}
-
-.article-img-container img {
-  width: 60%;
-  margin: auto;
 }

@@ -78,7 +78,7 @@
         @foreach($bestsellers as $article)
         <div class="article">
             <a href="/articles/{{ $article->reference }}">
-                <div class="article-img-container">
+                <div class="img-container">
                     <img src="{{ asset('images/' . $article->picture) }}" />
                 </div>
                 <div class="description">
