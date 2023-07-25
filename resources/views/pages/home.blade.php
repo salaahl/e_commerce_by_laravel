@@ -96,7 +96,7 @@
     <section class="three">
         @if($article_featured)
         <div class="article">
-            <a href="/articles/{{ $article_featured->reference }}">
+            <a href="/articles/{{ $article_featured->picture }}">
                 <div class="article-img-container">
                     <img src="{{ asset('images/' . $article_featured->picture) }}" />
                 </div>
