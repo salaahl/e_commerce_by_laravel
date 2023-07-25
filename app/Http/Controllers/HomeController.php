@@ -15,7 +15,14 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('pages/home');
+        $bestsellers = Product::orderBy('created_at', 'DESC')->limit(2)->get();
+        $article_featured = Product::inRandomOrder()->limit(1)->get();
+        
+        return view('pages/home', [
+                "bestsellers" => $bestsellers,
+                "article_featured" => $article_featured
+             ]
+        );
     }
     
     /**
