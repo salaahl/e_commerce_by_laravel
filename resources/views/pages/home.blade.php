@@ -78,12 +78,12 @@
         @foreach($bestsellers as $article)
         <div class="article">
             <a href="/articles/{{ $article->reference }}">
-                <div class="img-container">
+                <div class="article-img-container">
                     <img src="{{ asset('images/' . $article->picture) }}" />
-                    <div class="description">
-                        <h3>{{ $article->name }}</h3>
-                        <h3>{{ $article->price }}€</h3>
-                    </div>
+                </div>
+                <div class="description">
+                    <h3>{{ $article->name }}</h3>
+                    <h3>{{ $article->price }}€</h3>
                 </div>
             </a>
         </div>
