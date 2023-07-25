@@ -96,16 +96,16 @@
     <section class="three">
         @if($article_featured)
         <div class="article">
-            <a href="/articles/{{ $article_featured['reference'] }}">
+            <a href="/articles/{{ $article_featured->reference }}">
                 <div class="article-img-container">
-                    <img src="{{ asset('images/' . $article_featured['picture']) }}" />
+                    <img src="{{ asset('images/' . $article_featured->picture) }}" />
                 </div>
             </a>
         </div>
         <div class="section-text">
-            <h3>{{ $article_featured['name'] }}</h3>
-            <p>{{ $article_featured['description'] }}</p>
-            <p>{{ $article_featured['price'] }}€</p>
+            <h3>{{ $article_featured->name }}</h3>
+            <p>{{ $article_featured->description }}</p>
+            <p>{{ $article_featured->price }}€</p>
         </div>
         @endif
     </section>
