@@ -98,14 +98,14 @@
         <div class="article">
             <a href="/articles/{{ $article_featured[0]->reference }}">
                 <div class="article-img-container">
-                    <img src="{{ asset('images/' . $article_featured->picture) }}" />
+                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" />
                 </div>
             </a>
         </div>
         <div class="section-text">
-            <h3>{{ $article_featured->name }}</h3>
-            <p>{{ $article_featured->description }}</p>
-            <p>{{ $article_featured->price }}€</p>
+            <h3>{{ $article_featured[0]->name }}</h3>
+            <p>{{ $article_featured[0]->description }}</p>
+            <p>{{ $article_featured[0]->price }}€</p>
         </div>
         @endif
     </section>
