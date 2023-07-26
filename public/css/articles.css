@@ -92,7 +92,7 @@ header, main, aside {
 }
 
 header {
-  background-image: url('/images/placeholder-banner.png');
+  background-image: url('/images/articles_page_banner.png');
   background-size: cover;
   background-position: center;
 }
