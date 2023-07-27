@@ -34,7 +34,7 @@ class ArticlesController extends Controller
                 $articles = Product::orderBy('rating', 'DESC')->paginate(9);
                 break;
             case "bestseller":
-                $articles = Product::orderBy('order', 'DESC')->paginate(9);
+                $articles = Product::orderBy('orders', 'DESC')->paginate(9);
                 break;
             default:
                 $articles = Product::paginate(9);
