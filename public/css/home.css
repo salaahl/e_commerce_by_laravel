@@ -30,6 +30,10 @@
   }
 
   section.two h2 {
+    backdrop-filter: blur(40px);
+    background: rgb(255, 255, 255, 0.1);
+    padding: 4%;
+    border-radius: 80px;
     font-size: 20vw;
     -webkit-text-stroke: 1px white;
   }
@@ -42,6 +46,10 @@
 
   h1, section.two h2 {
     font-size: 10vw!important;
+  }
+
+  section.two h2 {
+    padding: 10%;
   }
 
   .carousel .inner {
@@ -102,6 +110,7 @@
   }
 
   section.two h2 {
+    padding: 2% 5% 2% 5%;
     -webkit-text-stroke: 2px white;
   }
 

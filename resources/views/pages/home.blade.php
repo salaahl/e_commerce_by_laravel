@@ -64,7 +64,7 @@
 
 @section('main-content')
 <main>
-    <h1>Top ventes</h1>
+    <h1>Top <span style="background-color: lightcoral;">ventes</span></h1>
     <section class="one">
         <div class="section-text">
             <h3>Articles à la une</h3>
