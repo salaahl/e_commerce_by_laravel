@@ -10,7 +10,7 @@
 <main>
     <h1>Articles</h1>
     <div class="filter-bar">
-        <h4>Trier par :</h4>
+        <h4>Trier par (ordre ascendant) :</h4>
         <ul class="filters">
             <li>
                 <form>
@@ -29,14 +29,14 @@
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Notes</button>
+                    <button type="submit" disabled>Notes</button>
                     <input name="order" type="hidden" value="rating">
                 </form>
             </li>
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Meilleures ventes</button>
+                    <button type="submit" disabled>Meilleures ventes</button>
                     <input name="order" type="hidden" value="bestseller">
                 </form>
             </li>
