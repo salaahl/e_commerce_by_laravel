@@ -29,7 +29,7 @@
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Notes</button>
+                    <button type="submit" disabled>Notes</button>
                     <input name="order" type="hidden" value="rating">
                 </form>
             </li>
