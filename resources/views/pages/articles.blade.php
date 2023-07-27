@@ -10,7 +10,7 @@
 <main>
     <h1>Articles</h1>
     <div class="filter-bar">
-        <h4>Trier par :</h4>
+        <h4>Trier par (ordre ascendant) :</h4>
         <ul class="filters">
             <li>
                 <form>
