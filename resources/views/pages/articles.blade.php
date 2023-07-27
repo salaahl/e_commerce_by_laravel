@@ -36,7 +36,7 @@
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Meilleures ventes</button>
+                    <button type="submit" disabled>Meilleures ventes</button>
                     <input name="order" type="hidden" value="bestseller">
                 </form>
             </li>
