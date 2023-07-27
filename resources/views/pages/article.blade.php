@@ -68,6 +68,14 @@
             </form>
             @endif
         </div>
+        @else
+        <div>
+            <h2>Veuillez vous connecter pour accéder au statut de cet article.</h2>
+            <form method="GET" action="{{url('/login')}}">
+                @csrf
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
         @endif
     </div>
 </main>
