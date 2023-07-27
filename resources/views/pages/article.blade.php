@@ -49,7 +49,7 @@
             <h3 id="price">{{ $article->price }}€</h3>
             <p>{{ $article->description }}</p>
         </div>
-        @if ($app->user)
+        @if ($app->user())
         <div>
             @if ($article->stock === 0)
             <h2 style="color: red">Cet article n'est plus en stock</h2>
