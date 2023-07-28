@@ -24,6 +24,7 @@
     </header>
     @yield('main-content')
     @include('layouts.footer')
+    <script src="{{ asset('js/active_page.js') }}"></script>
 </body>
 
 </html>

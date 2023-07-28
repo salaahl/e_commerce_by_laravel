@@ -22,6 +22,10 @@
   
 }
 
+#navbar-default ul li a.active {
+  color: cadetblue;
+}
+
 button:disabled {
   filter: brightness(0.5);
 }
