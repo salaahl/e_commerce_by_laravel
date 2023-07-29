@@ -58,7 +58,7 @@
                 <button type="submit" disabled>Etre notifié de sa disponibilité</button>
             </form>
             @else
-            <form>
+            <form id="add-basket">
                 @csrf
                 <label for="quantity">Quantité :</label>
                 <select name="quantity" id="quantity">
