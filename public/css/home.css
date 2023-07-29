@@ -122,11 +122,6 @@
 }
 
 @media (min-width: 1200px) {
-  main, nav {
-    max-width: 1280px;
-    margin: auto;
-  }
-
   section, h1 {
     width: 100%;
     margin: 5% auto;
@@ -218,7 +213,6 @@ nav, main {
   justify-content: space-around;
   align-items: end;
   height: 100%;
-  max-width: 1280px;
   margin: 0 2% 0 2%;
   background-size: cover;
   background-position: center;
