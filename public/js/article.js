@@ -1,4 +1,4 @@
-if (document.querySelector("form")) {
+if (document.querySelector("#add-basket")) {
     this.addEventListener("submit", (e) => {
         e.preventDefault();
         const url = "/basket/store";
