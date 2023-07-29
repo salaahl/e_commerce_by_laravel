@@ -1,7 +1,7 @@
 <nav class="border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 xl:px-0">
         <a href="/" class="flex items-center">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
+            <img src="/images/ecommerce_logo.png" class="h-8 mr-3" alt="Website logo" />
             <span class="self-center text-2xl font-semibold whitespace-nowrap">e-commerce</span>
         </a>
         <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
