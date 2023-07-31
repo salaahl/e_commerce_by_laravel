@@ -1,19 +1,25 @@
-@media (min-width: 0px) {
-  h1, section.two h2 {
-    font-size: 15vw!important;
+@media (max-width: 767px) {
+  main h1, section.two h2 {
+    font-size: 15vw;
   }
 
-  h3 {
-    font-size: 150%!important;
-  }
-  
   .carousel .inner {
-    height: 30vh;
+    height: 40vh;
   }
-  
-  section, h1 {
-    width: 90%;
-    margin: 5% auto;
+
+  section.four {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-text h3, .article h3, .description h3 {
+    font-size: 150%;
+  }
+
+  .carousel .slide {
+    min-width: 100%;
   }
 
   section .article, section .section-text {
@@ -25,19 +31,28 @@
     height: 50vh;
   }
 
-  section.two h2 {
-    backdrop-filter: blur(40px);
-    background: rgb(255, 255, 255, 0.1);
-    padding: 4%;
-    border-radius: 80px;
-    font-size: 20vw;
+  main h1, section.two h2 {
+    padding: 4% 10% 4% 10%;
     -webkit-text-stroke: 1px white;
   }
 }
 
-@media (max-width: 768px) {
-  .carousel .slide {
-    min-width: 100%;
+@media (min-width: 768px) and (max-width: 1023px) {
+  main h1, section.two h2 {
+    font-size: 10vw;
+  }
+
+  .carousel .inner {
+    height: 80vh;
+  }
+
+  section .article, section .section-text {
+    width: 48%;
+    margin: 1% 0;
+  }
+
+  section.two h2 {
+    padding: 4% 10% 4% 10%;
   }
 }
 
@@ -45,41 +60,19 @@
   html, body {
     font-size: 105%;
   }
-
-  h1, section.two h2 {
-    font-size: 10vw!important;
-  }
-
-  section.two h2 {
-    padding: 10%;
-  }
-
-  .carousel .inner {
-    height: 50vh;
-  }
-
-  section, h1 {
-    width: 95%;
-  }
   
   section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  section .article, section .section-text {
-    width: 45%;
-    margin: 2%;
-  }
-}
 
-@media (min-width: 1024px) {
-  h1, section.two h2 {
-    font-size: 8vw!important;
+  .section-text {
+    aspect-ratio: 1;
   }
   
-  h3 {
-    font-size: 200%!important;
+  .section-text h3, .article h3, .description h3 {
+    font-size: 200%;
   }
   
   .carousel .inner {
@@ -98,21 +91,11 @@
     margin: 0 20% 0 2%;
   }
 
-  section {
-    margin: 2% auto;
-  }
-  
-  section .article, section .section-text {
-    width: 30%;
-    margin: 0;
-  }
-
   section.two {
     height: 40vh;
   }
 
-  section.two h2 {
-    padding: 2% 5% 2% 5%;
+  main h1, section.two h2 {
     -webkit-text-stroke: 2px white;
   }
 
@@ -121,35 +104,53 @@
   }
 }
 
-@media (min-width: 1200px) {
-  section, h1 {
-    width: 100%;
-    margin: 5% auto;
+@media (min-width: 1024px) {
+  main h1, section.two h2 {
+    font-size: 8vw;
   }
-  
-  section {
-    width: 100%!important;
+
+  section .article, section .section-text {
+    width: 30%;
+    margin: 0;
+  }
+
+  section.two h2 {
+    padding: 2% 5% 2% 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  section, main h1 {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {  
+  section, main h1 {
+    width: 100%;
   }
 }
 
 html, body {
   font-family: 'Oswald', sans-serif;
+  scroll-behavior: smooth;
 }
 
-h1 {
-  margin: 5% auto!important;
-  padding: 2%;
-  font-weight: 800!important;
+main h1 {
+  font-weight: 800;
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
   color: #2A272A;
   background-color: #A3CFCD;
-  -webkit-text-stroke: 1px white;
 }
 
-h3 {
-  font-weight: 800!important;
+section, main h1 {
+  margin: 5% auto;
+}
+
+.section-text h3, .article h3, .description h3 {
+  font-weight: 800;
   text-transform: uppercase;
   color: #343a40;
 }
@@ -229,9 +230,24 @@ nav, main {
 }
 
 .section-text {
-  aspect-ratio: 1;
   padding: 1%;
-  background: rgb(0, 0, 0, 0.1);
+  text-align: justify;
+}
+
+.section-text:nth-child(1) {
+  background-color: rgb(111, 97, 192, 0.7);
+}
+
+.section-text:nth-child(2) {
+  background-color: rgb(160, 132, 232, 0.7);
+}
+
+.section-text:nth-child(3) {
+  background-color: rgb(139, 232, 229, 0.7);
+}
+
+.section-text h3 {
+  filter: invert(1) contrast(2);
 }
 
 section:not(.three) .article {
@@ -272,6 +288,9 @@ section.two {
 }
 
 section.two h2 {
+  backdrop-filter: blur(40px);
+  background: rgb(255, 255, 255, 0.1);
+  border-radius: 80px;
   font-weight: 800;
   text-transform: uppercase;
   color: cadetblue;
