@@ -7,8 +7,8 @@
 @endsection
 
 @section('main-content')
-<h1>Votre panier</h1>
 <div class="global-container">
+    <h1>Votre panier</h1>
     <main>
         @php
         $index = 0;
