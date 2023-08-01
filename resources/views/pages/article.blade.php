@@ -43,43 +43,45 @@
     <div id="article-img-container">
         <img src="{{ asset('images/' . $article->picture) }}" />
     </div>
-    <div id="article">
-        <h3 id="name">{{ $article->name }}</h3>
-        <h3 id="price">{{ $article->price }}€</h3>
-        <p id="description">{{ $article->description }}</p>
-    </div>
-    <div id="article-order">
-        @if (auth()->user())
-        <div>
-            @if ($article->stock === 0)
-            <h2 style="color: red">Cet article n'est plus en stock</h2>
-            <form method="GET" action="{{url('/')}}">
-                @csrf
-                <button type="submit" disabled>Etre notifié de sa disponibilité</button>
-            </form>
+    <div>
+        <div id="article">
+            <h3 id="name">{{ $article->name }}</h3>
+            <h3 id="price">{{ $article->price }}€</h3>
+            <p id="description">{{ $article->description }}</p>
+        </div>
+        <div id="article-order">
+            @if (auth()->user())
+            <div>
+                @if ($article->stock === 0)
+                <h2 style="color: red">Cet article n'est plus en stock</h2>
+                <form method="GET" action="{{url('/')}}">
+                    @csrf
+                    <button type="submit" disabled>Etre notifié de sa disponibilité</button>
+                </form>
+                @else
+                <form id="add-basket">
+                    @csrf
+                    <label for="quantity">Quantité :</label>
+                    <select name="quantity" id="quantity">
+                        @for ($i = 1; $i <= $article->stock; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                            @endfor
+                    </select>
+                    <button type="submit">Ajouter au panier</button>
+                    <input name="reference" id="reference" type="hidden" value="{{ $article->reference }}">
+                </form>
+                @endif
+            </div>
             @else
-            <form id="add-basket">
-                @csrf
-                <label for="quantity">Quantité :</label>
-                <select name="quantity" id="quantity">
-                    @for ($i = 1; $i <= $article->stock; $i++)
-                        <option value="{{ $i }}">{{ $i }}</option>
-                        @endfor
-                </select>
-                <button type="submit">Ajouter au panier</button>
-                <input name="reference" id="reference" type="hidden" value="{{ $article->reference }}">
-            </form>
+            <div>
+                <h2 style="color: cadetblue;">Veuillez vous connecter pour accéder au statut de cet article.</h2>
+                <form method="GET" action="{{url('/login')}}">
+                    @csrf
+                    <button type="submit">Se connecter</button>
+                </form>
+            </div>
             @endif
         </div>
-        @else
-        <div>
-            <h2 style="color: cadetblue;">Veuillez vous connecter pour accéder au statut de cet article.</h2>
-            <form method="GET" action="{{url('/login')}}">
-                @csrf
-                <button type="submit">Se connecter</button>
-            </form>
-        </div>
-        @endif
     </div>
 </main>
 <script src="{{ asset('js/article.js') }}"></script>
