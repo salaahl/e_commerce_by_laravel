@@ -124,7 +124,7 @@ aside {
 
 #article-order button:after {
   content: "";
-  background-color: #ffe54c;
+  background-color: rgb(160, 132, 232, 0.7);
   width: 100%;
   z-index: -1;
   position: absolute;
