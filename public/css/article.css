@@ -66,7 +66,7 @@ aside {
   display: flex;
 }
 
-#article-img-container, #article-container {
+#article-img-container, #article-container, #article, #article-order {
   margin: 5% 0;
 }
 
@@ -84,8 +84,11 @@ aside {
 #article-container {
   display: flex;
   flex-direction: column;
-  padding: 0 1% 0 1%;
   z-index: 0;
+}
+
+#article, #article-order {
+  padding: 0 1% 0 1%;
 }
 
 #article {
