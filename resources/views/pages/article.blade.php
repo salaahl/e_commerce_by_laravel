@@ -43,7 +43,7 @@
     <div id="article-img-container">
         <img src="{{ asset('images/' . $article->picture) }}" />
     </div>
-    <div>
+    <div id="article-container">
         <div id="article">
             <h3 id="name">{{ $article->name }}</h3>
             <h3 id="price">{{ $article->price }}€</h3>
