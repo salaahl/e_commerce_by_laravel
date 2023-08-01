@@ -1,22 +1,31 @@
-@media (min-width: 0px) {
-  h3 {
-    font-size: 150%!important;
+@media (max-width: 767px) {
+  main h1 {
+    font-size: 15vw;
+    margin: -5% auto 5% auto;
   }
 
   header {
     height: 30vh;
   }
+}
 
-  .filter-bar {
-    margin: 0 5% 0 5%;
-  }
-  
+@media (max-width: 768px) { 
   main .article {
-    margin: 5%;
+    margin: 2% 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main h1 {
+    font-size: 10vw;
   }
 }
 
 @media (min-width: 768px) {
+  main h1 {
+    margin: -2% auto 2% auto;
+  }
+
   html, body {
     font-size: 105%;
   }
@@ -24,55 +33,49 @@
   header {
     height: 50vh;
   }
-
-  .filter-bar {
-    margin: 0 2% 0 2%;
-  }
   
   main .article {
     width: 45%;
-    margin: 2%;
+    margin: 2% 0;
   }
 }
 
 @media (min-width: 1024px) {
-  h3 {
-    font-size: 200%!important;
+  main h1 {
+    font-size: 8vw;
+  }
+
+  .article h3 {
+    font-size: 200%;
   }
 
   header {
     height: 70vh;
   }
-
-  .filter-bar {
-    margin: 0 1% 0 1%;
-  }
   
   main .article {
     width: 30%;
-    margin: 1%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main, aside {
+    padding: 0 2%;
   }
 }
 
 @media (min-width: 1200px) {
-  .filter-bar, main .article {
+  main .article {
     margin: 1% 0 1% 0;
   }
-}
-
-@media (min-width: 1201px) {
-  
 }
 
 html, body {
   font-family: 'Oswald', sans-serif;
 }
 
-h1 {
-  width: 80%;
-  margin: -5% auto 5% auto!important;
-  font-size: 6vw!important;
-  font-weight: 800!important;
+main h1 {
+  font-weight: 800;
   text-align: center;
   text-transform: uppercase;
   color: #2A272A;
@@ -80,8 +83,9 @@ h1 {
   -webkit-text-stroke: 1px white;
 }
 
-h3 {
-  font-weight: 800!important;
+.description h3 {
+  font-size: 150%;
+  font-weight: 800;
   text-transform: uppercase;
   color: #343a40;
 }
@@ -97,14 +101,10 @@ header {
   background-position: center;
 }
 
-main {
-  max-width: 1280px;
-  margin: auto;
-}
-
 .filter-bar {
   display: flex;
   justify-content: space-between;
+  margin: 1% auto;
   padding: 1%;
   color: white;
   background-color: #2A272A;
@@ -117,7 +117,7 @@ main {
 }
 
 .filters li {
-  display: inline-block!important;
+  display: inline-block;
   margin: 0 1% 0 1%;
 }
 

@@ -120,15 +120,12 @@
 }
 
 @media (max-width: 1024px) {
-  section, main h1 {
-    width: 95%;
+  main {
+    padding: 2%;
   }
 }
 
-@media (min-width: 1200px) {  
-  section, main h1 {
-    width: 100%;
-  }
+@media (min-width: 1200px) {
 }
 
 html, body {
