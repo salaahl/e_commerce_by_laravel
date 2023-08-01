@@ -40,15 +40,15 @@
     </nav>
 </aside>
 <main>
-    <div class="img-container">
+    <div id="article-img-container">
         <img src="{{ asset('images/' . $article->picture) }}" />
     </div>
-    <div class="description">
-        <div class="header">
-            <h3 id="name">{{ $article->name }}</h3>
-            <h3 id="price">{{ $article->price }}€</h3>
-            <p>{{ $article->description }}</p>
-        </div>
+    <div id="article">
+        <h3 id="name">{{ $article->name }}</h3>
+        <h3 id="price">{{ $article->price }}€</h3>
+        <p id="description">{{ $article->description }}</p>
+    </div>
+    <div id="article-order">
         @if (auth()->user())
         <div>
             @if ($article->stock === 0)
