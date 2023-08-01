@@ -71,7 +71,7 @@
             </form>
             @endif
             @else
-            <h2 style="color: cadetblue;">Veuillez vous connecter pour accéder au statut de cet article.</h2>
+            <h2 style="color: red;">Veuillez vous connecter pour accéder au statut de cet article.</h2>
             <form method="GET" action="{{url('/login')}}">
                 @csrf
                 <button type="submit">Se connecter</button>
