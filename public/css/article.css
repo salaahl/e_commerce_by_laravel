@@ -1,18 +1,8 @@
-@media (min-width: 0px) {
+@media (max-width: 767px) {
   main h3 {
     font-size: 150%;
   }
-  
-  .breadcrumb {
-    margin: 5%;
-  }
-  
-  #article-img-container, #article {
-    margin: 5%;
-  }
-}
-
-@media (max-width: 767px) {
+    
   #article button {
     padding: 13px 50px 13px;
   }
@@ -22,18 +12,7 @@
   #article button {
     padding: 13px 50px 13px;
   }
-}
-
-@media (min-width: 1024px) {
-  main h3 {
-    font-size: 200%!important;
-  }
-
-  .breadcrumb {
-    margin: 0 1% 0 1%;
-    height: 5vh;
-  }
-
+    
   main {
     display: flex;
     flex-wrap: wrap;
@@ -41,10 +20,20 @@
     height: 80vh;
     padding: 1% 0 1% 0;
   }
+
+  main h3 {
+    font-size: 200%;
+  }
   
-  #article-img-container, #article {
+  #article-img-container, #article-container {
     width: 48%;
     margin: 1%;
+  }
+}
+
+@media (max-width: 1024px) {
+  main, .breadcrumb {
+    padding: 0 2%;
   }
 }
 
@@ -53,7 +42,7 @@
     margin: auto;
   }
 
-  #article-img-container, #article {
+  #article-img-container, #article-container {
     margin: 0%;
   }
 }
@@ -77,6 +66,10 @@ aside {
   display: flex;
 }
 
+#article-img-container, #article-container {
+  margin: 5% 0;
+}
+
 #article-img-container {
   display: flex;
   aspect-ratio: 1;
@@ -88,13 +81,21 @@ aside {
   margin: auto;
 }
 
-#article {
+#article-container {
   display: flex;
   flex-direction: column;
   padding: 0 1% 0 1%;
   z-index: 0;
+}
+
+#article {
   background-color: rgb(111, 97, 192, 0.7);
   border: 4px solid rgb(111, 97, 192, 0.7);
+}
+
+#article-order {
+  background-color: rgb(160, 132, 232, 0.7);
+  border: 4px solid rgb(160, 132, 232, 0.7);
 }
 
 #article label, 
