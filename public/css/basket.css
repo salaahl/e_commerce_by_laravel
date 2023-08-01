@@ -1,14 +1,6 @@
-@media (min-width: 0px) {
+@media (max-width: 767px) {
     h1 {
-        font-size: 15vw !important;
-    }
-
-    main { 
-        margin: 0 1% 0 1%;
-    }
-
-    .article {
-        margin: 1%;
+        font-size: 15vw;
     }
 
     .article .img-container {
@@ -16,15 +8,15 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     h1 {
-        font-size: 10vw !important;
+        font-size: 10vw;
     }
 }
 
-@media (min-width: 1024px) {
-    h1 {
-        font-size: 6vw !important;
+@media (min-width: 768px) {
+    .global-container h1 {
+        font-size: 6vw;
     }
 
     .global-container {
@@ -60,7 +52,11 @@
     }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1024px) {
+    
+}
+
+@media (min-width: 1200px) {
     .global-container {
         max-width: 1280px;
         margin: auto;
@@ -72,10 +68,10 @@ body {
     font-family: "Oswald", sans-serif;
 }
 
-h1 {
+.global-container h1 {
     max-width: 1280px;
-    margin: 2% auto 2% auto !important;
-    font-weight: 800 !important;
+    margin: 2% auto 2% auto;
+    font-weight: 800;
     text-align: center;
     text-transform: uppercase;
     color: #2a272a;
