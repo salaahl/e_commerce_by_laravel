@@ -1,6 +1,6 @@
 @media (prefers-color-scheme: light) {
     .filter-bar * {
-      filter: invert(1);
+      color: white;
     }
 }
 
@@ -126,8 +126,8 @@ header {
 }
 
 .filters li form button.active {
-  background: #A3CFCD;
-  padding: 2% 4%;
+  background: black;
+  padding: 1px 4px;
   border-radius: 5px;
 }
 
