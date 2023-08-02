@@ -1,3 +1,10 @@
+@media (prefers-color-scheme: dark) {
+    html, body {
+      color: rgb(156, 163, 175);
+      background-color: rgb(31, 41, 55);
+    }
+}
+
 @media (max-width: 768px) {
   html, body {
     font-size: 105%;
