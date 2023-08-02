@@ -3,6 +3,10 @@
       color: rgb(156, 163, 175);
       background-color: rgb(31, 41, 55);
     }
+
+    .carrousel, .section-text {
+      color: black;
+    }
 }
 
 @media (prefers-color-scheme: light) {
