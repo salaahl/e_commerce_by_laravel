@@ -1,11 +1,13 @@
 @media (prefers-color-scheme: dark) {
     html, body {
-      color: white;
+      color: rgb(156, 163, 175);
       background-color: rgb(31, 41, 55);
     }
-    
-    main {
-     
+}
+
+@media (prefers-color-scheme: light) {
+    .section-text h3, .article h3, .description h3 {
+      color: #343a40;
     }
 }
 
@@ -160,7 +162,6 @@ section, main h1 {
 .section-text h3, .article h3, .description h3 {
   font-weight: 800;
   text-transform: uppercase;
-  color: #343a40;
 }
 
 nav, main {
