@@ -15,28 +15,28 @@
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Nouveautés</button>
+                    <button type="submit" @if(request()->get('order') == 'new') class="active" @endif>Nouveautés</button>
                     <input name="order" type="hidden" value="new">
                 </form>
             </li>
             <li>
                 <form>
                     @csrf
-                    <button type="submit">Prix</button>
+                    <button type="submit" @if(request()->get('order') == 'price') class="active" @endif>Prix</button>
                     <input name="order" type="hidden" value="price">
                 </form>
             </li>
             <li>
                 <form>
                     @csrf
-                    <button type="submit" disabled>Notes</button>
+                    <button type="submit" @if(request()->get('order') == 'rating') class="active" @endif disabled>Notes</button>
                     <input name="order" type="hidden" value="rating">
                 </form>
             </li>
             <li>
                 <form>
                     @csrf
-                    <button type="submit" disabled>Meilleures ventes</button>
+                    <button type="submit" @if(request()->get('order') == 'bestseller') class="active" @endif disabled>Meilleures ventes</button>
                     <input name="order" type="hidden" value="bestseller">
                 </form>
             </li>
