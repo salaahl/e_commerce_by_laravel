@@ -1,3 +1,9 @@
+@media (prefers-color-scheme: light) {
+    .filter-bar * {
+      filter: invert(1);
+    }
+}
+
 @media (max-width: 767px) {
   main h1 {
     font-size: 15vw;
@@ -87,7 +93,6 @@ main h1 {
   font-size: 150%;
   font-weight: 800;
   text-transform: uppercase;
-  color: #343a40;
 }
 
 header, main, aside {
@@ -106,7 +111,6 @@ header {
   justify-content: space-between;
   margin: 1% auto;
   padding: 1%;
-  color: white;
   background-color: #2A272A;
   border-radius: 5px;
 }
@@ -119,6 +123,12 @@ header {
 .filters li {
   display: inline-block;
   margin: 0 1% 0 1%;
+}
+
+.filters li form button.active {
+  background: #A3CFCD;
+  padding: 2% 4%;
+  border-radius: 5px;
 }
 
 .articles {
