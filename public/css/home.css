@@ -1,3 +1,9 @@
+@media (prefers-color-scheme: dark) {
+    main {
+      background-color: rgb(31, 41, 55);
+    }
+}
+
 @media (max-width: 767px) {
   main h1, section.two h2 {
     font-size: 15vw;
