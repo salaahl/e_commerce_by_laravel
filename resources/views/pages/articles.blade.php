@@ -51,7 +51,7 @@
                 </div>
                 <div class="description">
                     <h3>{{ $article['name'] }}</h3>
-                    <h3 class="price" style="color: cadetblue;">{{ $article['price'] }}€</h3>
+                    <h3>{{ $article['price'] }}€</h3>
                 </div>
             </a>
         </div>
