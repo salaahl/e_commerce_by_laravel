@@ -37,10 +37,6 @@
 }
 
 @media (min-width: 1200px) {
-  .breadcrumb {
-    margin: auto;
-  }
-
   #article-img-container, #article-container {
     margin: 0%;
   }
