@@ -10,17 +10,17 @@
 <h1>Mon profil</h1>
 <main>
     <div class="mx-auto">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-4">
-            <div class="profile text-gray-900">
+        <div class="overflow-hidden shadow-sm sm:rounded-lg mb-4">
+            <div class="profile">
                 <a href="/profile">Modifier mes informations</a>
             </div>
         </div>
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="text-gray-900">
+        <div class="overflow-hidden shadow-sm sm:rounded-lg">
+            <div>
                 Historique de mes commandes :
                 @foreach($bills as $bill)
                 <div class="bill">
-                    <h3>Facture numéro : {{ $bill->id }}</h3>
+                    <h3>Facture numéro {{ $bill->id }}</h3>
                     <br>
                     Articles commandés :
                     <br>

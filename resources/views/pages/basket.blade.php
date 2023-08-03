@@ -25,7 +25,7 @@
             <div class="content">
                 <div class="description">
                     <h3>{{ $article[0]->name }}</h3>
-                    <h3 class="price">{{ $article[0]->price }}€</h3>
+                    <h3>{{ $article[0]->price }}€</h3>
                 </div>
                 <div class="options">
                     <div>
@@ -69,7 +69,7 @@
         </div>
         <form method="GET" action="{{url('/order')}}">
             @csrf
-            <button type="submit">Commander</button>
+            <button class="button-stylised" type="submit">Commander</button>
         </form>
     </aside>
 </div>

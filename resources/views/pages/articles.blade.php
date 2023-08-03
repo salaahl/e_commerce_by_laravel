@@ -15,7 +15,7 @@
             <li>
                 <form>
                     @csrf
-                    <button type="submit" @if(request()->get('order') == 'new') class="active" @endif>Nouveautés</button>
+                    <button type="submit" @if(request()->get('order') == 'new' || !request()->get('order')) class="active" @endif>Nouveautés</button>
                     <input name="order" type="hidden" value="new">
                 </form>
             </li>

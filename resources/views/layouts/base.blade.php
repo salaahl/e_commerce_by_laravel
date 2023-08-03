@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.css" rel="stylesheet" />
     <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="antialiased">

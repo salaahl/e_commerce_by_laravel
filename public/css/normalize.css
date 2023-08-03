@@ -1,23 +1,54 @@
 @media (prefers-color-scheme: dark) {
-    html, body {
-      color: rgb(156, 163, 175);
-      background-color: rgb(31, 41, 55);
-    }
+  html, body {
+    color: rgb(156, 163, 175);
+    background-color: rgb(31, 41, 55);
+  }
+
+  .website-logo {
+    filter: contrast(0.4);
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   html, body {
     font-size: 105%;
   }
 
-  h1 {
+  body h1, main h1 {
+    font-size: 15vw;
+    -webkit-text-stroke: 1px white;
+  }
+
+  main h3 {
+    font-size: 150%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body h1, main h1 {
     font-size: 10vw;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   h1 {
-    font-size: 6vw;
+    -webkit-text-stroke: 2px white;
+  }
+
+  main h3 {
+    font-size: 200%;
+  }
+}
+
+@media (min-width: 1024px) {
+  body h1, main h1 {
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    padding: 0 2%;
   }
 }
 
@@ -25,12 +56,60 @@
   
 }
 
-@media (min-width: 1201px) {
-  
+html, body {
+  font-family: 'Oswald', sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav, main {
+  max-width: 1280px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: rgb(139, 232, 229);
+}
+
+/* La propriété ne prend pas sans le "body/main" */
+body h1, main h1 {
+  font-weight: 800;
+}
+
+main h3 {
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 #navbar-default ul li a.active {
-  color: cadetblue;
+  color: rgb(139, 232, 229);
+}
+
+.button-stylised {
+  position: relative;
+  width: 100%;
+  margin: 5% 0 5% 0;
+  padding: 13px 20px 13px;
+  border: 1px solid;
+}
+
+.button-stylised:after {
+  content: "";
+  background-color: rgb(213, 255, 228);
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-stylised:hover:after {
+  top: 0px;
+  left: 0px;
 }
 
 button:disabled {
