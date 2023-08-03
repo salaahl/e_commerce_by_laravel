@@ -70,13 +70,16 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   border-radius: 5px;
-  color: black;
   background-color: rgb(139, 232, 229);
 }
 
 /* La propriété ne prend pas sans le "body/main" */
 body h1, main h1 {
   font-weight: 800;
+}
+
+h1, h2 {
+  color: black;
 }
 
 main h3 {
