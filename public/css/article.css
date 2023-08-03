@@ -46,10 +46,6 @@
   }
 }
 
-aside {
-  display: flex;
-}
-
 #article-img-container {
   display: flex;
   aspect-ratio: 1;
