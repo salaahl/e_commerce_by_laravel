@@ -1,283 +1,287 @@
 @media (prefers-color-scheme: dark) {
     .carousel, .section-text {
-      color: black;
+        color: black;
     }
 }
 
 @media (prefers-color-scheme: light) {
     .section-text h3, .article h3, .description h3 {
-      color: #343a40;
+        color: #343a40;
     }
 }
 
 @media (max-width: 767px) {
-  section.two h2 {
-    font-size: 15vw;
-  }
+    section.two h2 {
+        font-size: 15vw;
+    }
 
-  .carousel .inner {
-    height: 40vh;
-  }
+    .carousel .inner {
+        height: 40vh;
+    }
 
-  section.four {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+    section.four {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 768px) {
-  .section-text h3, .article h3, .description h3 {
-    font-size: 150%;
-  }
+    .section-text h3, .article h3, .description h3 {
+        font-size: 150%;
+    }
 
-  .carousel .slide {
-    min-width: 100%;
-  }
+    .carousel .slide {
+        min-width: 100%;
+    }
 
-  section .article, section .section-text {
-    margin: 5% auto;
-    width: 100%;
-  }
+    section .article, section .section-text {
+        margin: 5% auto;
+        width: 100%;
+    }
 
-  section.two {
-    height: 50vh;
-  }
+    section.two {
+        height: 50vh;
+    }
 
-  main h1, section.two h2 {
-    padding: 4% 10% 4% 10%;
-    -webkit-text-stroke: 1px white;
-  }
+    main h1, section.two h2 {
+        padding: 4% 10% 4% 10%;
+        -webkit-text-stroke: 1px white;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  main h1, section.two h2 {
-    font-size: 10vw;
-  }
+    main h1, section.two h2 {
+        font-size: 10vw;
+    }
 
-  .carousel .inner {
-    height: 80vh;
-  }
+    .carousel .inner {
+        height: 80vh;
+    }
 
-  section .article, section .section-text {
-    width: 48%;
-    margin: 1% 0;
-  }
+    section .article, section .section-text {
+        width: 48%;
+        margin: 1% 0;
+    }
 
-  section.two h2 {
-    padding: 4% 10% 4% 10%;
-  }
+    section.two h2 {
+        padding: 4% 10% 4% 10%;
+    }
 }
 
-@media (min-width: 768px) {  
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+@media (min-width: 768px) {
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-  .section-text {
-    aspect-ratio: 1;
-  }
-  
-  .section-text h3, .article h3, .description h3 {
-    font-size: 200%;
-  }
-  
-  .carousel .inner {
-    height: 90vh;
-  }
+    .section-text {
+        aspect-ratio: 1;
+    }
 
-  .carousel .slide {
-    min-width: 80%;
-  }
-    
-  .carousel .slide:first-of-type {
-    margin: 0 2% 0% 20%;
-  }
-  
-  .carousel .slide:last-of-type {
-    margin: 0 20% 0 2%;
-  }
+    .section-text h3, .article h3, .description h3 {
+        font-size: 200%;
+    }
 
-  section.two {
-    height: 40vh;
-  }
+    .carousel .inner {
+        height: 90vh;
+    }
 
-  section.two h2 {
-    -webkit-text-stroke: 2px white;
-  }
+    .carousel .slide {
+        min-width: 80%;
+    }
 
-  section.three .article, section.three .section-text {
-    width: 48%;
-  }
+    .carousel .slide:first-of-type {
+        margin: 0 2% 0% 20%;
+    }
+
+    .carousel .slide:last-of-type {
+        margin: 0 20% 0 2%;
+    }
+
+    section.two {
+        height: 40vh;
+    }
+
+    section.two h2 {
+        -webkit-text-stroke: 2px white;
+    }
+
+    section.three .article, section.three .section-text {
+        width: 48%;
+    }
 }
 
 @media (min-width: 1024px) {
-  section.two h2 {
-    font-size: 8vw;
-  }
+    section.two h2 {
+        font-size: 8vw;
+    }
 
-  section .article, section .section-text {
-    width: 30%;
-    margin: 0;
-  }
+    section .article, section .section-text {
+        width: 30%;
+        margin: 0;
+    }
 
-  section.two h2 {
-    padding: 2% 5% 2% 5%;
-  }
+    section.two h2 {
+        padding: 2% 5% 2% 5%;
+    }
 }
 
 section, main h1 {
-  margin: 5% auto;
+    margin: 5% auto;
 }
 
 .section-text h3, .article h3, .description h3 {
-  font-weight: 800;
-  text-transform: uppercase;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 .carousel {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .slide a {
-  height: 100%;
-  width: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 .arrow {
-  border: solid white;
-  border-width: 0 1vw 1vw 0;
-  display: inline-block;
-  padding: 15%;
-  filter: drop-shadow(2px 4px 6px black);
+    border: solid white;
+    border-width: 0 1vw 1vw 0;
+    display: inline-block;
+    padding: 15%;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .previous {
-  transform: rotate(130deg);
+    transform: rotate(130deg);
 }
 
 .next {
-  transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 #slide1 a:first-of-type, #slide4 a:last-of-type {
-  z-index: -1;
+    z-index: -1;
 }
 
 .carousel .inner {
-  display: flex;
-  width: 100%;
-  margin: auto;
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* Add this for smooth scrolling on Safari */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
 }
 
 .carousel .inner::-webkit-scrollbar {
-  display: none;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .carousel .slide {
-  display: flex;
-  justify-content: space-around;
-  align-items: end;
-  height: 100%;
-  margin: 0 2% 0 2%;
-  background-size: cover;
-  background-position: center;
-  scroll-snap-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end; /* Changed "end" to "flex-end" for Safari compatibility */
+    height: 100%;
+    margin: 0 2% 0 2%;
+    background-size: cover;
+    background-position: center;
+    -webkit-scroll-snap-align: center;
+    scroll-snap-align: center; /* Added standard scroll-snap-align property */
 }
 
 .slide .description {
-  max-width: 60%;
-  margin-bottom: 5%;
-  padding: 0.5%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: white;
+    max-width: 60%;
+    margin-bottom: 5%;
+    padding: 0.5%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .section-text {
-  padding: 1%;
-  text-align: justify;
+    padding: 1%;
+    text-align: justify;
 }
 
 .section-text:nth-child(1) {
-  background-color: rgb(111, 97, 192, 0.7);
-    border: 4px solid rgb(111, 97, 192, 0.7);
+    background-color: rgba(111, 97, 192, 0.7); /* Updated rgba value for Safari */
+    border: 4px solid rgba(111, 97, 192, 0.7);
 }
 
 .section-text:nth-child(2) {
-  background-color: rgb(160, 132, 232, 0.7);
-  border: 4px solid rgb(160, 132, 232, 0.7);
+    background-color: rgba(160, 132, 232, 0.7); /* Updated rgba value for Safari */
+    border: 4px solid rgba(160, 132, 232, 0.7);
 }
 
 .section-text:nth-child(3) {
-  background-color: rgb(139, 232, 229, 0.7);
-  border: 4px solid rgb(139, 232, 229, 0.7);
+    background-color: rgba(139, 232, 229, 0.7); /* Updated rgba value for Safari */
+    border: 4px solid rgba(139, 232, 229, 0.7);
 }
 
 .section-text h3 {
-  filter: invert(1) contrast(2);
+    -webkit-filter: invert(1) contrast(2);
+    filter: invert(1) contrast(2);
 }
 
 section:not(.three) .article {
-  border-bottom: 4px solid;
+    border-bottom: 4px solid;
 }
 
 .article .description {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .article h3:first-child {
-  text-wrap: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+    white-space: nowrap; /* Changed "text-wrap" to "white-space" for Safari compatibility */
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .article .img-container {
-  display: flex;
-  aspect-ratio: 1;
-  border: 4px solid;
+    display: flex;
+    aspect-ratio: 1;
+    border: 4px solid;
 }
 
 .article .img-container img {
-  width: 60%;
-  margin: auto;
+    width: 60%;
+    margin: auto;
 }
 
 section.two {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('/images/cool-background.svg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/cool-background.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 section.two h2 {
-  backdrop-filter: blur(40px);
-  background: rgb(255, 255, 255, 0.1);
-  border-radius: 80px;
-  font-weight: 800;
-  text-transform: uppercase;
+    -webkit-backdrop-filter: blur(40px); /* Updated to use "-webkit-backdrop-filter" */
+    backdrop-filter: blur(40px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 80px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 section.two .section-text {
-  margin: 0;
+    margin: 0;
 }
 
 section.three h3 {
-  text-decoration: underline;
+    text-decoration: underline;
 }
