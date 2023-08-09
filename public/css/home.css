@@ -117,7 +117,7 @@
     font-size: 8vw;
   }
 
-  section:not(.carousel) .article, section:not(.carousel) .section-text {
+  section:not(.carousel):not(.featured) .article, section:not(.carousel):not(.featured) .section-text {
     width: 30%;
     margin: 0;
   }
