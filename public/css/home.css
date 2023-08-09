@@ -127,7 +127,7 @@
   }
 }
 
-section:not(.carousel), main h1 {
+section:not(.carousel), main h1, section.featured div:has(> h2) {
   margin: 5% auto;
 }
 
@@ -259,6 +259,7 @@ section.featured div:has(> h2) {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-image: url('/images/cool-background.svg');
   background-attachment: fixed;
   background-position: center;
@@ -266,7 +267,7 @@ section.featured div:has(> h2) {
   background-size: cover;
 }
 
-section.featured div:has(> h2) {
+section.featured h2 {
   backdrop-filter: blur(40px);
   background: rgb(255, 255, 255, 0.1);
   border-radius: 80px;
