@@ -1,92 +1,85 @@
 @media (max-width: 767px) {
-    #article-img-container, #article-container, #article, #article-order {
-        margin: 5% 0;
-        -webkit-margin: 5% 0;
-    }
-    
-    #article-order button {
-        padding: 13px 50px 13px;
-        -webkit-padding: 13px 50px 13px;
-    }
+  #article-img-container, #article-container, #article, #article-order {
+    margin: 5% 0;
+  }
+
+  #article-order button {
+    padding: 13px 50px 13px;
+  }
 }
 
 @media (min-width: 768px) {    
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        height: 80vh;
-        padding: 1% 0 1% 0;
-    }
-    
-    #article-img-container, #article-container {
-        width: 48%;
-    }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 80vh;
+    padding: 1% 0 1% 0;
+  }
 
-    #article-order {
-        margin: auto 0;
-    }
+  #article-img-container, #article-container {
+    width: 48%;
+  }
 
-    #article-order button {
-        padding: 13px 50px 13px;
-        -webkit-padding: 13px 50px 13px;
-    }
+  #article-order {
+    margin: auto 0;
+  }
+
+  #article-order button {
+    padding: 13px 50px 13px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .breadcrumb {
-        padding: 0 2%;
-        -webkit-padding: 0 2%;
-    }
+  .breadcrumb {
+    padding: 0 2%;
+  }
 }
 
 @media (min-width: 1200px) {
-    #article-img-container, #article-container {
-        margin: 0%;
-        -webkit-margin: 0%;
-    }
+  #article-img-container, #article-container {
+    margin: 0%;
+  }
 }
 
 #article-img-container {
-    display: flex;
-    -webkit-aspect-ratio: 1;
-    -moz-aspect-ratio: 1;
-    aspect-ratio: 1;
-    border: 5px solid;
+  display: flex;
+  aspect-ratio: 1;
+  border: 5px solid;
 }
 
 #article-img-container img {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 
 #article-container {
-    display: flex;
-    flex-direction: column;
-    z-index: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
 }
 
 #article, #article-order {
-    padding: 0 1% 0 1%;
+  padding: 0 1% 0 1%;
 }
 
 #article {
-    border: 4px solid rgba(111, 97, 192, 0.7);
+  border: 4px solid rgb(111, 97, 192, 0.7);
 }
 
 #article-order label, 
 #article-order select, 
 #article-order button {
-    display: block;
-    width: 100%;
-    margin-top: 5%;
+  display: block;
+  width: 100%;
+  margin-top: 5%;
 }
 
 #article select {
-    text-transform: uppercase;
-    border: 1px solid;
+  text-transform: uppercase;
+  border: 1px solid;
 }
 
 #article #description {
-    margin: 10% 0 10% 0;
+  margin: 10% 0 10% 0;
 }
