@@ -91,7 +91,9 @@
         @endif
     </section>
     <section class="featured">
-        <h2>à la une</h2>
+        <div>
+            <h2>à la une</h2>
+        </div>
         @if($article_featured)
         <div class="article">
             <a href="/articles/{{ $article_featured[0]->reference }}">
