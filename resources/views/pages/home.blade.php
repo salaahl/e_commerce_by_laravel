@@ -8,58 +8,58 @@
 
 @section('header')
 @parent
-<div class="carousel">
-    <div class="inner">
+<section class="carousel">
+    <div class="inner" role="list">
         <div id="slide1" class="slide" style="background-image: url('images/illustration_1.jpg');">
             <a href="#"><i class="arrow previous"></i></a>
-            <div class="description">
+            <article class="description">
                 <h3>Slide 1</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore
                     magna aliqua.
                 </p>
-            </div>
+            </article>
             <a href="#slide2"><i class="arrow next"></i></a>
         </div>
         <div id="slide2" class="slide" style="background-image: url('images/illustration_2.jpg');">
             <a href="#slide1"><i class="arrow previous"></i></a>
-            <div class="description">
+            <article class="description">
                 <h3>Slide 2</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore
                     magna aliqua.
                 </p>
-            </div>
+            </article>
             <a href="#slide3"><i class="arrow next"></i></a>
         </div>
         <div id="slide3" class="slide" style="background-image: url('images/illustration_1.jpg');">
             <a href="#slide2"><i class="arrow previous"></i></a>
-            <div class="description">
+            <article class="description">
                 <h3>Slide 3</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore
                     magna aliqua.
                 </p>
-            </div>
+            </article>
             <a href="#slide4"><i class="arrow next"></i></a>
         </div>
         <div id="slide4" class="slide" style="background-image: url('images/illustration_2.jpg');">
             <a href="#slide3"><i class="arrow previous"></i></a>
-            <div class="description">
+            <article class="description">
                 <h3>Slide 4</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore
                     magna aliqua.
                 </p>
-            </div>
+            </article>
             <a href="#"><i class="arrow next"></i></a>
         </div>
     </div>
-</div>
+</section>
 @endsection
 
 @section('main-content')
@@ -76,7 +76,7 @@
         </div>
         @if($bestsellers)
         @foreach($bestsellers as $article)
-        <div class="article">
+        <article class="article">
             <a href="/articles/{{ $article->reference }}">
                 <div class="img-container">
                     <img src="{{ asset('images/' . $article->picture) }}" />
@@ -86,7 +86,7 @@
                     <h3>{{ $article->price }}€</h3>
                 </div>
             </a>
-        </div>
+        </article>
         @endforeach
         @endif
     </section>
@@ -98,7 +98,7 @@
         <div class="article">
             <a href="/articles/{{ $article_featured[0]->reference }}">
                 <div class="img-container">
-                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" />
+                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" alt="article image"/>
                 </div>
             </a>
         </div>
