@@ -65,7 +65,7 @@
 @section('main-content')
 <main>
     <h1>Top ventes</h1>
-    <section class="one">
+    <section class="bestsellers">
         <div class="section-text">
             <h3>Articles à la une</h3>
             <p>
@@ -90,7 +90,7 @@
         @endforeach
         @endif
     </section>
-    <section class="two">
+    <section class="featured">
         <h2>à la une</h2>
     </section>
     <section class="three">
@@ -111,7 +111,7 @@
         </div>
         @endif
     </section>
-    <section class="four">
+    <section class="coming-soon">
         <div class="article">
             <a href="article.html">
                 <div class="img-container">
