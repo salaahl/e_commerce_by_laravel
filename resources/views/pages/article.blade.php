@@ -41,15 +41,15 @@
 </aside>
 <main>
     <div id="article-img-container">
-        <img src="{{ asset('images/' . $article->picture) }}" />
+        <img src="{{ asset('images/' . $article->picture) }}" alt="{{ $article->name }} picture"/>
     </div>
-    <div id="article-container">
-        <div id="article">
+    <article id="article-container">
+        <section id="article">
             <h3 id="name">{{ $article->name }}</h3>
             <h3 id="price">{{ $article->price }}€</h3>
             <p id="description">{{ $article->description }}</p>
-        </div>
-        <div id="article-order">
+        </section>
+        <section id="article-order">
             @if (auth()->user())
             @if ($article->stock === 0)
             <h2 style="color: red">Cet article n'est plus en stock</h2>
@@ -77,8 +77,8 @@
                 <button class="button-stylised" type="submit">Se connecter</button>
             </form>
             @endif
-        </div>
-    </div>
+        </section>
+    </article>
 </main>
 <script src="{{ asset('js/article.js') }}"></script>
 @endsection
