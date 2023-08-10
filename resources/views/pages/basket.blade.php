@@ -16,13 +16,13 @@
         @endphp
         @if(isset($articles))
         @foreach($articles as $article)
-        <div class="article">
-            <div class="img-container">
+        <article class="article">
+            <section class="img-container">
                 <a href="{{ '/articles/' . $article[0]->reference }}">
                     <img src="{{ asset('images/' . $article[0]->picture) }}" />
                 </a>
-            </div>
-            <div class="content">
+            </section>
+            <section class="content">
                 <div class="description">
                     <h3>{{ $article[0]->name }}</h3>
                     <h3>{{ $article[0]->price }}€</h3>
@@ -45,8 +45,8 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </article>
         @php
         $total += $article[0]->price * $quantity[$index];
         $index++;
@@ -57,16 +57,16 @@
         @endif
     </main>
     <aside>
-        <div id="total">
+        <section id="total">
             <h2>Total : {{ $total }}€</h2>
-        </div>
-        <div id="customer">
+        </section>
+        <section id="customer">
             <h4>{{ $user->name }}</h4>
             <h4>{{ $user->surname }}</h4>
             <h4>{{ $user->address }}</h4>
             <h4>{{ $user->phone }}</h4>
             <h4>{{ $user->email }}</h4>
-        </div>
+        </section>
         <form method="GET" action="{{url('/order')}}">
             @csrf
             <button class="button-stylised" type="submit">Commander</button>
