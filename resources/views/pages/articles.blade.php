@@ -9,7 +9,7 @@
 @section('main-content')
 <main>
     <h1>Articles</h1>
-    <div class="filter-bar">
+    <aside class="filter-bar">
         <h4>Trier par (ordre ascendant) :</h4>
         <ul class="filters">
             <li>
@@ -41,22 +41,22 @@
                 </form>
             </li>
         </ul>
-    </div>
-    <div class="articles">
+    </aside>
+    <section class="articles">
         @foreach($articles as $article)
-        <div class="article">
+        <article class="article">
             <a href="/articles/{{ $article['reference'] }}">
                 <div class="article-img-container">
-                    <img src="{{ asset('images/' . $article['picture']) }}" />
+                    <img src="{{ asset('images/' . $article['picture']) }}" alt="{{ $article['name'] }} picture"/>
                 </div>
                 <div class="description">
                     <h3>{{ $article['name'] }}</h3>
                     <h3>{{ $article['price'] }}€</h3>
                 </div>
             </a>
-        </div>
+        </article>
         @endforeach
-    </div>
+    </section>
 </main>
 <aside>
     {{ $articles->links() }}
