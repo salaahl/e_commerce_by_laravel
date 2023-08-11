@@ -90,13 +90,6 @@
             <h2>à la une</h2>
         </div>
         @if($article_featured)
-        <div class="article">
-            <a href="/articles/{{ $article_featured[0]->reference }}">
-                <div class="img-container">
-                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" alt="article image"/>
-                </div>
-            </a>
-        </div>
         <div class="section-text">
             <a href="/articles/{{ $article_featured[0]->reference }}">
                 <h3>{{ $article_featured[0]->name }}</h3>
@@ -104,30 +97,37 @@
             <p>{{ $article_featured[0]->description }}</p>
             <p>{{ $article_featured[0]->price }}€</p>
         </div>
+        <div class="article">
+            <a href="/articles/{{ $article_featured[0]->reference }}">
+                <div class="img-container">
+                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" alt="article image"/>
+                </div>
+            </a>
+        </div>
         @endif
     </section>
     <section class="coming-soon">
-        <div class="article">
-            <a href="article.html">
-                <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
-                </div>
-            </a>
-        </div>
-        <div class="article">
-            <a href="article.html">
-                <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
-                </div>
-            </a>
-        </div>
         <div class="section-text">
-            <h3>Section 4</h3>
+            <h3>Nouvelle collection</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
             </p>
+        </div>
+        <div class="article">
+            <a href="article.html">
+                <div class="img-container">
+                    <img src="{{ asset('images/dress.png') }}" />
+                </div>
+            </a>
+        </div>
+        <div class="article">
+            <a href="article.html">
+                <div class="img-container">
+                    <img src="{{ asset('images/dress.png') }}" />
+                </div>
+            </a>
         </div>
     </section>
 </main>
