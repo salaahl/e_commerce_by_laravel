@@ -220,17 +220,17 @@ section:not(.carousel), main h1 {
   text-align: justify;
 }
 
-.section-text:nth-child(1) {
+section.bestsellers .section-text {
   background-color: rgb(111, 97, 192, 0.7);
     border: 4px solid rgb(111, 97, 192, 0.7);
 }
 
-.section-text:nth-child(2) {
+section.featured .section-text {
   background-color: rgb(160, 132, 232, 0.7);
   border: 4px solid rgb(160, 132, 232, 0.7);
 }
 
-.section-text:nth-child(3) {
+section.coming-soon .section-text {
   background-color: rgb(139, 232, 229, 0.7);
   border: 4px solid rgb(139, 232, 229, 0.7);
 }
