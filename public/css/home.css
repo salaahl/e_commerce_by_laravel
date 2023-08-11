@@ -23,6 +23,7 @@
   }
 
   .section-text {
+    width: 100%;
     margin-bottom: 5%;
   }
     
@@ -115,10 +116,6 @@
   section.featured .article, section.featured .section-text {
     width: 48%;
   }
-
-  section.coming-soon {
-    flex-direction: row-reverse;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -128,11 +125,14 @@
 
   section:not(.carousel):not(.featured) .article, section:not(.carousel):not(.featured) .section-text {
     width: 30%;
-    margin: 0;
   }
 
   section.bestsellers h2, section.featured h2 {
     padding: 2% 5% 2% 5%;
+  }
+
+  section.coming-soon {
+    flex-direction: row-reverse;
   }
 }
 
