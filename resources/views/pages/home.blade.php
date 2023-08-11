@@ -64,15 +64,10 @@
 
 @section('main-content')
 <main>
-    <h1>Top ventes</h1>
+    <h1>Accueil</h1>
     <section class="bestsellers">
         <div class="section-text">
-            <h3>Articles à la une</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-            </p>
+            <h2>Top ventes</h2>
         </div>
         @if($bestsellers)
         @foreach($bestsellers as $article)

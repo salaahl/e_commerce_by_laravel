@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 767px) {
-  section.featured h2 {
+  section.bestsellers h2, section.featured h2 {
     font-size: 15vw;
   }
 
@@ -43,14 +43,14 @@
     height: 50vh;
   }
 
-  main h1, section.featured h2 {
+  main h1, section.bestsellers h2, section.featured h2 {
     padding: 4% 10% 4% 10%;
     -webkit-text-stroke: 1px white;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  main h1, section.featured h2 {
+  main h1, section.bestsellers h2, section.featured h2 {
     font-size: 10vw;
   }
 
@@ -63,7 +63,7 @@
     margin: 1% 0;
   }
 
-  section.featured h2 {
+  section.bestsellers h2, section.featured h2 {
     padding: 4% 10% 4% 10%;
   }
 }
@@ -103,7 +103,7 @@
     height: 40vh;
   }
 
-  section.featured h2 {
+  section.bestsellers h2, section.featured h2 {
     -webkit-text-stroke: 2px white;
   }
 
@@ -113,7 +113,7 @@
 }
 
 @media (min-width: 1024px) {
-  section.featured h2 {
+  section.bestsellers h2, section.featured h2 {
     font-size: 8vw;
   }
 
@@ -122,7 +122,7 @@
     margin: 0;
   }
 
-  section.featured h2 {
+  section.bestsellers h2, section.featured h2 {
     padding: 2% 5% 2% 5%;
   }
 }
@@ -131,7 +131,7 @@ section:not(.carousel), main h1 {
   margin: 5% auto;
 }
 
-.section-text h3, .article h3, .description h3 {
+section.bestsellers h2, .section-text h3, .article h3, .description h3 {
   font-weight: 800;
   text-transform: uppercase;
 }
