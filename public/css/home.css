@@ -21,6 +21,10 @@
     width: 48%;
     margin: 0 0 4% 0;
   }
+
+  .section-text {
+    margin-bottom: 5%;
+  }
     
   section.featured h2 {
     font-size: 15vw;
