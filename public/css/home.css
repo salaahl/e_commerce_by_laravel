@@ -13,6 +13,7 @@
 @media (max-width: 767px) {
   section:not(.carousel) {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
     }
     
@@ -30,8 +31,7 @@
   }
 
   section.coming-soon {
-    display: flex;
-    flex-direction: column-reverse;
+    flex-wrap: wrap;
   }
 }
 
