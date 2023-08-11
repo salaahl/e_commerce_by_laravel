@@ -11,6 +11,16 @@
 }
 
 @media (max-width: 767px) {
+  section:not(.carousel) {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+  section:not(.featured):not(.carousel) .article {
+    width: 48%;
+    margin: 0 0 4% 0;
+  }
+    
   section.featured h2 {
     font-size: 15vw;
   }
@@ -239,7 +249,7 @@ section:not(.featured):not(.carousel) .article {
 }
 
 .article h3:first-child {
-  text-wrap: nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
