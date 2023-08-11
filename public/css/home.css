@@ -29,10 +29,6 @@
   .carousel .inner {
     height: 40vh;
   }
-
-  section.coming-soon {
-    flex-wrap: wrap;
-  }
 }
 
 @media (max-width: 768px) {
@@ -119,6 +115,10 @@
 
   section.featured .article, section.featured .section-text {
     width: 48%;
+  }
+
+  section.coming-soon {
+    flex-direction: row-reverse;
   }
 }
 
