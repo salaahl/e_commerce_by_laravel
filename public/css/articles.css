@@ -26,7 +26,8 @@
 
 @media (max-width: 768px) { 
   main .article {
-    margin: 2% 0;
+    width: 48%;
+    margin: 4% 0;
   }
 }
 
@@ -119,7 +120,7 @@ header {
 }
 
 .article h3:first-child {
-  text-wrap: nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
