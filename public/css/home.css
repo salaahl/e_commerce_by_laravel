@@ -40,11 +40,6 @@
     min-width: 100%;
   }
 
-  section:not(.carousel) .article, section:not(.carousel) .section-text {
-    margin: 5% auto;
-    width: 100%;
-  }
-
   section.featured div:has(> h2) {
     height: 50vh;
   }
