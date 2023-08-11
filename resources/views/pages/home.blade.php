@@ -112,27 +112,27 @@
         @endif
     </section>
     <section class="coming-soon">
-        <div class="article">
-            <a href="article.html">
-                <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
-                </div>
-            </a>
-        </div>
-        <div class="article">
-            <a href="article.html">
-                <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
-                </div>
-            </a>
-        </div>
         <div class="section-text">
-            <h3>Section 4</h3>
+            <h3>Nouvelle collection</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                 consequat.
             </p>
+        </div>
+        <div class="article">
+            <a href="article.html">
+                <div class="img-container">
+                    <img src="{{ asset('images/dress.png') }}" />
+                </div>
+            </a>
+        </div>
+        <div class="article">
+            <a href="article.html">
+                <div class="img-container">
+                    <img src="{{ asset('images/dress.png') }}" />
+                </div>
+            </a>
         </div>
     </section>
 </main>
