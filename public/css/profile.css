@@ -10,6 +10,13 @@
     }
 }
 
+@media (max-width: 1280px) {
+    body h1 {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}
+
 @media (min-width: 1280px) {
     body h1 {
         margin-left: auto;
