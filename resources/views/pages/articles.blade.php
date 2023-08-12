@@ -6,9 +6,15 @@
 <link href="{{ asset('css/articles.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
+@section('header')
+@parent
+<section class="page-header">
+    <h1>Articles</h1>
+</section>
+@endsection
+
 @section('main-content')
 <main>
-    <h1>Articles</h1>
     <aside class="filter-bar">
         <h4>Trier par (ordre ascendant) :</h4>
         <ul class="filters">
