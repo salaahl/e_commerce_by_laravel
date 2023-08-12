@@ -63,14 +63,14 @@ nav, main {
 }
 
 nav > div > div {
-  display: block;
   height: 35vh;
-  overflow: hidden;
-  transition: all 1s;
 }
 
 nav > div > div.hidden {
   height: 0!important;
+  display: block;
+  overflow: hidden;
+  transition: all 1s;
 }
 
 h1 {
