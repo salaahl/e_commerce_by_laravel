@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: light) {
-  header {
+  .page-header {
     background-image: url('/images/articles_page_banner.jpg');
   }
   
@@ -9,7 +9,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  header {
+  .page-header {
     background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.3)), url('/images/articles_page_banner.jpg');
   }
 }
@@ -19,7 +19,7 @@
     margin: -5% auto 5% auto;
   }
 
-  header {
+  .page-header {
     height: 30vh;
   }
 }
@@ -36,7 +36,7 @@
     margin: -2% auto 2% auto;
   }
 
-  header {
+  .page-header {
     height: 50vh;
   }
   
@@ -51,7 +51,7 @@
     font-size: 200%;
   }
 
-  header {
+  .page-header {
     height: 70vh;
   }
   
@@ -72,7 +72,7 @@
   }
 }
 
-header {
+.page-header {
   max-width: 1280px;
   margin: auto;
   background-size: cover;
