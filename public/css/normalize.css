@@ -14,6 +14,17 @@
     font-size: 105%;
   }
 
+  nav > div > div {
+    height: 35vh;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  nav > div > div.hidden {
+    display: block;
+    height: 0;
+  }
+
   body h1, main h1 {
     font-size: 15vw;
     -webkit-text-stroke: 1px white;
@@ -60,17 +71,6 @@ html, body {
 nav, main {
   max-width: 1280px;
   margin: auto;
-}
-
-nav > div > div {
-  height: 35vh;
-  overflow: hidden;
-  transition: all 1s;
-}
-
-nav > div > div.hidden {
-  height: 0!important;
-  display: block;
 }
 
 h1 {
