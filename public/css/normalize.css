@@ -56,16 +56,16 @@
 
 @media (min-width: 1024px) {
   body h1 {
-    font-size: 8vw;
+    font-size: 6vw;
     -webkit-text-stroke: 2px white;
   }
 
   body h2 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   body h3 {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 }
 
