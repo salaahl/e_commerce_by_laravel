@@ -10,56 +10,28 @@
     }
 }
 
-@media (max-width: 767px) {
-    main h1 {
-        font-size: 15vw;
-    }
-}
-
-@media (min-width: 768px) {
-    main h1 {
-        font-size: 10vw;
-    }
-}
-
-@media (min-width: 1024px) {
-    main h1 {
-        font-size: 6vw;
-    }
-}
-
-@media (max-width: 1024px) {
+@media (min-width: 1280px) {
     body h1 {
-        margin: 2%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (min-width: 1200px) {
-    body h1 {
-        max-width: 1280px;
-        margin: 2% auto;
-    }
-
-    main {
-        margin: 0;
-    }
+body h1 {
+    max-width: 1280px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-@media (max-width: 1280px) {
-    body h1 {
-        padding: 0 2%;
-    }
-}
-
-h3 {
+h2 {
     text-align: center;
 }
 
-.profile {
+.edit-profile {
     text-align: center;
     padding: 2%;
     background-color: darkslategray;
-    color: white !important;
+    color: white;
 }
 
 .bill {
