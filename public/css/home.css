@@ -108,7 +108,7 @@
 
 @media (min-width: 1024px) {
   section.featured h2 {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 
   section:not(.carousel):not(.featured) .article, section:not(.carousel):not(.featured) .section-text {
@@ -122,6 +122,12 @@
   section.coming-soon {
     flex-direction: row-reverse;
   }
+}
+
+@media (min-width: 1280px) {
+    section.featured h2 {
+      font-size: 6vw;
+    }
 }
 
 section:not(.carousel), main h1 {
