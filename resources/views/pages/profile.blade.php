@@ -11,7 +11,7 @@
 <main>
     <div class="mx-auto">
         <aside class="overflow-hidden shadow-sm sm:rounded-lg mb-4">
-            <div class="profile">
+            <div class="edit-profile">
                 <a href="/profile">Modifier mes informations</a>
             </div>
         </aside>
@@ -19,7 +19,7 @@
             <p>Historique de mes commandes :</p>
             @foreach($bills as $bill)
             <article class="bill">
-                <h3>Facture numéro {{ $bill->id }}</h3>
+                <h2>Facture numéro {{ $bill->id }}</h2>
                 <br>
                 Articles commandés :
                 <br>
