@@ -41,10 +41,6 @@
 }
 
 @media (max-width: 768px) {
-  .section-text h2, .description h3 {
-    font-size: 150%;
-  }
-
   .carousel .slide {
     min-width: 100%;
   }
@@ -56,7 +52,7 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  main h1, section.featured h2 {
+  section.featured h2 {
     font-size: 10vw;
   }
 
@@ -83,10 +79,6 @@
 
   .section-text {
     aspect-ratio: 1;
-  }
-  
-  .section-text h2, .description h3 {
-    font-size: 200%;
   }
   
   .carousel .inner {
@@ -116,7 +108,7 @@
 
 @media (min-width: 1024px) {
   section.featured h2 {
-    font-size: 8vw;
+    font-size: 6vw;
   }
 
   section:not(.carousel):not(.featured) .article, section:not(.carousel):not(.featured) .section-text {
