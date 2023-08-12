@@ -16,7 +16,7 @@
             </div>
         </aside>
         <section class="overflow-hidden shadow-sm sm:rounded-lg">
-            <h3>Historique de mes commandes :</h3>
+            <h4>Historique de mes commandes :</h4>
             @foreach($bills as $bill)
             <article class="bill">
                 <h2>Facture numéro {{ $bill->id }}</h2>
@@ -25,8 +25,8 @@
                 @foreach($orders as $order)
                 @if(isset($order[$i]->index_id) && $order[$i]->index_id === $bill->order_index)
                 <div class="article">
-                    <h3>- Référence : {{ $order[$i]->product_reference }}</h3>
-                    <h3>- Quantité : {{ $order[$i]->quantity }}</h3>
+                    <h4>- Référence : {{ $order[$i]->product_reference }}</h4>
+                    <h4>- Quantité : {{ $order[$i]->quantity }}</h4>
                 </div>
                 @php($i++)
                 @endif
