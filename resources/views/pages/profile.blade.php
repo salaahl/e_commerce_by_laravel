@@ -16,7 +16,7 @@
             </div>
         </aside>
         <section class="overflow-hidden shadow-sm sm:rounded-lg">
-            <p>Historique de mes commandes :</p>
+            <h3>Historique de mes commandes :</h3>
             @foreach($bills as $bill)
             <article class="bill">
                 <h2>Facture numéro {{ $bill->id }}</h2>
