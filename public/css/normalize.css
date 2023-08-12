@@ -71,7 +71,7 @@ nav div.hidden {
   height: 0;
 }
 
-nav div:last-child:not(.hidden) {
+nav div:not(.hidden):last-child {
   height: 30vh;
 }
 
