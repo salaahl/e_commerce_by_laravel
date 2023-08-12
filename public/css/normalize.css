@@ -62,16 +62,17 @@ nav, main {
   margin: auto;
 }
 
-nav div div:last-child {
+nav > div > div {
   overflow: hidden;
   transition: all 1s;
 }
 
-nav div div:has(> .hidden) {
-  height: 0;
+nav > div > div:has(> .hidden) {
+  display: none;
+  height: 0!important;
 }
 
-nav div div:not(.hidden) {
+nav > div > div:not(.hidden) {
   display: block;
   height: 35vh;
 }
