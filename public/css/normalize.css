@@ -62,7 +62,7 @@ nav, main {
   margin: auto;
 }
 
-nav {
+nav div:last-child {
   height: 30vh;
   overflow: hidden;
   transition: all 1s;
