@@ -20,17 +20,13 @@
             @foreach($bills as $bill)
             <article class="bill">
                 <h2>Facture numéro {{ $bill->id }}</h2>
-                <br>
-                Articles commandés :
-                <br>
+                <h3>Articles commandés :</h3>
                 @php($i = 0)
                 @foreach($orders as $order)
                 @if(isset($order[$i]->index_id) && $order[$i]->index_id === $bill->order_index)
                 <div class="article">
-                    - Référence : {{ $order[$i]->product_reference }}
-                    <br>
-                    - Quantité : {{ $order[$i]->quantity }}
-                    <br>
+                    <h3>- Référence : {{ $order[$i]->product_reference }}</h3>
+                    <h3>- Quantité : {{ $order[$i]->quantity }}</h3>
                 </div>
                 @php($i++)
                 @endif
