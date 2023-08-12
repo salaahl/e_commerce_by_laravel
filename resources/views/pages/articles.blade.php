@@ -8,13 +8,12 @@
 
 @section('header')
 @parent
-<section class="page-header">
-    <h1>Articles</h1>
-</section>
+<div class="header-img"></div>
 @endsection
 
 @section('main-content')
 <main>
+    <h1>Articles</h1>
     <aside class="filter-bar">
         <h4>Trier par (ordre ascendant) :</h4>
         <ul class="filters">
