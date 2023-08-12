@@ -26,13 +26,17 @@
     width: 100%;
     margin-bottom: 5%;
   }
+
+  .carousel .inner {
+    height: 40vh;
+  }
     
   section.featured h2 {
     font-size: 15vw;
   }
 
-  .carousel .inner {
-    height: 40vh;
+  section.featured .article {
+    width: 100%;
   }
 }
 
@@ -43,10 +47,6 @@
 
   .carousel .slide {
     min-width: 100%;
-  }
-
-  section.featured div:has(> h2) {
-    height: 50vh;
   }
 
   main h1, section.featured h2 {
@@ -103,10 +103,6 @@
   
   .carousel .slide:last-of-type {
     margin: 0 20% 0 2%;
-  }
-
-  section.featured div:has(> h2) {
-    height: 40vh;
   }
 
   section.featured h2 {
@@ -278,6 +274,7 @@ section.featured div:has(> h2) {
 }
 
 section.featured h2 {
+  margin: 10%; 
   backdrop-filter: blur(40px);
   background: rgb(255, 255, 255, 0.1);
   border-radius: 80px;
