@@ -68,7 +68,7 @@ nav {
   transition: all 1s;
 }
 
-nav.hidden {
+nav .hidden {
   height: 0;
 }
 
