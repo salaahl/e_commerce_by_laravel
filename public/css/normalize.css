@@ -62,6 +62,16 @@ nav, main {
   margin: auto;
 }
 
+nav {
+  height: 30vh;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+nav.hidden {
+  height: 0;
+}
+
 h1 {
   text-align: center;
   text-transform: uppercase;
