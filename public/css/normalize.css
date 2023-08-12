@@ -54,7 +54,22 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
+  body h1 {
+    font-size: 7vw;
+    -webkit-text-stroke: 2px white;
+  }
+
+  body h2 {
+    font-size: 4vw;
+  }
+
+  body h3 {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 1280px) {
   body h1 {
     font-size: 6vw;
     -webkit-text-stroke: 2px white;
