@@ -68,6 +68,11 @@
     <section class="bestsellers">
         <div class="section-text">
             <h2>Top ventes</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua.
+            </p>
         </div>
         @if($bestsellers)
         @foreach($bestsellers as $article)
