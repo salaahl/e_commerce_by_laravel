@@ -63,13 +63,16 @@ nav, main {
 }
 
 nav div:last-child {
-  height: 30vh;
   overflow: hidden;
   transition: all 1s;
 }
 
 nav div.hidden {
   height: 0;
+}
+
+nav div:last-child:not(.hidden) {
+  height: 30vh;
 }
 
 h1 {
