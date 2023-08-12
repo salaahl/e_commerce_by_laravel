@@ -1,5 +1,5 @@
 @media (prefers-color-scheme: light) {
-  .page-header {
+  .header-img {
     background-image: url('/images/articles_page_banner.jpg');
   }
   
@@ -9,7 +9,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .page-header {
+  .header-img {
     background-image: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.3)), url('/images/articles_page_banner.jpg');
   }
 }
@@ -19,7 +19,7 @@
     margin: -5% auto 5% auto;
   }
 
-  .page-header {
+  .header-img {
     height: 30vh;
   }
 }
@@ -36,7 +36,7 @@
     margin: -2% auto 2% auto;
   }
 
-  .page-header {
+  .header-img {
     height: 50vh;
   }
   
@@ -51,7 +51,7 @@
     font-size: 200%;
   }
 
-  .page-header {
+  .header-img {
     height: 70vh;
   }
   
@@ -72,7 +72,7 @@
   }
 }
 
-.page-header {
+.header-img {
   max-width: 1280px;
   margin: auto;
   background-size: cover;
