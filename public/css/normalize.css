@@ -67,12 +67,12 @@ nav div div:last-child {
   transition: all 1s;
 }
 
-nav div div:has(.hidden) {
+nav div div:has(> .hidden) {
   height: 0;
 }
 
-nav div div:not(.hidden):last-child {
-  height: 30vh;
+nav div div:not(.hidden) {
+  height: 35vh;
 }
 
 h1 {
