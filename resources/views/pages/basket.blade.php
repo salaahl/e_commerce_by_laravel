@@ -58,7 +58,7 @@
     </main>
     <aside>
         <section id="total">
-            <h2>Total : {{ $total }}€</h2>
+            <h3>Total : {{ $total }}€</h3>
         </section>
         <section id="customer">
             <h4>{{ $user->name }}</h4>
