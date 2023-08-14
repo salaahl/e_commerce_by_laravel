@@ -52,7 +52,7 @@
         <section id="article-order">
             @if (auth()->user())
             @if ($article->stock === 0)
-            <h2 style="color: red">Cet article n'est plus en stock</h2>
+            <h4 style="color: red">Cet article n'est plus en stock</h4>
             <form method="GET" action="{{url('/')}}">
                 @csrf
                 <button class="button-stylised" type="submit" disabled>Etre notifié de sa disponibilité</button>
@@ -71,7 +71,7 @@
             </form>
             @endif
             @else
-            <h2 style="color: red;">Veuillez vous connecter pour accéder au statut de cet article.</h2>
+            <h4 style="color: red;">Veuillez vous connecter pour accéder au statut de cet article.</h4>
             <form method="GET" action="{{url('/login')}}">
                 @csrf
                 <button class="button-stylised" type="submit">Se connecter</button>
