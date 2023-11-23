@@ -1,6 +1,7 @@
 let quantity = document.querySelectorAll(".quantity");
 let deleteArticle = document.querySelectorAll(".delete-article");
 
+// Mettre à jour la quantité
 if (quantity) {
     quantity.forEach((select) => {
         select.addEventListener("change", () => {
@@ -14,7 +15,7 @@ if (quantity) {
             };
 
             let options = {
-                method: "POST",
+                method: "PUT",
                 body: JSON.stringify(data),
                 headers: {
                     "X-CSRF-TOKEN": document.querySelector(
@@ -61,7 +62,7 @@ if (deleteArticle) {
             };
 
             let options = {
-                method: "POST",
+                method: "DELETE",
                 body: JSON.stringify(data),
                 headers: {
                     "X-CSRF-TOKEN": formData.get("_token"),
