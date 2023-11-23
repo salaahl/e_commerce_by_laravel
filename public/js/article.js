@@ -9,7 +9,7 @@ if (document.querySelector("#add-basket")) {
         };
 
         let options = {
-            method: "POST",
+            method: "PUT",
             body: JSON.stringify(data),
             headers: {
                 "X-CSRF-TOKEN": document.querySelector('input[name="_token"]').value,
