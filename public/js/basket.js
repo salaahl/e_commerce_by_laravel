@@ -5,7 +5,7 @@ let deleteArticle = document.querySelectorAll(".delete-article");
 if (quantity) {
     quantity.forEach((select) => {
         select.addEventListener("change", () => {
-            document.querySelector("#total h2").style.filter = 'blur(10px)';
+            document.querySelector("#total h3").style.filter = 'blur(10px)';
             const url = "/basket/update";
 
             let data = {
@@ -37,9 +37,9 @@ if (quantity) {
                                     .querySelector(".price").innerHTML
                             ) * price.value;
                     });
-                    document.querySelector("#total h2").innerHTML =
+                    document.querySelector("#total h3").innerHTML =
                         "Total : " + total + "€";
-                    document.querySelector("#total h2").style.filter = 'blur(0px)';
+                    document.querySelector("#total h3").style.filter = 'blur(0px)';
                 })
                 .catch((error) => {
                     alert(
