@@ -25,7 +25,7 @@
             <section class="content">
                 <div class="description">
                     <h3>{{ $article[0]->name }}</h3>
-                    <h3>{{ $article[0]->price }}€</h3>
+                    <h3 class="price">{{ $article[0]->price }}€</h3>
                 </div>
                 <div class="options">
                     <div>
