@@ -15,7 +15,7 @@ if (quantity) {
             };
 
             let options = {
-                method: "PUT",
+                method: "PATCH",
                 body: JSON.stringify(data),
                 headers: {
                     "X-CSRF-TOKEN": document.querySelector(
@@ -50,6 +50,7 @@ if (quantity) {
     });
 }
 
+// Supprimer un article
 if (deleteArticle) {
     deleteArticle.forEach((article) => {
         article.addEventListener("submit", (e) => {
