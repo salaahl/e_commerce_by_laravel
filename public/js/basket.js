@@ -73,8 +73,7 @@ if (deleteArticle) {
 
             fetch(url, options)
                 .then((data) => {
-                    console.log(data);
-                    alert("L'article a bien été supprimé.");
+                    alert("L'article a bien été supprimé. Veuillez rafraîchir la page.");
                 })
                 .catch((error) => {
                     alert(
