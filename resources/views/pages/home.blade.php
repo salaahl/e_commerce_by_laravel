@@ -121,14 +121,14 @@
             </p>
         </div>
         <div class="article">
-            <a href="article.html">
+            <a href="#">
                 <div class="img-container">
                     <img src="{{ asset('images/dress.png') }}" />
                 </div>
             </a>
         </div>
         <div class="article">
-            <a href="article.html">
+            <a href="#">
                 <div class="img-container">
                     <img src="{{ asset('images/dress.png') }}" />
                 </div>
