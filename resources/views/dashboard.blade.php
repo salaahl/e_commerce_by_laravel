@@ -12,6 +12,6 @@
     <a href="/orders">Mes commandes</a>
 </h2>
 <h2>
-    <a href="/edit-profile">Modifier mes informations</a>
+    <a href="/profile">Modifier mes informations</a>
 </h2>
 @endsection
