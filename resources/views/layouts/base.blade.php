@@ -19,7 +19,7 @@
 
 <body class="antialiased">
     <header>
-        @include('layouts.navbar')
+        @include('layouts.navigation')
         @yield('header')
     </header>
     @yield('main-content')
