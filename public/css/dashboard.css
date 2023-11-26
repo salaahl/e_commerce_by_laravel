@@ -33,11 +33,14 @@ h2 {
     text-align: center;
 }
 
-.edit-profile {
-    text-align: center;
-    padding: 2%;
-    background-color: darkslategray;
-    color: white;
+#dashboard-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+#orders-link, #profile-link {
+    padding: 10%;
+    border: 2px solid;
 }
 
 .bill {
