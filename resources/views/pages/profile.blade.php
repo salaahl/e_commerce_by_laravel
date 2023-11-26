@@ -10,11 +10,6 @@
 <main>
     <h1>Mon profil</h1>
     <div class="mx-auto">
-        <aside class="overflow-hidden shadow-sm sm:rounded-lg mb-4">
-            <div class="edit-profile">
-                <a href="/profile">Modifier mes informations</a>
-            </div>
-        </aside>
         <section class="overflow-hidden shadow-sm sm:rounded-lg">
             <h4>Historique de mes commandes :</h4>
             @foreach($bills as $bill)
