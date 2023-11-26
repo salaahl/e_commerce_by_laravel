@@ -33,7 +33,6 @@ Route::get('/products', [ProductController::class, 'products'])->name('products'
 Route::get('/products/{slug}', [ProductController::class, 'product'])->name('product');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/user-profile', [HomeController::class, 'profile'])->name('profile');
     Route::get('/order', [BasketController::class, 'order'])->name('order');
     Route::get('/order/confirmation/{slug}', [BasketController::class, 'confirmation'])->name('confirmation');
     Route::get('/basket', [BasketController::class, 'show'])->name('basket');
@@ -47,6 +46,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/orders', [HomeController::class, 'profile'])->name('commands');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
