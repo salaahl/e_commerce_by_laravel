@@ -35,7 +35,7 @@ h2 {
 
 #dashboard-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #orders-link, #profile-link {
