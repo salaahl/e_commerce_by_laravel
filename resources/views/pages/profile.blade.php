@@ -3,7 +3,7 @@
 @section('head')
 @parent
 @section('title', 'Profile')
-<link href="{{ asset('css/profile.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('main-content')
