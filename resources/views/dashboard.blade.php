@@ -8,10 +8,10 @@
 
 @section('main-content')
 <h1>Tableau de bord</h1>
-<h2>
+<h3>
     <a href="/orders">Mes commandes</a>
-</h2>
-<h2>
+</h3>
+<h3>
     <a href="/profile">Modifier mes informations</a>
-</h2>
+</h3>
 @endsection
