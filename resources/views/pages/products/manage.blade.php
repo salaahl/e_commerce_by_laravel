@@ -12,7 +12,7 @@
     <section>
         <h3>Ajouter un nouveau produit :</h3>
         <article>
-            <form method="POST" class="form" action="{{url('/products/store')}}">
+            <form method="POST" class="form" action="{{url('/products/create')}}">
                 @csrf
                 <p class="field required">
                     <input type="text" id="product-reference" name="reference" required="required" class="text-input" placeholder="Reference du produit">
