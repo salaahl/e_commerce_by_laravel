@@ -33,6 +33,14 @@
                 <li>
                     <a href="/user-profile" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Mon compte</a>
                 </li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </a>
+                </form>
                 @endauth
             </ul>
         </div>
