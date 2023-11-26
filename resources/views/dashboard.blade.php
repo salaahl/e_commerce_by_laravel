@@ -2,7 +2,7 @@
 
 @section('head')
 @parent
-@section('title', 'Panier')
+@section('title', 'Tableau de bord')
 <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
