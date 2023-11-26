@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CRUDController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ArticlesController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BasketController;
 
@@ -23,8 +23,14 @@ Route::get('/404', function () {
 });
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
-Route::get('/articles/{slug}', [ArticlesController::class, 'article'])->name('article');
-Route::get('/articles', [ArticlesController::class, 'articles'])->name('articles');
+Route::middleware('auth')->group(function () {
+    Route::get('/products/manage', [ProductController::class, 'manage']);
+    Route::post('/products/create', [ProductController::class, 'create']);
+    Route::post('/products/update', [ProductController::class, 'update']);
+    Route::post('/products/destroy', [ProductController::class, 'destroy']);
+});
+Route::get('/products', [ProductController::class, 'products'])->name('products');
+Route::get('/products/{slug}', [ProductController::class, 'product'])->name('product');
 
 Route::middleware('auth')->group(function () {
     Route::get('/user-profile', [HomeController::class, 'profile'])->name('profile');
@@ -34,11 +40,6 @@ Route::middleware('auth')->group(function () {
     Route::put('/basket/store', [BasketController::class, 'store']);
     Route::patch('/basket/update', [BasketController::class, 'update']);
     Route::delete('/basket/destroy', [BasketController::class, 'destroy']);
-    Route::get('CRUD/create', [CRUDController::class, 'create']);
-    Route::put('CRUD/store', [CRUDController::class, 'store']);
-    Route::patch('CRUD/update', [CRUDController::class, 'update']);
-    Route::get('CRUD/show', [CRUDController::class, 'show']);
-    Route::delete('/CRUD/destroy', [CRUDController::class, 'destroy']);
 });
 
 Route::get('/dashboard', function () {

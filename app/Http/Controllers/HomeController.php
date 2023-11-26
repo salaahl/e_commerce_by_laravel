@@ -16,11 +16,11 @@ class HomeController extends Controller
     public function home()
     {
         $bestsellers = Product::orderBy('created_at', 'DESC')->limit(2)->get();
-        $article_featured = Product::orderBy('created_at', 'DESC')->limit(1)->get();
+        $product_featured = Product::orderBy('created_at', 'DESC')->limit(1)->get();
         
         return view('pages/home', [
                 "bestsellers" => $bestsellers,
-                "article_featured" => $article_featured
+                "product_featured" => $product_featured
              ]
         );
     }

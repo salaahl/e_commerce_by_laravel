@@ -1,5 +1,5 @@
 let quantity = document.querySelectorAll(".quantity");
-let deleteArticle = document.querySelectorAll(".delete-article");
+let deleteProduct = document.querySelectorAll(".delete-product");
 
 // Mettre à jour la quantité
 if (quantity) {
@@ -9,7 +9,7 @@ if (quantity) {
             const url = "/basket/update";
 
             let data = {
-                reference: select.closest(".article").querySelector("form")
+                reference: select.closest(".product").querySelector("form")
                     .lastElementChild.value,
                 quantity: select.value,
             };
@@ -33,7 +33,7 @@ if (quantity) {
                         total +=
                             parseInt(
                                 price
-                                    .closest(".article")
+                                    .closest(".product")
                                     .querySelector(".price").innerHTML
                             ) * price.value;
                     });
@@ -51,12 +51,12 @@ if (quantity) {
 }
 
 // Supprimer un article
-if (deleteArticle) {
-    deleteArticle.forEach((article) => {
-        article.addEventListener("submit", (e) => {
+if (deleteProduct) {
+    deleteProduct.forEach((product) => {
+        product.addEventListener("submit", (e) => {
             e.preventDefault();
             const url = "/basket/destroy";
-            let formData = new FormData(article);
+            let formData = new FormData(product);
 
             let data = {
                 reference: formData.get("reference"),

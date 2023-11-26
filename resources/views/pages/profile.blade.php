@@ -7,8 +7,8 @@
 @endsection
 
 @section('main-content')
-<h1>Mon profil</h1>
 <main>
+    <h1>Mon profil</h1>
     <div class="mx-auto">
         <aside class="overflow-hidden shadow-sm sm:rounded-lg mb-4">
             <div class="edit-profile">
@@ -24,7 +24,7 @@
                 @php($i = 0)
                 @foreach($orders as $order)
                 @if(isset($order[$i]->index_id) && $order[$i]->index_id === $bill->order_index)
-                <div class="article">
+                <div class="product">
                     <h4>- Référence : {{ $order[$i]->product_reference }}</h4>
                     <h4>- Quantité : {{ $order[$i]->quantity }}</h4>
                 </div>

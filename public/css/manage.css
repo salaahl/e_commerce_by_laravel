@@ -13,15 +13,9 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-    width: 95%;
-    margin: auto;
-}
-
 h1,
 form {
     max-width: 1280px;
-    margin: auto !important;
 }
 .form .button,
 .form .message,
@@ -187,13 +181,17 @@ form {
     font: inherit;
     line-height: normal;
     cursor: pointer;
-    background: #e8474c;
     color: white;
-    width: 100%;
-    margin-left: auto;
+    width: 45%;
     font-weight: bold;
     padding-left: 2em;
     padding-right: 2em;
+}
+.form .button:first-child {
+    background: #111111;
+}
+.form .button:last-child {
+    background: #e8474c;
 }
 .form .button:hover,
 .form .button:focus,
@@ -207,8 +205,6 @@ form {
     left: 1px;
 }
 .form {
-    width: 95%;
-    margin: 5% auto;
     padding: 2%;
     display: flex;
     flex-flow: row wrap;
@@ -290,4 +286,58 @@ form {
     transform-style: preserve-3d;
     will-change: top, left, width;
     transform-origin: 0 0;
+}
+
+/* Mon CSS */
+
+/* Mobiles */
+@media (max-width: 767px) {
+}
+
+/* Tablettes et + */
+@media (min-width: 768px) {
+}
+
+@media (max-width: 768px) {
+}
+
+/* Petit ordinateur et + */
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+/* Grand ordinateur et + */
+@media (min-width: 1280px) {
+}
+
+@media (max-width: 1280px) {
+}
+
+input {
+    max-width: 100%;
+}
+
+section {
+    margin: 2% auto;
+}
+
+section:first-of-type article {
+    margin: 1% 0 5% 0;
+}
+
+section:last-of-type
+    article:not(section article:first-of-type):not(
+        section article:last-of-type
+    ) {
+    margin: 5% auto;
+}
+
+section:last-of-type article:first-of-type {
+    margin: 1% 0 5% 0;
+}
+
+section:last-child article:last-of-type {
+    margin: 5% 0 0 0;
 }

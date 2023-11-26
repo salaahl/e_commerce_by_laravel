@@ -16,7 +16,7 @@
                     <a href="/" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Accueil</a>
                 </li>
                 <li>
-                    <a href="/articles" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Articles</a>
+                    <a href="/products" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Articles</a>
                 </li>
                 <li>
                     <a style="filter: opacity(0.5);" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">A propos de nous</a>

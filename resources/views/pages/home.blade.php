@@ -75,15 +75,15 @@
             </p>
         </div>
         @if($bestsellers)
-        @foreach($bestsellers as $article)
-        <article class="article">
-            <a href="/articles/{{ $article->reference }}">
+        @foreach($bestsellers as $product)
+        <article class="product">
+            <a href="/products/{{ $product->reference }}">
                 <div class="img-container">
-                    <img src="{{ asset('images/' . $article->picture) }}" />
+                    <img src="{{ asset('images/' . $product->picture) }}" />
                 </div>
                 <div class="description">
-                    <h3>{{ $article->name }}</h3>
-                    <h3>{{ $article->price }}€</h3>
+                    <h3>{{ $product->name }}</h3>
+                    <h3>{{ $product->price }}€</h3>
                 </div>
             </a>
         </article>
@@ -94,18 +94,18 @@
         <div>
             <h2>à la une</h2>
         </div>
-        @if($article_featured)
+        @if($product_featured)
         <div class="section-text">
-            <a href="/articles/{{ $article_featured[0]->reference }}">
-                <h3>{{ $article_featured[0]->name }}</h3>
+            <a href="/products/{{ $product_featured[0]->reference }}">
+                <h3>{{ $product_featured[0]->name }}</h3>
             </a>
-            <p>{{ $article_featured[0]->description }}</p>
-            <p>{{ $article_featured[0]->price }}€</p>
+            <p>{{ $product_featured[0]->description }}</p>
+            <p>{{ $product_featured[0]->price }}€</p>
         </div>
-        <div class="article">
-            <a href="/articles/{{ $article_featured[0]->reference }}">
+        <div class="product">
+            <a href="/products/{{ $product_featured[0]->reference }}">
                 <div class="img-container">
-                    <img src="{{ asset('images/' . $article_featured[0]->picture) }}" alt="article image"/>
+                    <img src="{{ asset('images/' . $product_featured[0]->picture) }}" alt="product image"/>
                 </div>
             </a>
         </div>
@@ -120,14 +120,14 @@
                 consequat.
             </p>
         </div>
-        <div class="article">
+        <div class="product">
             <a href="#">
                 <div class="img-container">
                     <img src="{{ asset('images/dress.png') }}" />
                 </div>
             </a>
         </div>
-        <div class="article">
+        <div class="product">
             <a href="#">
                 <div class="img-container">
                     <img src="{{ asset('images/dress.png') }}" />

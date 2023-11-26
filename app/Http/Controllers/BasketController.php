@@ -33,9 +33,9 @@ class BasketController extends Controller
      */
     public function store(Request $request)
     {
-        $article = Product::where('reference', $request->reference)->first();
+        $product = Product::where('reference', $request->reference)->first();
         $basket = Basket::where('user_email', auth()->user()->email)
-            ->where('product_reference', $article->reference)
+            ->where('product_reference', $product->reference)
             ->first();
 
         if ($basket) {
@@ -43,7 +43,7 @@ class BasketController extends Controller
         } else {
             $basket = new Basket;
             $basket->user_email = auth()->user()->email;
-            $basket->product_reference = $article->reference;
+            $basket->product_reference = $product->reference;
             $basket->quantity = $request->quantity;
         }
         $basket->save();
@@ -57,18 +57,18 @@ class BasketController extends Controller
         $user = User::where('email', auth()->user()->email)->get()->first();
         $baskets = Basket::where('user_email', $user->email);
         
-        $articles = [];
+        $products = [];
         $quantity = [];
         $baskets = Basket::where('user_email', auth()->user()->email)->get();
 
         foreach ($baskets as $basket) {
-            $articles[] = Product::where('reference', $basket->product_reference)->get();
+            $products[] = Product::where('reference', $basket->product_reference)->get();
             $quantity[] = $basket->quantity;
         }
 
         return view('pages/basket', [
             "user" => auth()->user(),
-            "articles" => $articles,
+            "products" => $products,
             "quantity" => $quantity
         ]);
     }
@@ -88,9 +88,9 @@ class BasketController extends Controller
             $order->product_reference = $basket->product_reference;
             $order->quantity = $basket->quantity;
             $order->save();
-            $article = Product::where('reference', $basket->product_reference);
-            $article->update([
-                'stock' => $article->first()->stock - $basket->quantity
+            $product = Product::where('reference', $basket->product_reference);
+            $product->update([
+                'stock' => $product->first()->stock - $basket->quantity
             ]);
         }
 

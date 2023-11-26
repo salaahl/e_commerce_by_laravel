@@ -3,7 +3,7 @@
 @section('head')
 @parent
 @section('title', 'Articles')
-<link href="{{ asset('css/articles.css') }}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('css/products.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('header')
@@ -47,16 +47,16 @@
             </li>
         </ul>
     </aside>
-    <section class="articles">
-        @foreach($articles as $article)
-        <article class="article">
-            <a href="/articles/{{ $article['reference'] }}">
-                <div class="article-img-container">
-                    <img src="{{ asset('images/' . $article['picture']) }}" alt="{{ $article['name'] }} picture"/>
+    <section class="products">
+        @foreach($products as $product)
+        <article class="product">
+            <a href="/products/{{ $product['reference'] }}">
+                <div class="product-img-container">
+                    <img src="{{ asset('images/' . $product['picture']) }}" alt="{{ $product['name'] }} picture" />
                 </div>
                 <div class="description">
-                    <h3>{{ $article['name'] }}</h3>
-                    <h3>{{ $article['price'] }}€</h3>
+                    <h3>{{ $product['name'] }}</h3>
+                    <h3>{{ $product['price'] }}€</h3>
                 </div>
             </a>
         </article>
@@ -64,6 +64,6 @@
     </section>
 </main>
 <aside>
-    {{ $articles->links() }}
+    {{ $products->links() }}
 </aside>
 @endsection

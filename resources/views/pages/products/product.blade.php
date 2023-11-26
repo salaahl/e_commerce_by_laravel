@@ -2,9 +2,9 @@
 
 @section('head')
 @parent
-@php($article_name = $article->name)
-@section('title', $article_name)
-<link href="{{ asset('css/article.css') }}" rel="stylesheet" type="text/css" />
+@php($product_name = $product->name)
+@section('title', $product_name)
+<link href="{{ asset('css/product.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('main-content')
@@ -25,7 +25,7 @@
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                     </svg>
-                    <a href="/articles" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">Articles</a>
+                    <a href="/products" class="ml-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ml-2">Articles</a>
                 </div>
             </li>
             <li aria-current="page">
@@ -33,25 +33,25 @@
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
                     </svg>
-                    <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">{{ $article->name }}</span>
+                    <span class="ml-1 text-sm font-medium text-gray-500 md:ml-2">{{ $product->name }}</span>
                 </div>
             </li>
         </ol>
     </nav>
 </aside>
 <main>
-    <div id="article-img-container">
-        <img src="{{ asset('images/' . $article->picture) }}" alt="{{ $article->name }} picture"/>
+    <div id="product-img-container">
+        <img src="{{ asset('images/' . $product->picture) }}" alt="{{ $product->name }} picture"/>
     </div>
-    <article id="article-container">
-        <section id="article">
-            <h3 id="name">{{ $article->name }}</h3>
-            <h3 id="price">{{ $article->price }}€</h3>
-            <p id="description">{{ $article->description }}</p>
+    <article id="product-container">
+        <section id="product">
+            <h3 id="name">{{ $product->name }}</h3>
+            <h3 id="price">{{ $product->price }}€</h3>
+            <p id="description">{{ $product->description }}</p>
         </section>
-        <section id="article-order">
+        <section id="product-order">
             @if (auth()->user())
-            @if ($article->stock === 0)
+            @if ($product->stock === 0)
             <h4 style="color: red">Cet article n'est plus en stock</h4>
             <form method="GET" action="{{url('/')}}">
                 @csrf
@@ -62,12 +62,12 @@
                 @csrf
                 <label for="quantity">Quantité :</label>
                 <select name="quantity" id="quantity">
-                    @for ($i = 1; $i <= $article->stock; $i++)
+                    @for ($i = 1; $i <= $product->stock; $i++)
                         <option value="{{ $i }}">{{ $i }}</option>
                         @endfor
                 </select>
                 <button class="button-stylised" type="submit">Ajouter au panier</button>
-                <input name="reference" id="reference" type="hidden" value="{{ $article->reference }}">
+                <input name="reference" id="reference" type="hidden" value="{{ $product->reference }}">
             </form>
             @endif
             @else
@@ -80,5 +80,5 @@
         </section>
     </article>
 </main>
-<script src="{{ asset('js/article.js') }}"></script>
+<script src="{{ asset('js/product.js') }}"></script>
 @endsection

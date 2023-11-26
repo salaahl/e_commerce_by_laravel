@@ -17,7 +17,7 @@
       justify-content: space-between;
     }
     
-  section:not(.featured):not(.carousel) .article {
+  section:not(.featured):not(.carousel) .product {
     width: 48%;
     margin: 0 0 4% 0;
   }
@@ -35,7 +35,7 @@
     font-size: 15vw;
   }
 
-  section.featured .article {
+  section.featured .product {
     width: 100%;
   }
 }
@@ -60,7 +60,7 @@
     height: 80vh;
   }
 
-  section:not(.carousel) .article, section:not(.carousel) .section-text {
+  section:not(.carousel) .product, section:not(.carousel) .section-text {
     width: 48%;
     margin: 1% 0;
   }
@@ -101,7 +101,7 @@
     -webkit-text-stroke: 2px white;
   }
 
-  section.featured .article, section.featured .section-text {
+  section.featured .product, section.featured .section-text {
     width: 48%;
   }
 }
@@ -111,7 +111,7 @@
     font-size: 7vw;
   }
 
-  section:not(.carousel):not(.featured) .article, section:not(.carousel):not(.featured) .section-text {
+  section:not(.carousel):not(.featured) .product, section:not(.carousel):not(.featured) .section-text {
     width: 30%;
   }
 
@@ -232,11 +232,11 @@ section.coming-soon .section-text {
   filter: invert(1) contrast(2);
 }
 
-section:not(.featured):not(.carousel) .article {
+section:not(.featured):not(.carousel) .product {
   border-bottom: 4px solid;
 }
 
-.article .description {
+.product .description {
   display: flex;
   justify-content: space-between;
 }
@@ -247,13 +247,13 @@ section:not(.featured):not(.carousel) .article {
   overflow: hidden;
 }
 
-.article .img-container {
+.product .img-container {
   display: flex;
   aspect-ratio: 1;
   border: 4px solid;
 }
 
-.article .img-container img {
+.product .img-container img {
   width: 60%;
   margin: auto;
 }

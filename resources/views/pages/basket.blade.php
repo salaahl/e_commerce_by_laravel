@@ -14,41 +14,41 @@
         $index = 0;
         $total = 0;
         @endphp
-        @if(isset($articles))
-        @foreach($articles as $article)
-        <article class="article">
+        @if(isset($products))
+        @foreach($products as $product)
+        <article class="product">
             <section class="img-container">
-                <a href="{{ '/articles/' . $article[0]->reference }}">
-                    <img src="{{ asset('images/' . $article[0]->picture) }}" />
+                <a href="{{ '/products/' . $product[0]->reference }}">
+                    <img src="{{ asset('images/' . $product[0]->picture) }}" />
                 </a>
             </section>
             <section class="content">
                 <div class="description">
-                    <h3>{{ $article[0]->name }}</h3>
-                    <h3 class="price">{{ $article[0]->price }}€</h3>
+                    <h3>{{ $product[0]->name }}</h3>
+                    <h3 class="price">{{ $product[0]->price }}€</h3>
                 </div>
                 <div class="options">
                     <div>
                         <h4>Quantité :</h4>
                         <select name="quantity" class="quantity">
                             <option value="{{ $quantity[$index] }}" selected>{{ $quantity[$index] }}</option>
-                            @for ($i = 1; $i <= $article[0]->stock; $i++)
+                            @for ($i = 1; $i <= $product[0]->stock; $i++)
                             <option value="{{ $i }}">{{ $i }}</option>
                             @endfor
                         </select>
                     </div>
                     <div>
-                        <form class="delete-article">
+                        <form class="delete-product">
                             @csrf
                             <button type="submit">Supprimer du panier</button>
-                            <input name="reference" type="hidden" value="{{ $article[0]->reference }}">
+                            <input name="reference" type="hidden" value="{{ $product[0]->reference }}">
                         </form>
                     </div>
                 </div>
             </section>
         </article>
         @php
-        $total += $article[0]->price * $quantity[$index];
+        $total += $product[0]->price * $quantity[$index];
         $index++;
         @endphp
         @endforeach
