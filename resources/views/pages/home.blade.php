@@ -123,14 +123,14 @@
         <div class="product">
             <a href="#">
                 <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
+                    <img src="{{ asset('images/placeholder_perfume.png') }}" />
                 </div>
             </a>
         </div>
         <div class="product">
             <a href="#">
                 <div class="img-container">
-                    <img src="{{ asset('images/dress.png') }}" />
+                    <img src="{{ asset('images/placeholder_perfume.png') }}" />
                 </div>
             </a>
         </div>
