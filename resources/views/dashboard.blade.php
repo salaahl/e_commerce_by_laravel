@@ -1,17 +1,17 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.base')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+@section('head')
+@parent
+@section('title', 'Panier')
+<link href="{{ asset('css/profile.css') }}" rel="stylesheet" type="text/css" />
+@endsection
+
+@section('main-content')
+<h1>Tableau de bord</h1>
+<h2>
+    <a href="/orders">Mes commandes</a>
+</h2>
+<h2>
+    <a href="/edit-profile">Modifier mes informations</a>
+</h2>
+@endsection
