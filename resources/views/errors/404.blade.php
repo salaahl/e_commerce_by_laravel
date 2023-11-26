@@ -1,1 +1,2 @@
-<h1>Route introuvable.</h1>
+<h1>Adresse incorrecte.</h1>
+<a href="/">Retourner à l'accueil</a>
