@@ -1,5 +1,6 @@
 @media (prefers-color-scheme: light) {
-    aside, .product .options {
+    aside,
+    .product .options {
         background-color: beige;
     }
 
@@ -10,7 +11,8 @@
 }
 
 @media (prefers-color-scheme: dark) {
-    aside, .product .options {
+    aside,
+    .product .options {
         background-color: black;
     }
 
@@ -71,23 +73,25 @@
     }
 
     .global-container {
-      padding: 0 2%;
+        padding: 0 2%;
     }
-  }
+}
 
-@media (min-width: 1200px) {
-    body h1, .global-container {
+@media (min-width: 1280px) {
+    body h1,
+    .global-container {
         max-width: 1280px;
         margin: auto;
     }
 }
 
 main h3 {
-    font-size: inherit!important;
+    font-size: inherit !important;
 }
 
-main, aside {
-    margin: 1% 0!important;
+main,
+aside {
+    margin: 1% 0 !important;
 }
 
 .product {
@@ -126,7 +130,8 @@ main, aside {
     padding-left: 2%;
 }
 
-.product .options h4, .product .options button {
+.product .options h4,
+.product .options button {
     padding: 0.5%;
 }
 

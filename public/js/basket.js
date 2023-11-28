@@ -5,7 +5,7 @@ let deleteProduct = document.querySelectorAll(".delete-product");
 if (quantity) {
     quantity.forEach((select) => {
         select.addEventListener("change", () => {
-            document.querySelector("#total h3").style.filter = 'blur(10px)';
+            document.querySelector("#total h3").style.filter = "blur(10px)";
             const url = "/basket/update";
 
             let data = {
@@ -31,15 +31,16 @@ if (quantity) {
                     let total = 0;
                     quantity.forEach((price) => {
                         total +=
-                            parseInt(
+                            parseFloat(
                                 price
                                     .closest(".product")
                                     .querySelector(".price").innerHTML
                             ) * price.value;
                     });
                     document.querySelector("#total h3").innerHTML =
-                        "Total : " + total + "€";
-                    document.querySelector("#total h3").style.filter = 'blur(0px)';
+                        "Total : " + total.toFixed(2) + "€";
+                    document.querySelector("#total h3").style.filter =
+                        "blur(0px)";
                 })
                 .catch((error) => {
                     alert(
@@ -73,7 +74,9 @@ if (deleteProduct) {
 
             fetch(url, options)
                 .then((data) => {
-                    alert("L'article a bien été supprimé. Veuillez rafraîchir la page.");
+                    alert(
+                        "L'article a bien été supprimé. Veuillez rafraîchir la page."
+                    );
                 })
                 .catch((error) => {
                     alert(

@@ -10,11 +10,11 @@
 <h1>Votre panier</h1>
 <div class="global-container">
     <main>
+        @if(isset($products))
         @php
         $index = 0;
         $total = 0;
         @endphp
-        @if(isset($products))
         @foreach($products as $product)
         <article class="product">
             <section class="img-container">
@@ -33,8 +33,8 @@
                         <select name="quantity" class="quantity">
                             <option value="{{ $quantity[$index] }}" selected>{{ $quantity[$index] }}</option>
                             @for ($i = 1; $i <= $product[0]->stock; $i++)
-                            <option value="{{ $i }}">{{ $i }}</option>
-                            @endfor
+                                <option value="{{ $i }}">{{ $i }}</option>
+                                @endfor
                         </select>
                     </div>
                     <div>
@@ -52,9 +52,6 @@
         $index++;
         @endphp
         @endforeach
-        @else
-        <div>Code à exécuter si le panier ne contient aucun article.</div>
-        @endif
     </main>
     <aside>
         <section id="total">
@@ -72,6 +69,9 @@
             <button class="button-stylised" type="submit">Commander</button>
         </form>
     </aside>
+    @else
+    <div>Code à exécuter si le panier ne contient aucun article.</div>
+    @endif
 </div>
 <script src="{{ asset('js/basket.js') }}"></script>
 @endsection

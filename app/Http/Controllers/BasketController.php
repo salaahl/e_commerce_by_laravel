@@ -57,8 +57,8 @@ class BasketController extends Controller
         $user = User::where('email', auth()->user()->email)->get()->first();
         $baskets = Basket::where('user_email', $user->email);
         
-        $products = [];
-        $quantity = [];
+        $products = null;
+        $quantity = null;
         $baskets = Basket::where('user_email', auth()->user()->email)->get();
 
         foreach ($baskets as $basket) {

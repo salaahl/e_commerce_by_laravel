@@ -10,6 +10,28 @@
     }
 }
 
+@media (max-width: 767px) {
+    #orders-link, #profile-link {
+        margin: 5% 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+@media (min-width: 768px) {
+    #dashboard-links {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
+}
+
 @media (max-width: 1280px) {
     main {
         padding: 0 1% 0 1%;
@@ -33,13 +55,9 @@ h2 {
     text-align: center;
 }
 
-#dashboard-links {
-    display: flex;
-    justify-content: space-between;
-}
-
-#orders-link, #profile-link {
-    padding: 10%;
+#orders-link,
+#profile-link {
+    padding: 5%;
     border: 2px solid;
 }
 
