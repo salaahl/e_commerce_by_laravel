@@ -28,6 +28,9 @@
                 <li>
                     <a href="/login" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Se connecter</a>
                 </li>
+                <li>
+                    <a href="/register" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">S'inscrire</a>
+                </li>
                 @endguest
                 @auth
                 <li>
