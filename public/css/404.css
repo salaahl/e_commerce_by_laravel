@@ -61,6 +61,7 @@ div:has(> .four_zero_four_bg) {
  
 .four_zero_four_bg h1 {
     font-size:80px;
+    -webkit-text-stroke: unset;
 }
 
 .four_zero_four_bg h3 {
