@@ -6,6 +6,13 @@ html, body {
 header, footer {
     display: contents;
     position: absolute;
+}
+
+header {
+    top: 0;
+}
+
+footer {
     bottom: 0;
 }
 
