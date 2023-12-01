@@ -19,13 +19,11 @@
     </div>
     
     <div class="contant_box_404">
-    <h3 class="h2">
-    Look like you're lost
-    </h3>
+    <h3 class="h2">Vous semblez perdu</h3>
     
-    <p>the page you are looking for not avaible!</p>
+    <p>La page que vous recherchez n'est pas disponible !</p>
     
-    <a href="" class="link_404">Go to Home</a>
+    <a href="/" class="link_404">Retourner à la page d'accueil</a>
   </div>
     </div>
     </div>
