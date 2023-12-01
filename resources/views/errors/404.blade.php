@@ -19,7 +19,7 @@
     </div>
     
     <div class="contant_box_404">
-    <h3 class="h2">Vous semblez perdu</h3>
+    <h3 class="h2">Vous semblez perdu...</h3>
     
     <p>La page que vous recherchez n'est pas disponible !</p>
     
