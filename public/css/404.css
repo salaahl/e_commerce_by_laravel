@@ -4,7 +4,7 @@ html, body {
 }
 
 header, footer {
-    display: contents;
+    width: 100%;
     position: absolute;
 }
 
@@ -17,7 +17,7 @@ footer {
 }
 
 h1 {
-    background-color: none!important;
+    background-color: unset!important;
 }
 
 .page_404 { 
