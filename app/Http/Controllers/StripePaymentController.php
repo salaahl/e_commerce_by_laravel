@@ -29,7 +29,7 @@ class StripePaymentController extends Controller
                 $product = Product::where('reference', $basket_item->product_reference)->first();
 
                 $total_price += $product->price * $basket_item->quantity;
-                $items[] += [
+                $items[] = [
                     'price_data' => [
                         'product_data' => [
                             'name' => $product->name,
@@ -45,13 +45,13 @@ class StripePaymentController extends Controller
             $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
             header('Content-Type: application/json');
 
-            $YOUR_DOMAIN = env('DOMAIN_URL');
+            $APP_URL = env('APP_URL');
 
             $checkout_session = $stripe->checkout->sessions->create([
                 'ui_mode' => 'embedded',
                 'line_items' => $items,
                 'mode' => 'payment',
-                'return_url' => $YOUR_DOMAIN . '/return',
+                'return_url' => $APP_URL . '/return',
             ]);
 
             http_response_code(200);
@@ -73,7 +73,7 @@ class StripePaymentController extends Controller
         try {
             $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
             header('Content-Type: application/json');
-            
+
             // retrieve JSON from POST body
             $jsonStr = file_get_contents('php://input');
             $jsonObj = json_decode($jsonStr);

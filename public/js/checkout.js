@@ -13,10 +13,7 @@ async function initialize() {
                 .querySelector('[name="csrf-token"]')
                 .getAttribute("content"),
         },
-    })
-        .catch((error) => {
-            console.log(error.message)
-        });
+    });
 
     const { clientSecret } = await response.json();
 
