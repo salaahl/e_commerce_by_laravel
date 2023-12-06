@@ -56,7 +56,7 @@ class StripePaymentController extends Controller
                                 'name' => '$product->name',
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
-                            'unit_amount' => 1000,
+                            'unit_amount' => 50000,
                             'currency' => 'eur',
                         ],
                         'quantity' => 1,
