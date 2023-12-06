@@ -40,7 +40,7 @@ class StripePaymentController extends Controller
                     ],
                     'quantity' => $basket_item->quantity,
                 ]
-            }
+            };
 
             $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
             header('Content-Type: application/json');
