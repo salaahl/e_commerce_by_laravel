@@ -1,5 +1,5 @@
 const stripe = Stripe(
-    "pk_test_51OJQl9BWdqqNqzCqIMxdVqwvnp6vtgIauO9UKLkVThKIvPj5NCtIz8LqHkIge0bfZS7oMY6exjhgCuRkP3jyGcBQ00zuUp5Q6q"
+    "pk_live_51OJQl9BWdqqNqzCqBphM4uRwqhDd6vkxVUDDDdh3DkE1WJVgouKASwhOfy3LYBR8PVoAZHXv1j3DPbago5ij0A1g00vDnHPFSM"
 );
 
 initialize();
@@ -13,11 +13,14 @@ async function initialize() {
                 .querySelector('[name="csrf-token"]')
                 .getAttribute("content"),
         },
-    }).then(response => response.json())
-    .then(result => {
-      console.log(result)
-    })
-    .catch((error) => {
-        console.log(error.message)
     });
+
+    const { clientSecret } = await response.json();
+
+    const checkout = await stripe.initEmbeddedCheckout({
+        clientSecret,
+    });
+
+    // Mount Checkout
+    checkout.mount("#checkout");
 }
