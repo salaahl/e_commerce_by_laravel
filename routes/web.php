@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BasketController;
-use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\StripePaymentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +52,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/payment', [PaymentController::class, 'index']);
-Route::post('/payment', [PaymentController::class, 'payment']);
+Route::get('checkout/', [StripePaymentController::class, 'checkout'])->name('checkout');
+Route::post('checkout/', [StripePaymentController::class, 'checkoutPost'])->name('checkout.post');
+Route::post('status/', [StripePaymentController::class, 'status'])->name('status.post');
+Route::get('return/', [StripePaymentController::class, 'return'])->name('return');
 
 require __DIR__ . '/auth.php';
