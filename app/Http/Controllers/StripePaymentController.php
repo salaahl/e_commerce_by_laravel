@@ -29,18 +29,16 @@ class StripePaymentController extends Controller
                 $product = Product::where('reference', $basket_item->product_reference)->first();
 
                 $total_price += $product->price * $basket_item->quantity;
-                $items[] = [
-                    [
-                        'price_data' => [
-                            'product_data' => [
-                                'name' => $product->name,
-                            ],
-                            // Prix (sans le séparateur, ex : 1000 = 10)
-                            'unit_amount' => filter_var($product->price, FILTER_SANITIZE_NUMBER_INT),
-                            'currency' => 'eur',
+                $items[] += [
+                    'price_data' => [
+                        'product_data' => [
+                            'name' => $product->name,
                         ],
-                        'quantity' => $basket_item->quantity,
-                    ]
+                        // Prix (sans le séparateur, ex : 1000 = 10)
+                        'unit_amount' => filter_var($product->price, FILTER_SANITIZE_NUMBER_INT),
+                        'currency' => 'eur',
+                    ],
+                    'quantity' => $basket_item->quantity,
                 ]
             }
 
@@ -51,7 +49,7 @@ class StripePaymentController extends Controller
 
             $checkout_session = $stripe->checkout->sessions->create([
                 'ui_mode' => 'embedded',
-                'line_items' => [[ $items ]],
+                'line_items' => $items,
                 'mode' => 'payment',
                 'return_url' => $YOUR_DOMAIN . '/return',
             ]);
@@ -72,10 +70,10 @@ class StripePaymentController extends Controller
 
     public function status(Request $request)
     {
-        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-        header('Content-Type: application/json');
-
         try {
+            $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+            header('Content-Type: application/json');
+            
             // retrieve JSON from POST body
             $jsonStr = file_get_contents('php://input');
             $jsonObj = json_decode($jsonStr);
