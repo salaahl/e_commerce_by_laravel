@@ -39,7 +39,7 @@ class StripePaymentController extends Controller
                         'currency' => 'eur',
                     ],
                     'quantity' => $basket_item->quantity,
-                ]
+                ];
             };
 
             $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
