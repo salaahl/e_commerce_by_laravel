@@ -45,7 +45,7 @@ class StripePaymentController extends Controller
             $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
             header('Content-Type: application/json');
 
-            $YOUR_DOMAIN = 'http://127.0.0.1:8000';
+            $YOUR_DOMAIN = env('DOMAIN_URL');
 
             $checkout_session = $stripe->checkout->sessions->create([
                 'ui_mode' => 'embedded',
