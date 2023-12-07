@@ -39,6 +39,11 @@ Route::middleware('auth')->group(function () {
     Route::put('/basket/store', [BasketController::class, 'store']);
     Route::patch('/basket/update', [BasketController::class, 'update']);
     Route::delete('/basket/destroy', [BasketController::class, 'destroy']);
+    
+    Route::get('checkout/', [StripePaymentController::class, 'checkout'])->name('checkout');
+    Route::post('checkout/', [StripePaymentController::class, 'checkoutPost'])->name('checkout.post');
+    Route::post('status/', [StripePaymentController::class, 'status'])->name('status.post');
+    Route::get('return/', [StripePaymentController::class, 'return'])->name('return');
 });
 
 Route::get('/dashboard', function () {
@@ -51,10 +56,5 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-Route::get('checkout/', [StripePaymentController::class, 'checkout'])->name('checkout');
-Route::post('checkout/', [StripePaymentController::class, 'checkoutPost'])->name('checkout.post');
-Route::post('status/', [StripePaymentController::class, 'status'])->name('status.post');
-Route::get('return/', [StripePaymentController::class, 'return'])->name('return');
 
 require __DIR__ . '/auth.php';
