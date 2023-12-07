@@ -30,13 +30,12 @@ class StripePaymentController extends Controller
     
                 foreach ($basket as $basket_item) {
                     $product = Product::where('reference', $basket_item->product_reference)->first();
-    
                     $total_price += $product->price * $basket_item->quantity;
                     $items[] = [
                         'price_data' => [
                             'product_data' => [
                                 'name' => $product->name,
-                                'images' => $APP_URL . '/images/' . $product->picture,
+                                'images' => [$APP_URL . '/images/' . $product->picture],
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
                             'unit_amount' => $product->price * 100,
