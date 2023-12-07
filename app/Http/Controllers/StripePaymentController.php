@@ -20,10 +20,11 @@ class StripePaymentController extends Controller
 
     public function checkoutPost(Request $request)
     {
+        try {
+        $APP_URL = env('APP_URL');
         $basket = Basket::where('user_email', auth()->user()->email)->get();
-        
-        if($basket) {
-            try {
+            
+            if($basket) {
                 $total_price = 0;
                 $items = [];
     
@@ -35,7 +36,7 @@ class StripePaymentController extends Controller
                         'price_data' => [
                             'product_data' => [
                                 'name' => $product->name,
-                                'images' => $product->picture,
+                                'images' => $APP_URL . '/images/' . $product->picture,
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
                             'unit_amount' => $product->price * 100,
@@ -47,8 +48,6 @@ class StripePaymentController extends Controller
     
                 $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
                 header('Content-Type: application/json');
-    
-                $APP_URL = env('APP_URL');
     
                 $checkout_session = $stripe->checkout->sessions->create([
                     'ui_mode' => 'embedded',
@@ -62,16 +61,15 @@ class StripePaymentController extends Controller
                 return response()->json([
                     'clientSecret' => $checkout_session->client_secret,
                 ]);
-            } catch (Exception $e) {
-                http_response_code(500);
-    
-                return response()->json([
-                    'error' => $e->getMessage(),
-                    'image_url' => $product->picture,
-                ]);
+            } else {
+                return redirect()->route('basket'); 
             }
-        } else {
-            return redirect()->route('basket'); 
+        } catch (Exception $e) {
+            http_response_code(500);
+    
+            return response()->json([
+                'error' => $e->getMessage(),
+            ]);
         }
     }
 
