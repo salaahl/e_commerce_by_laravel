@@ -35,6 +35,7 @@ class StripePaymentController extends Controller
                         'price_data' => [
                             'product_data' => [
                                 'name' => $product->name,
+                                'id' => $product->reference,
                                 'images' => [$APP_URL . '/images/' . $product->picture],
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
