@@ -49,7 +49,7 @@ class StripePaymentController extends Controller
 
             $checkout_session = $stripe->checkout->sessions->create([
                 'ui_mode' => 'embedded',
-                'line_items' => [
+                'line_items' => [[
                     'price_data' => [
                         'product_data' => [
                             'name' => 'Nom',
@@ -59,7 +59,7 @@ class StripePaymentController extends Controller
                         'currency' => 'eur',
                     ],
                     'quantity' => 1,
-                ],
+                ]],
                 'mode' => 'payment',
                 'return_url' => $APP_URL . '/return',
             ]);
