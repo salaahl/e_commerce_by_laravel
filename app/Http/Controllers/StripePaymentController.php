@@ -49,17 +49,7 @@ class StripePaymentController extends Controller
 
             $checkout_session = $stripe->checkout->sessions->create([
                 'ui_mode' => 'embedded',
-                'line_items' => [[
-                    'price_data' => [
-                        'product_data' => [
-                            'name' => 'Nom',
-                        ],
-                        // Prix (sans le séparateur, ex : 1000 = 10)
-                        'unit_amount' => 1900,
-                        'currency' => 'eur',
-                    ],
-                    'quantity' => 1,
-                ]],
+                'line_items' => $items,
                 'mode' => 'payment',
                 'return_url' => $APP_URL . '/return',
             ]);
