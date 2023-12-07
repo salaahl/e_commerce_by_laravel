@@ -64,6 +64,7 @@ class StripePaymentController extends Controller
 
             return response()->json([
                 'error' => $e->getMessage(),
+                'items' => $items,
             ]);
         }
     }
