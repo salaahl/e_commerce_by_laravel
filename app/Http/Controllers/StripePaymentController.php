@@ -35,6 +35,7 @@ class StripePaymentController extends Controller
                         'price_data' => [
                             'product_data' => [
                                 'name' => $product->name,
+                                'images' => $product->picture,
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
                             'unit_amount' => $product->price * 100,
@@ -66,6 +67,7 @@ class StripePaymentController extends Controller
     
                 return response()->json([
                     'error' => $e->getMessage(),
+                    'image_url' => $product->picture,
                 ]);
             }
         } else {
