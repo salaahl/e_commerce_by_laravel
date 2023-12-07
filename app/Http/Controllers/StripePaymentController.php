@@ -37,7 +37,7 @@ class StripePaymentController extends Controller
                                 'name' => $product->name,
                             ],
                             // Prix (sans le séparateur, ex : 1000 = 10)
-                            'unit_amount' => filter_var($product->price, FILTER_SANITIZE_NUMBER_INT),
+                            'unit_amount' => $product->price * 100,
                             'currency' => 'eur',
                         ],
                         'quantity' => $basket_item->quantity,
