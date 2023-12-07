@@ -20,52 +20,56 @@ class StripePaymentController extends Controller
 
     public function checkoutPost(Request $request)
     {
-        try {
-            $basket = Basket::where('user_email', auth()->user()->email)->get();
-            $total_price = 0;
-            $items = [];
-
-            foreach ($basket as $basket_item) {
-                $product = Product::where('reference', $basket_item->product_reference)->first();
-
-                $total_price += $product->price * $basket_item->quantity;
-                $items[] = [
-                    'price_data' => [
-                        'product_data' => [
-                            'name' => $product->name,
+        $basket = Basket::where('user_email', auth()->user()->email)->get();
+        
+        if($basket) {
+            try {
+                $total_price = 0;
+                $items = [];
+    
+                foreach ($basket as $basket_item) {
+                    $product = Product::where('reference', $basket_item->product_reference)->first();
+    
+                    $total_price += $product->price * $basket_item->quantity;
+                    $items[] = [
+                        'price_data' => [
+                            'product_data' => [
+                                'name' => $product->name,
+                            ],
+                            // Prix (sans le séparateur, ex : 1000 = 10)
+                            'unit_amount' => filter_var($product->price, FILTER_SANITIZE_NUMBER_INT),
+                            'currency' => 'eur',
                         ],
-                        // Prix (sans le séparateur, ex : 1000 = 10)
-                        'unit_amount' => filter_var($product->price, FILTER_SANITIZE_NUMBER_INT),
-                        'currency' => 'eur',
-                    ],
-                    'quantity' => $basket_item->quantity,
-                ];
-            };
-
-            $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-            header('Content-Type: application/json');
-
-            $APP_URL = env('APP_URL');
-
-            $checkout_session = $stripe->checkout->sessions->create([
-                'ui_mode' => 'embedded',
-                'line_items' => $items,
-                'mode' => 'payment',
-                'return_url' => $APP_URL . '/return',
-            ]);
-
-            http_response_code(200);
-
-            return response()->json([
-                'clientSecret' => $checkout_session->client_secret,
-            ]);
-        } catch (Exception $e) {
-            http_response_code(500);
-
-            return response()->json([
-                'error' => $e->getMessage(),
-                'items' => $items,
-            ]);
+                        'quantity' => $basket_item->quantity,
+                    ];
+                };
+    
+                $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+                header('Content-Type: application/json');
+    
+                $APP_URL = env('APP_URL');
+    
+                $checkout_session = $stripe->checkout->sessions->create([
+                    'ui_mode' => 'embedded',
+                    'line_items' => $items,
+                    'mode' => 'payment',
+                    'return_url' => $APP_URL . '/return',
+                ]);
+    
+                http_response_code(200);
+    
+                return response()->json([
+                    'clientSecret' => $checkout_session->client_secret,
+                ]);
+            } catch (Exception $e) {
+                http_response_code(500);
+    
+                return response()->json([
+                    'error' => $e->getMessage(),
+                ]);
+            }
+        } else {
+            return redirect()->route('basket'); 
         }
     }
 
