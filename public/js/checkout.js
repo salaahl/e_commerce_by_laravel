@@ -13,14 +13,11 @@ async function initialize() {
                 .querySelector('[name="csrf-token"]')
                 .getAttribute("content"),
         },
-    });
-
-    const { clientSecret } = await response.json();
-
-    const checkout = await stripe.initEmbeddedCheckout({
-        clientSecret,
-    });
-
-    // Mount Checkout
-    checkout.mount("#checkout");
+    }).then(response => response.json())
+      .then(result => {
+        console.log(result)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
 }
