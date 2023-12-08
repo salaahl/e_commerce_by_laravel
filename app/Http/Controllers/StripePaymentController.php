@@ -21,6 +21,58 @@ class StripePaymentController extends Controller
 
 
     //
+    public function checkoutCustomPost(Request $request)
+    {
+        try {
+            $basket = Basket::where('user_email', auth()->user()->email)->get();
+
+            if ($basket) {
+                $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+                $amount = 0;
+
+                foreach ($basket as $basket_item) {
+                    $product = Product::where('reference', $basket_item->product_reference)->first();
+                    $amount += filter_var($product->price * $basket_item->quantity, FILTER_SANITIZE_NUMBER_INT);
+                };
+
+                header('Content-Type: application/json');
+
+                // retrieve JSON from POST body
+                $jsonStr = file_get_contents('php://input');
+                $jsonObj = json_decode($jsonStr);
+
+                // Create a PaymentIntent with amount and currency
+                $paymentIntent = $stripe->paymentIntents->create([
+                    'amount' => $amount,
+                    'currency' => 'eur',
+                ]);
+
+                $output = [
+                    'clientSecret' => $paymentIntent->client_secret,
+                    'user_name' => auth()->user()->name,
+                    'user_surname' => auth()->user()->surname,
+                    'user_address' => auth()->user()->address,
+                    'user_email' => auth()->user()->email,
+                    'total' => $product->price * $basket_item->quantity,
+                ];
+
+                return response()->json([
+                    'output' => $output,
+                ]);
+            } else {
+                return redirect()->route('basket');
+            }
+        } catch (Exception $e) {
+            http_response_code(500);
+
+            return response()->json([
+                'error' => $e->getMessage(),
+            ]);
+        }
+    }
+
+
+    //
     public function checkoutPost(Request $request)
     {
         try {

@@ -3,6 +3,7 @@
 @section('head')
 @parent
 @section('title', 'Panier')
+<meta name="csrf-token" content="{{ csrf_token() }}">
 <link href="{{ asset('css/basket.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
@@ -57,13 +58,13 @@
         <section id="total">
             <h3>Total : {{ $total }}€</h3>
         </section>
-        <section id="customer">
-            <h4>{{ $user->name }}</h4>
-            <h4>{{ $user->surname }}</h4>
-            <h4>{{ $user->address }}</h4>
-            <h4>{{ $user->phone }}</h4>
-            <h4>{{ $user->email }}</h4>
-        </section>
+
+        <!-- Display a payment form -->
+        <form id="payment-form">
+            <div id="address-element"></div>
+            <div id="payment-element"></div>
+            <button id="submit">Submit</button>
+        </form>
         <form method="GET" action="{{url('/order')}}">
             @csrf
             <button class="button-stylised" type="submit">Commander</button>
@@ -74,4 +75,6 @@
     @endif
 </div>
 <script src="{{ asset('js/basket.js') }}"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{{ asset('js/checkout.js') }}" defer></script>
 @endsection
