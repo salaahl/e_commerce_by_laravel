@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Paiement</title>
+    <title>Payement</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="Page de paiement" />
+    <meta name="description" content="Page de payement" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="{{ asset('css/checkout.css') }}" rel="stylesheet" type="text/css" />
     <script src="https://js.stripe.com/v3/"></script>
@@ -14,13 +14,9 @@
 
 <body>
     <!-- Display a payment form -->
-    <form id="payment-form">
-
-      <div id="address-element"></div>
-      <div id="payment-element"></div>
-    
-      <button id="submit">Submit</button>
-    </form>
+    <div id="checkout">
+        <!-- Checkout will insert the payment form here -->
+    </div>
 </body>
 
 </html>
