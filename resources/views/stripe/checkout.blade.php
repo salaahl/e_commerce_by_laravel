@@ -15,13 +15,9 @@
 <body>
     <!-- Display a payment form -->
     <form id="payment-form">
-      <h3>Contact info</h3>
-      <div id="link-authentication-element"></div>
-
-      <h3>Adresse</h3>
-      <div id="address-element"></div>
         
-      <h3>Payement</h3>
+      <div id="link-authentication-element"></div>
+      <div id="address-element"></div>
       <div id="payment-element"></div>
     
       <button id="submit">Submit</button>
