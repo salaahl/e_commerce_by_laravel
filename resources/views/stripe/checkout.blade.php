@@ -15,15 +15,13 @@
 <body>
     <!-- Display a payment form -->
     <form id="payment-form">
-        <input type="text" id="email" placeholder="Enter email address" />
-        <div id="payment-element">
-            <!--Stripe.js injects the Payment Element-->
-        </div>
-        <button id="submit">
-            <div class="spinner hidden" id="spinner"></div>
-            <span id="button-text">Pay now</span>
-        </button>
-        <div id="payment-message" class="hidden"></div>
+      <h3>Contact info</h3>
+      <div id="link-authentication-element"></div>
+    
+      <h3>Payment</h3>
+      <div id="payment-element"></div>
+    
+      <button id="submit">Submit</button>
     </form>
 </body>
 
