@@ -22,40 +22,40 @@ class StripePaymentController extends Controller
     //
     public function checkoutCustomPost(Request $request)
     {
-        $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
-
-        function calculateOrderAmount(array $items): int
-        {
-            // Replace this constant with a calculation of the order's amount
-            // Calculate the order total on the server to prevent
-            // people from directly manipulating the amount on the client
-            return 1400;
-        }
-
-        header('Content-Type: application/json');
-
         try {
-            // retrieve JSON from POST body
-            $jsonStr = file_get_contents('php://input');
-            $jsonObj = json_decode($jsonStr);
-
-            // Create a PaymentIntent with amount and currency
-            $paymentIntent = $stripe->paymentIntents->create([
-                'amount' => 1000,
-                'currency' => 'eur',
-                // In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
-                'automatic_payment_methods' => [
-                    'enabled' => true,
-                ],
-            ]);
-
-            $output = [
-                'clientSecret' => $paymentIntent->client_secret,
-            ];
-
-            return response()->json([
-                'clientSecret' => $output,
-            ]);
+        $basket = Basket::where('user_email', auth()->user()->email)->get();
+        
+            if ($basket) {
+                $stripe = new \Stripe\StripeClient(env('STRIPE_SECRET'));
+                $amount = 0;
+    
+                foreach ($basket as $basket_item) {
+                    $product = Product::where('reference', $basket_item->product_reference)->first();
+                    $amount += filter_var($product->price * $basket_item->quantity, FILTER_SANITIZE_NUMBER_INT);
+                };
+        
+                header('Content-Type: application/json');
+        
+                // retrieve JSON from POST body
+                $jsonStr = file_get_contents('php://input');
+                $jsonObj = json_decode($jsonStr);
+    
+                // Create a PaymentIntent with amount and currency
+                $paymentIntent = $stripe->paymentIntents->create([
+                    'amount' => $amount,
+                    'currency' => 'eur',
+                ]);
+    
+                $output = [
+                    'clientSecret' => $paymentIntent->client_secret,
+                ];
+    
+                return response()->json([
+                    'clientSecret' => $output,
+                ]);
+            } else {
+                return redirect()->route('basket');
+            }
         } catch (Exception $e) {
             http_response_code(500);
 
