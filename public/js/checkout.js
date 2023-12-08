@@ -31,7 +31,14 @@ async function initialize() {
     // Create an elements group from the Stripe instance, passing the clientSecret (obtained in step 2), loader, and appearance (optional).
     const elements = stripe.elements({clientSecret, appearance, loader});
 
-    const addressOptions = { mode: 'shipping' };
+    const addressOptions = { 
+        mode: 'shipping',
+        defaultValues: {
+            address: {
+              country: 'FR',
+            },
+        },
+    };
     const paymentOptions = {
       defaultValues: {
         billingDetails: {
@@ -58,6 +65,8 @@ async function initialize() {
     addressElement.mount("#address-element");
     linkAuthenticationElement.mount("#link-authentication-element");
     paymentElement.mount("#payment-element");
+
+    addressElement.focus();
 }
 
 async function handleSubmit(e) {
