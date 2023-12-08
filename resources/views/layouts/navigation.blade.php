@@ -36,14 +36,17 @@
                 <li>
                     <a href="/dashboard" class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0">Mon compte</a>
                 </li>
-                <form method="POST" action="/logout">
-                    @csrf
-                    <a href="#"
-                            onclick="event.preventDefault();
-                                        this.closest('form').submit();">
-                        {{ __('Se déconnecter') }}
-                    </a>
-                </form>
+                <li>
+                    <form method="POST" action="/logout">
+                        @csrf
+                        <a href="#"
+                                class="block py-2 pl-3 pr-4 text-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-700 md:p-0"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Se déconnecter') }}
+                        </a>
+                    </form>
+                </li>
                 @endauth
             </ul>
         </div>
