@@ -56,14 +56,12 @@ async function initialize() {
     
     // Create Element instances
     const addressElement = elements.create('address', addressOptions);
-    const linkAuthenticationElement = elements.create("linkAuthentication");
     // Passing in defaultValues is optional, but useful if you want to prefill consumer information to
     // ease consumer experience.
     const paymentElement = elements.create('payment', paymentOptions);
     
     // Mount the Elements to their corresponding DOM node
     addressElement.mount("#address-element");
-    linkAuthenticationElement.mount("#link-authentication-element");
     paymentElement.mount("#payment-element");
 
     addressElement.focus();
