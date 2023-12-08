@@ -15,8 +15,7 @@
 <body>
     <!-- Display a payment form -->
     <form id="payment-form">
-        
-      <div id="link-authentication-element"></div>
+
       <div id="address-element"></div>
       <div id="payment-element"></div>
     
