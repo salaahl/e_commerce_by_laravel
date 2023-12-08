@@ -41,7 +41,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/basket/destroy', [BasketController::class, 'destroy']);
     
     Route::get('checkout/', [StripePaymentController::class, 'checkout'])->name('checkout');
-    Route::post('checkout/', [StripePaymentController::class, 'checkoutCustomPost'])->name('checkout.post');
+    Route::post('checkout/', [StripePaymentController::class, 'checkoutPost'])->name('checkout.post');
     Route::post('status/', [StripePaymentController::class, 'status'])->name('status.post');
     Route::get('return/', [StripePaymentController::class, 'return'])->name('return');
 });
