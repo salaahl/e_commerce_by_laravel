@@ -17,8 +17,11 @@
     <form id="payment-form">
       <h3>Contact info</h3>
       <div id="link-authentication-element"></div>
-    
-      <h3>Payment</h3>
+
+      <h3>Adresse</h3>
+      <div id="address-element"></div>
+        
+      <h3>Payement</h3>
       <div id="payment-element"></div>
     
       <button id="submit">Submit</button>
