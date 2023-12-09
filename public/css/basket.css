@@ -59,7 +59,7 @@
     }
 
     aside {
-        min-width: 25%;
+        min-width: 28%;
     }
 }
 
@@ -155,5 +155,5 @@ aside {
 }
 
 aside * {
-    margin: 2% auto;
+    margin: auto;
 }
