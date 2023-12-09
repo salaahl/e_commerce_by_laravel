@@ -63,12 +63,14 @@
         <form id="payment-form">
             <div id="address-element"></div>
             <div id="payment-element"></div>
-            <button id="submit">Submit</button>
+            <button id="submit" class="button-stylised" type="submit">Commander</button>
         </form>
+        <!--
         <form method="GET" action="{{url('/order')}}">
             @csrf
             <button class="button-stylised" type="submit">Commander</button>
         </form>
+        -->
     </aside>
     @else
     <div>Code à exécuter si le panier ne contient aucun article.</div>
