@@ -61,9 +61,14 @@
 
         <!-- Display a payment form -->
         <form id="payment-form">
+            <!--Stripe.js injects the Payment and Address Element-->
             <div id="address-element"></div>
             <div id="payment-element"></div>
-            <button id="submit" class="button-stylised" type="submit">Commander</button>
+            <button id="submit" class="button-stylised">
+                <div class="spinner hidden" id="spinner"></div>
+                <span id="button-text">Pay now</span>
+            </button>
+            <div id="payment-message" class="hidden"></div>
         </form>
         <!--
         <form method="GET" action="{{url('/order')}}">

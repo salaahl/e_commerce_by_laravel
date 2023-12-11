@@ -1,11 +1,12 @@
 // This is your test publishable API key.
 const stripe = Stripe(
-    "pk_live_51OJQl9BWdqqNqzCqBphM4uRwqhDd6vkxVUDDDdh3DkE1WJVgouKASwhOfy3LYBR8PVoAZHXv1j3DPbago5ij0A1g00vDnHPFSM"
+    "pk_test_51OJQl9BWdqqNqzCqIMxdVqwvnp6vtgIauO9UKLkVThKIvPj5NCtIz8LqHkIge0bfZS7oMY6exjhgCuRkP3jyGcBQ00zuUp5Q6q"
 );
 
 // The items the customer wants to buy
-const items = [{ reference: "bleu_de_chanel" }];
+const items = [{ id: "bleu_de_chanel", amount: 1000 }];
 
+let user_email;
 let elements;
 
 initialize();
@@ -30,6 +31,9 @@ async function initialize() {
 
     const clientSecret = response.output.clientSecret;
 
+    // Va être utilisé par la fonction handleSubmit
+    user_email = response.output.email;
+
     // Customize the appearance of Elements using the Appearance API.
     const appearance = {
         theme: "flat",
@@ -38,8 +42,7 @@ async function initialize() {
     // Enable the skeleton loader UI for the optimal loading experience.
     const loader = "auto";
 
-    // Create an elements group from the Stripe instance, passing the clientSecret (obtained in step 2), loader, and appearance (optional).
-    const elements = stripe.elements({ clientSecret, appearance, loader });
+    elements = stripe.elements({ clientSecret, appearance, loader });
 
     const addressOptions = {
         mode: "shipping",
@@ -59,7 +62,13 @@ async function initialize() {
                 email: response.output.email,
                 address: {
                     line1: response.output.address,
-                    country: 'FR',
+                    country: "FR",
+                },
+            },
+            custom_text: {
+                submit: {
+                    message:
+                        "We'll email you instructions on how to get started.",
                 },
             },
         },
@@ -88,13 +97,14 @@ async function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
 
-    const { error } = await stripe.confirmPayment({
+    const error = await stripe.confirmPayment({
         elements,
         confirmParams: {
             // Make sure to change this to your payment completion page
-            return_url: "/confirmation",
-            receipt_email: response.output.email,
+            return_url: "http://localhost:8000/order/confirmation/",
+            receipt_email: user_email,
         },
+        redirect: 'if_required',
     });
 
     // This point will only be reached if there is an immediate error when
@@ -102,10 +112,10 @@ async function handleSubmit(e) {
     // your `return_url`. For some payment methods like iDEAL, your customer will
     // be redirected to an intermediate site first to authorize the payment, then
     // redirected to the `return_url`.
-    if (error.type === "card_error" || error.type === "validation_error") {
+    if (error) {
         showMessage(error.message);
     } else {
-        showMessage("An unexpected error occurred.");
+        window.location = '/order';
     }
 
     setLoading(false);
