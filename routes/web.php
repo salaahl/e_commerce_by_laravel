@@ -57,4 +57,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::post('stripe_webhooks/', [StripePaymentController::class, 'webhooks'])->name('webhooks');
+
 require __DIR__ . '/auth.php';
