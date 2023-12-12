@@ -25,8 +25,9 @@
             </section>
             <section class="content">
                 <div class="description">
-                    <h3>{{ $product[0]->name }}</h3>
+                    <h3 class="title">{{ $product[0]->name }}</h3>
                     <h3 class="price">{{ $product[0]->price }}€</h3>
+                    <h6 class="reference">{{ $product[0]->reference }}€</h6>
                 </div>
                 <div class="options">
                     <div>
