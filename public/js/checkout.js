@@ -3,12 +3,6 @@ const stripe = Stripe(
     "pk_live_51OJQl9BWdqqNqzCqBphM4uRwqhDd6vkxVUDDDdh3DkE1WJVgouKASwhOfy3LYBR8PVoAZHXv1j3DPbago5ij0A1g00vDnHPFSM"
 );
 
-// The items the customer wants to buy
-const items = [];
-document.querySelectorAll(".reference").forEach(product => {
-    items[] = product;
-});
-
 let user_email;
 let elements;
 
@@ -29,7 +23,6 @@ async function initialize() {
                 .querySelector('[name="csrf-token"]')
                 .getAttribute("content"),
         },
-        body: JSON.stringify({ items }),
     }).then((r) => r.json());
 
     const clientSecret = response.output.clientSecret;
