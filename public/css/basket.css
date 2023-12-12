@@ -56,6 +56,7 @@
     .product .description {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     aside {
@@ -103,8 +104,13 @@ aside {
     border: 4px solid;
 }
 
-.product .description {
+.description .title, .description .price {
     font-size: 150%;
+}
+
+.description .reference {
+    width: 100%;
+    font-size: small;
 }
 
 .product .img-container {
