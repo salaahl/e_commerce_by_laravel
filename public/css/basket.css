@@ -88,13 +88,9 @@
     }
 }
 
-main h3 {
-    font-size: inherit !important;
-}
-
 main,
 aside {
-    margin: 1% 0 !important;
+    margin: 1% 0;
 }
 
 .product {
