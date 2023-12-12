@@ -1,6 +1,6 @@
 // This is your test publishable API key.
 const stripe = Stripe(
-    "pk_live_51OJQl9BWdqqNqzCqBphM4uRwqhDd6vkxVUDDDdh3DkE1WJVgouKASwhOfy3LYBR8PVoAZHXv1j3DPbago5ij0A1g00vDnHPFSM"
+    "pk_test_51OJQl9BWdqqNqzCqIMxdVqwvnp6vtgIauO9UKLkVThKIvPj5NCtIz8LqHkIge0bfZS7oMY6exjhgCuRkP3jyGcBQ00zuUp5Q6q"
 );
 
 let user_email;
@@ -44,7 +44,7 @@ async function initialize() {
         allowedCountries: ['FR'],
         contacts: [
             {
-              name: response.output.name,
+              name: 'response.output.name',
               address: {
                 line1: response.output.address,
                 city: 'Paris',
