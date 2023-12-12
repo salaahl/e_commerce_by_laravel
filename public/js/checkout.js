@@ -4,7 +4,10 @@ const stripe = Stripe(
 );
 
 // The items the customer wants to buy
-const items = [{ id: "bleu_de_chanel", amount: 1000 }];
+const items = [];
+document.querySelectorAll(".reference").forEach(product => {
+    items[] = product;
+});
 
 let user_email;
 let elements;
