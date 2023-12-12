@@ -18,7 +18,6 @@ async function initialize() {
     const response = await fetch("/checkout", {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
             "X-CSRF-TOKEN": document
                 .querySelector('[name="csrf-token"]')
                 .getAttribute("content"),
@@ -42,6 +41,19 @@ async function initialize() {
 
     const addressOptions = {
         mode: "shipping",
+        allowedCountries: ['FR'],
+        contacts: [
+            {
+              name: response.output.name,
+              address: {
+                line1: response.output.address,
+                city: 'Paris',
+                state: 'Ile-de-France',
+                postal_code: '75000',
+                country: 'FR',
+              },
+            }
+        ],
         defaultValues: {
             firstname: response.output.name,
             lastname: response.output.surname,
