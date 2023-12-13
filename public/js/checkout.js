@@ -6,8 +6,12 @@ const stripe = Stripe(
 let user_email;
 let elements;
 
-initialize();
-checkStatus();
+document.querySelector("#show-payment-form").addEventListener("click", function() {
+    initialize();
+    checkStatus();
+    this.style.display = 'none';
+    document.querySelector("#submit").style.display = "block";
+});
 
 document
     .querySelector("#payment-form")

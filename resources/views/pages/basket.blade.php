@@ -27,7 +27,6 @@
                 <div class="description">
                     <h3 class="title">{{ $product[0]->name }}</h3>
                     <h3 class="price">{{ $product[0]->price }}€</h3>
-                    <h6 class="reference">{{ $product[0]->reference }}</h6>
                 </div>
                 <div class="options">
                     <div>
@@ -65,18 +64,13 @@
             <!--Stripe.js injects the Payment and Address Element-->
             <div id="address-element"></div>
             <div id="payment-element"></div>
-            <button id="submit" class="button-stylised">
+            <button id="submit" class="button-stylised" style="display: none;">
                 <div class="spinner hidden" id="spinner"></div>
-                <span id="button-text">Pay now</span>
+                <span id="button-text">Payer</span>
             </button>
             <div id="payment-message" class="hidden"></div>
         </form>
-        <!--
-        <form method="GET" action="{{url('/order')}}">
-            @csrf
-            <button class="button-stylised" type="submit">Commander</button>
-        </form>
-        -->
+        <button id="show-payment-form" class="button-stylised">Payer</button>
     </aside>
     @else
     <div>Code à exécuter si le panier ne contient aucun article.</div>
