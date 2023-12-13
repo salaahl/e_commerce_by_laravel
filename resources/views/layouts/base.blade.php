@@ -19,8 +19,8 @@
 
 <body class="antialiased">
     <header>
-        @include('layouts.navigation')
         @yield('header')
+        @include('layouts.navigation')
     </header>
     @yield('main-content')
     @include('layouts.footer')
