@@ -9,6 +9,7 @@ let elements;
 document.querySelector("#show-payment-form").addEventListener("click", function() {
     initialize();
     checkStatus();
+    this.style.display = 'none';
 });
 
 document
