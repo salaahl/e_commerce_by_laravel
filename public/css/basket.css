@@ -32,7 +32,7 @@
         width: 80%;
     }
 
-    .description .title, .description .price, #total {
+    .description .title, .description .price, #total h3 {
         font-size: 110%;
     }
 }
@@ -73,7 +73,7 @@
         flex-wrap: wrap;
     }
 
-    .description .title, .description .price, #total {
+    .description .title, .description .price, #total h3 {
         font-size: 150%;
     }
 
@@ -118,6 +118,7 @@
     justify-content: space-between;
     margin: 0 0 1% 0;
     border: 4px solid;
+    border-radius: 5px;
 }
 
 .product .img-container {
@@ -159,11 +160,7 @@ aside {
     z-index: 0;
 }
 
-#total {
-    font-size: 200%;
-}
-
-#total h2 {
+#total h3 {
     transition: filter 1s;
 }
 
