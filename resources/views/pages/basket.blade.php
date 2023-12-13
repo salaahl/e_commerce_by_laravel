@@ -65,7 +65,7 @@
             <!--Stripe.js injects the Payment and Address Element-->
             <div id="address-element"></div>
             <div id="payment-element"></div>
-            <button id="submit" class="button-stylised" style: "display: none;">
+            <button id="submit" class="button-stylised" style="display: none;">
                 <div class="spinner hidden" id="spinner"></div>
                 <span id="button-text">Pay now</span>
             </button>
