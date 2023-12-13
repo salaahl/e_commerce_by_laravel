@@ -21,14 +21,11 @@
     <header>
         @yield('header')
             @include('layouts.navigation')
-        @endsection
     </header>
     @yield('main-content')
-    @endsection
     
     @yield('footer')
         @include('layouts.footer')
-    @show
     <script src="{{ asset('js/active_page.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 </body>
