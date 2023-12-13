@@ -23,11 +23,6 @@
 }
 
 @media (max-width: 767px) {
-
-    .global-container main,
-    aside {
-        margin: 2% 0;
-    }
     .product .img-container {
         width: 80%;
     }
@@ -49,11 +44,7 @@
         height: fit-content;
     }
     
-    .global-container main, aside {
-        margin: 1% 0;
-    }
-
-    .global-container main {
+    main {
         width: 70%;
         overflow: auto;
     }
@@ -69,7 +60,7 @@
     }
 
     aside {
-        width: 28%;
+        min-width: 28%;
     }
 }
 
@@ -87,10 +78,6 @@
     .global-container {
         padding: 0 2%;
     }
-
-    .global-container main {
-        padding: 0;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -101,6 +88,10 @@
     }
 }
 
+.global-container main,
+aside {
+    margin: 1% 0;
+}
 
 .product {
     display: flex;
@@ -163,4 +154,12 @@ aside {
 
 #total h2 {
     transition: filter 1s;
+}
+
+aside * {
+    margin: auto;
+}
+
+#payment-form {
+    width: 100%;
 }
