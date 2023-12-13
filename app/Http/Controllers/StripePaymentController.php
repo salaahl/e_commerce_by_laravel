@@ -159,7 +159,7 @@ class StripePaymentController extends Controller
         }
     }
 
-    // Le CRSF de cette route a été désactivé, voir si c'est absolument nécessaire
+    //
     public function webhooks()
     {
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
