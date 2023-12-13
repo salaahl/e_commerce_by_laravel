@@ -146,8 +146,8 @@
     padding-left: 2%;
 }
 
-.product .options h4,
 .product .options button {
+    margin-top: 0.5%;
     padding: 0.5%;
 }
 
@@ -157,6 +157,7 @@ aside {
     justify-content: space-between;
     align-items: center;
     padding: 1%;
+    border-radius: 5px;
     z-index: 0;
 }
 
