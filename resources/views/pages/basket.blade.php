@@ -66,7 +66,7 @@
             <div id="payment-element"></div>
             <button id="submit" class="button-stylised" style="display: none;">
                 <div class="spinner hidden" id="spinner"></div>
-                <span id="button-text">Pay now</span>
+                <span id="button-text">Payer</span>
             </button>
             <div id="payment-message" class="hidden"></div>
         </form>
