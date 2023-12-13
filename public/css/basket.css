@@ -49,9 +49,12 @@
         height: fit-content;
     }
     
+    .global-container main, aside {
+        margin: 1% 0;
+    }
+
     .global-container main {
         width: 70%;
-        margin: 1% 0;
         overflow: auto;
     }
 
@@ -66,7 +69,7 @@
     }
 
     aside {
-        min-width: 28%;
+        width: 28%;
     }
 }
 
@@ -78,7 +81,7 @@
 
 @media (max-width: 1024px) {
     body h1 {
-        margin: 0 1%;
+        margin: 0 2%;
     }
 
     .global-container {
