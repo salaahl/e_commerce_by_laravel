@@ -212,7 +212,7 @@ class StripePaymentController extends Controller
             break;
           default:
             // Unexpected event type
-            error_log('Received unknown event type');
+            error_log($event->data->object);
         }
         
         http_response_code(200);

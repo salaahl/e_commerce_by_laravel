@@ -1,17 +1,19 @@
 // This is your test publishable API key.
 const stripe = Stripe(
-    "pk_live_51OJQl9BWdqqNqzCqBphM4uRwqhDd6vkxVUDDDdh3DkE1WJVgouKASwhOfy3LYBR8PVoAZHXv1j3DPbago5ij0A1g00vDnHPFSM"
+    "pk_test_51OJQl9BWdqqNqzCqIMxdVqwvnp6vtgIauO9UKLkVThKIvPj5NCtIz8LqHkIge0bfZS7oMY6exjhgCuRkP3jyGcBQ00zuUp5Q6q"
 );
 
 let user_email;
 let elements;
 
-document.querySelector("#show-payment-form").addEventListener("click", function() {
-    initialize();
-    checkStatus();
-    this.style.display = 'none';
-    document.querySelector("#submit").style.display = "block";
-});
+document
+    .querySelector("#show-payment-form")
+    .addEventListener("click", function () {
+        initialize();
+        checkStatus();
+        this.style.display = "none";
+        document.querySelector("#submit").style.display = "block";
+    });
 
 document
     .querySelector("#payment-form")
@@ -45,18 +47,18 @@ async function initialize() {
 
     const addressOptions = {
         mode: "shipping",
-        allowedCountries: ['FR'],
+        allowedCountries: ["FR"],
         contacts: [
             {
-              name: 'response.output.name',
-              address: {
-                line1: response.output.address,
-                city: 'Paris',
-                state: 'Ile-de-France',
-                postal_code: '75000',
-                country: 'FR',
-              },
-            }
+                name: "response.output.name",
+                address: {
+                    line1: response.output.address,
+                    city: "Paris",
+                    state: "Ile-de-France",
+                    postal_code: "75000",
+                    country: "FR",
+                },
+            },
         ],
         defaultValues: {
             firstname: response.output.name,
@@ -116,7 +118,7 @@ async function handleSubmit(e) {
             return_url: "http://localhost:8000/order/confirmation/",
             receipt_email: user_email,
         },
-        redirect: 'if_required',
+        redirect: "if_required",
     });
 
     // This point will only be reached if there is an immediate error when
@@ -127,7 +129,7 @@ async function handleSubmit(e) {
     if (error) {
         showMessage(error.message);
     } else {
-        window.location = '/order';
+        window.location = "/order";
     }
 
     setLoading(false);
