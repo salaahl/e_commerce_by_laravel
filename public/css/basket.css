@@ -23,6 +23,10 @@
 }
 
 @media (max-width: 767px) {
+    .global-container main,
+    aside {
+        margin: 2% 0;
+    }
     .product .img-container {
         width: 80%;
     }
@@ -40,12 +44,17 @@
         justify-content: space-between;
     }
 
+    .global-container main,
+    aside {
+        margin: 1% 0;
+    }
+
     main, aside {
         height: fit-content;
     }
     
     main {
-        width: 70%;
+        width: 68%;
         overflow: auto;
     }
 
@@ -60,7 +69,7 @@
     }
 
     aside {
-        min-width: 28%;
+        width: 30%;
     }
 }
 
@@ -88,10 +97,12 @@
     }
 }
 
-.global-container main,
-aside {
-    margin: 1% 0;
+@media (max-width: 1280px) {
+    .global-container main {
+        padding: 0;
+    }
 }
+
 
 .product {
     display: flex;
