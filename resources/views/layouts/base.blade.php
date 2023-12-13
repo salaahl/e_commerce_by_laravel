@@ -19,16 +19,16 @@
 
 <body class="antialiased">
     <header>
-        @section('header')
+        @yield('header')
             @include('layouts.navigation')
         @endsection
     </header>
-    @section('main-content')
+    @yield('main-content')
     @endsection
     
-    @section('footer')
+    @yield('footer')
         @include('layouts.footer')
-    @endsection
+    @show
     <script src="{{ asset('js/active_page.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 </body>
