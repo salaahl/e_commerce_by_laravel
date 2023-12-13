@@ -120,11 +120,6 @@
     border: 4px solid;
 }
 
-.description .reference {
-    width: 100%;
-    font-size: small;
-}
-
 .product .img-container {
     display: flex;
     align-items: center;
