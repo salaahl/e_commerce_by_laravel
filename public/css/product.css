@@ -37,7 +37,7 @@
 }
 
 @media (min-width: 1280px) {
-  #product-img-container, #product-container {
+  #product-, #product-container {
     margin: 0%;
   }
 }
@@ -46,6 +46,7 @@
   display: flex;
   aspect-ratio: 1;
   border: 5px solid;
+  border-radius: 10px;
 }
 
 #product-img-container img {
