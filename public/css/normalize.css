@@ -1,8 +1,18 @@
 @media (prefers-color-scheme: dark) {
+    h1 {
+        background-color: rgb(115, 115, 115);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
     html,
     body {
         color: rgb(156, 163, 175);
         background-color: rgb(31, 41, 55);
+    }
+
+    h1 {
+        background-color: rgb(139, 232, 229);
     }
 
     .website-logo {
@@ -108,7 +118,6 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     border-radius: 5px;
-    background-color: rgb(139, 232, 229);
 }
 
 /* La propriété ne prend pas sans le "body/main" */
