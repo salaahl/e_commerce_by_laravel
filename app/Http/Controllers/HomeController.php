@@ -15,16 +15,20 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $bestsellers = Product::orderBy('created_at', 'DESC')->limit(2)->get();
-        $product_featured = Product::orderBy('created_at', 'DESC')->limit(1)->get();
-        
-        return view('pages/home', [
+        $bestsellers = Product::orderBy('name', 'DESC')->limit(2)->get();
+        $product_featured = Product::orderBy('created_at', 'DESC')->first();
+        $products_new = Product::orderBy('created_at', 'DESC')->limit(2)->get();
+
+        return view(
+            'pages/home',
+            [
                 "bestsellers" => $bestsellers,
-                "product_featured" => $product_featured
-             ]
+                "product_featured" => $product_featured,
+                "products_new" => $products_new
+            ]
         );
     }
-    
+
     /**
      * Handle the incoming request.
      */
@@ -32,15 +36,17 @@ class HomeController extends Controller
     {
         $bills = Bill::where('email', auth()->user()->email)->orderBy('created_at', 'DESC')->get();
         $orders = [];
-        foreach($bills as $bill) {
+        foreach ($bills as $bill) {
             $orders[] = Order::where('index_id', $bill->order_index)->orderBy('created_at', 'DESC')->get();
         }
-        
-        return view('pages/profile', [
+
+        return view(
+            'pages/profile',
+            [
                 "user" => auth()->user(),
                 "bills" => $bills,
                 "orders" => $orders
-             ]
+            ]
         );
     }
 }

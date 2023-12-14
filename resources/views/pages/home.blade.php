@@ -96,16 +96,16 @@
         </div>
         @if($product_featured)
         <div class="section-text">
-            <a href="/products/{{ $product_featured[0]->reference }}">
-                <h3>{{ $product_featured[0]->name }}</h3>
+            <a href="/products/{{ $product_featured->reference }}">
+                <h3>{{ $product_featured->name }}</h3>
             </a>
-            <p>{{ $product_featured[0]->description }}</p>
-            <p>{{ $product_featured[0]->price }}€</p>
+            <p>{{ $product_featured->description }}</p>
+            <p>{{ $product_featured->price }}€</p>
         </div>
         <div class="product">
-            <a href="/products/{{ $product_featured[0]->reference }}">
+            <a href="/products/{{ $product_featured->reference }}">
                 <div class="img-container">
-                    <img src="{{ asset('images/' . $product_featured[0]->picture) }}" alt="product image"/>
+                    <img src="{{ asset('images/' . $product_featured->picture) }}" alt="product image" />
                 </div>
             </a>
         </div>
@@ -120,20 +120,21 @@
                 consequat.
             </p>
         </div>
-        <div class="product">
-            <a href="#">
+        @if($products_new)
+        @foreach($products_new as $product)
+        <article class="product">
+            <a href="/products/{{ $product->reference }}">
                 <div class="img-container">
-                    <img src="{{ asset('images/placeholder_perfume.png') }}" />
+                    <img src="{{ asset('images/' . $product->picture) }}" />
+                </div>
+                <div class="description">
+                    <h3>{{ $product->name }}</h3>
+                    <h3>{{ $product->price }}€</h3>
                 </div>
             </a>
-        </div>
-        <div class="product">
-            <a href="#">
-                <div class="img-container">
-                    <img src="{{ asset('images/placeholder_perfume.png') }}" />
-                </div>
-            </a>
-        </div>
+        </article>
+        @endforeach
+        @endif
     </section>
 </main>
 @endsection
