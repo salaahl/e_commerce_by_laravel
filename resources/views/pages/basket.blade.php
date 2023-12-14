@@ -76,7 +76,7 @@
     <div>Code à exécuter si le panier ne contient aucun article.</div>
     @endif
 </div>
-<script src="{{ asset('js/basket.js') }}"></script>
+<script src="{{ asset('js/basket_products.js') }}"></script>
 <script src="https://js.stripe.com/v3/"></script>
-<script src="{{ asset('js/checkout.js') }}" defer></script>
+<script src="{{ asset('js/stripe_payment.js') }}" defer></script>
 @endsection
