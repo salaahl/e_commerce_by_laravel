@@ -1,6 +1,6 @@
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
     h1 {
-        background-color: rgb(115, 115, 115);
+        background-color: rgb(139, 232, 229);
     }
 }
 
@@ -12,7 +12,7 @@
     }
 
     h1 {
-        background-color: rgb(139, 232, 229);
+        background-color: rgb(115, 115, 115);
     }
 
     .website-logo {
