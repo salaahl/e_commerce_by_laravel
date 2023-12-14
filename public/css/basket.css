@@ -13,16 +13,19 @@
 @media (prefers-color-scheme: dark) {
     aside,
     .product .options {
-        background-color: black;
+        background-color: rgb(39, 39, 42);
     }
 
     .product .options button {
-        color: black;
-        background-color: white;
+        background-color: rgb(68, 64, 60);
     }
 
     #payment-form * {
         color: rgb(156, 163, 175);
+    }
+
+    #payment-form .button-stylised:after {
+        background-color: rgb(68, 64, 60);
     }
 }
 
