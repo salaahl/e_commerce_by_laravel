@@ -5,6 +5,13 @@
 @section('title', 'Modifier mes informations')
 @endsection
 
+<!-- bg-gray-100 -->
+<style>
+    body {
+        background-color: rgb(243, 244, 246);
+    }
+</style>
+
 @section('main-content')
 <div class="py-12">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
