@@ -6,6 +6,10 @@
     .button-stylised:after {
         background-color: #cbd5e1;
     }
+
+    #navbar-default ul li a.active {
+        color: rgb(139, 232, 229);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +25,10 @@
 
     .website-logo {
         filter: contrast(0.4);
+    }
+
+    #navbar-default ul li a.active {
+        color: white;
     }
 
     .button-stylised:after {
@@ -141,10 +149,6 @@ h2 {
 body h3 {
     font-weight: 800;
     text-transform: uppercase;
-}
-
-#navbar-default ul li a.active {
-    color: rgb(139, 232, 229);
 }
 
 .button-stylised {
